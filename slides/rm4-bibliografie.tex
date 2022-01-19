@@ -1,0 +1,191 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{hogent}
+\usecolortheme{hgwhite} % witte achtergrond, zwarte tekst
+
+\include{common}
+\addbibresource{rm1-werken-met-latex.bib}
+
+%---------- Info over de presentatie ------------------------------------------
+
+\title{Module 4. Een bibliografische databank bijhouden.}
+\subtitle{Research Methods}
+\author{\lecturers}   % Pas waarden aan in common.tex
+\date{\academicyear}
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \frametitle{Inhoud}
+
+  \tableofcontents
+\end{frame}
+
+\section{Literatuurstudie in {\LaTeX}.}
+
+\begin{frame}[fragile]
+  \frametitle{Bronvermelding en referentielijst in {\LaTeX}.}
+
+  Bib{\LaTeX} en Biber
+
+  \vspace{18pt}
+
+  \verb|artikel.tex|: Hoofdtekst\\
+  \verb|artikel.bib|: Bibliografische databank (bewerk met bv.~JabRef)
+
+  \vspace{18pt}
+
+  Preamble:
+
+  \begin{verbatim}
+  \usepackage[backend=biber,style=apa]{biblatex}
+  \DeclareLanguageMapping{dutch}{dutch-apa}
+  \addbibresource{artikel.bib}
+  \end{verbatim}
+
+\end{frame}
+
+\subsection{Een bibliografische databank aanleggen.}
+
+\begin{frame}
+  \frametitle{Bibliografische gegevens in Jabref.}
+
+  Info die \textbf{altijd} ingevuld moet worden:
+
+  \begin{description}
+    \item[Author] Familienaam, Voornaam and Familienaam, Voornaam and Familienaam, Voornaam\ldots
+    \item[Title] v/h artikel, boek, \ldots
+    \item[Year] of datum van publicatie
+    \item[Bibtexkey] id van deze bron, gebruikt bij refereren (tip: klik op sleutel-icoon)
+  \end{description}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Bibliografische gegevens in Jabref.}
+  \framesubtitle{Extra info voor Article}
+
+  \begin{description}
+    \item[Journal] Naam van het tijdschrift
+    \item[Volume] Jaargang
+    \item[Number] Nummer binnen de jaargang (optioneel)
+    \item[Pages] \verb|mmm--nnn|
+  \end{description}
+
+  \bigskip
+
+  \textbf{Voorbeeld:}
+
+  \bigskip
+
+  \fullcitebib{Anscombe1973}
+\end{frame}
+
+\begin{frame}[plain]
+  \frametitle{Bibliografische gegevens in Jabref.}
+  \framesubtitle{Extra info voor Electronic}
+
+  \begin{description}
+    \item[Url] Hyperlink naar de bron
+    \item[Urldate] Datum van raadplegen
+  \end{description}
+
+  \bigskip
+
+  \textbf{Voorbeeld:}
+
+  \bigskip
+
+  \fullcitebib{Lundin2020}
+
+\end{frame}
+
+\begin{frame}[plain]
+  \frametitle{Bibliografische gegevens in Jabref.}
+  \framesubtitle{Extra info voor InProceedings}
+
+  \begin{description}
+    \item[Booktitle] ``Proceedings of the [naam conferentie]''
+    \item[Editor] Redacteur(s) (optioneel)
+    \item[Pages] paginanummers (optioneel)
+  \end{description}
+
+  \medskip
+
+  \textbf{Voorbeeld:}
+
+  \fullcitebib{vanderLaanEtAl2015}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Bibliografische gegevens in Jabref.}
+
+  Vul zoveel mogelijk info in (maakt zoeken gemakkelijker):
+
+  \begin{description}
+    \item[DOI] Digital Object Identifier: uniek ID voor artikel, hiermee kan je automatisch alle velden invullen
+    \item[URL] ook al is het niet echt een Electronic bron
+    \item[Keywords] Sleutelwoorden
+    \item[File] PDF van de publicatie
+    \item[Abstract] Samenvatting
+    \item[Comments] Je eigen samenvatting/opmerkingen
+  \end{description}
+
+\end{frame}
+
+\subsection{Refereren naar de literatuur.}
+
+\begin{frame}[fragile]
+  \frametitle{Bronvermelding en referentielijst in {\LaTeX}.}
+
+  \begin{itemize}
+    \item Verwijzingen in de tekst:
+
+    \begin{itemize}
+      \item \verb|\textcite{Knuth1998}| \(\Rightarrow\) Knuth (1998)
+      \item \verb|\autocite{Knuth1998}| \(\Rightarrow\) (Knuth, 1998)
+    \end{itemize}
+
+    \item Literatuurlijst invoegen: \verb|\printbibliography|
+
+    \item Compileren (in TexStudio):
+
+    \begin{enumerate}
+      \item Build/Compile (F5): bronnen worden nog niet toegevoegd, ``keys'' van bronnen in het vet aangeduid
+      \item Bibliography (F8): selecteert de gerefereerde bronnen en maakt ze klaar
+      \item Build/Compile (F5): effectief invoegen verwijzingen en literatuurlijst
+    \end{enumerate}
+  \end{itemize}
+
+  Zie de voorziene sjablonen of de cursus voor voorbeelden!
+\end{frame}
+
+\begin{frame}
+  \frametitle{En nu?}
+
+  \begin{itemize}
+    \item Verwerk wat je gelezen hebt tot een doorlopende tekst
+    \item Stijl/structuur nabootsen van gelezen artikels!
+    \item Structureren, bv. ahv Mind Map
+      \begin{itemize}
+        \item Xmind, Minder, FreeMind, Vym, \ldots
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Meer info}
+
+  De inhoud van deze les is verwerkt in een ``Praktische gids voor de bachelorproef''
+
+  \vspace{12pt}
+
+  \url{https://github.com/HoGentTIN/bachproef-gids/releases}
+
+\end{frame}
+
+%% TODO: aanvullen met info uit Bachelorproefgids
+
+\end{document}

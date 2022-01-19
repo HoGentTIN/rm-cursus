@@ -1,0 +1,38 @@
+%% common.tex -- Code die in elk .tex-bestand terug komt
+
+%% Packages
+
+\usepackage[dutch]{babel}
+\usepackage{graphicx,multicol}
+\usepackage{comment,enumerate,hyperref}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{eurosym}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{fancyvrb} % for \begin{Verbatim} (LaTeX controls within verbatim)
+\usepackage{textcomp}
+\usepackage{framed}
+\usepackage{wrapfig}
+
+\usepackage[outputdir=out]{minted}
+\setminted{bgcolor=gray!20,gobble=4}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+\DeclareLanguageMapping{dutch}{dutch-apa}
+
+\usepackage{csquotes}
+
+%% Variabelen, elk academiejaar aan te passen
+\newcommand{\academicyear}{2021--2022}
+\newcommand{\lecturers}{Thomas Aelbrecht \and Koen Mertens \and Bert Van Vreckem}
+
+%% Macro's en commando's
+
+%% \alertbox: een kader voor tekst die moet opvallen
+\newcommand{\alertbox}[2][hgblue]{%
+  \setbeamercolor{alertbox}{bg=#1,fg=white}
+  \begin{beamercolorbox}[sep=2pt,center]{alertbox}
+    \textbf{#2}
+  \end{beamercolorbox}
+}
