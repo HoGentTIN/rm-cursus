@@ -1,0 +1,47 @@
+%===============================================================================
+% bachproef-voorblad.sty - LaTeX package voor het genereren van een voorpagina
+% voor een bachelorproef, conform de huisstijl van HOGENT.
+%===============================================================================
+% De hoofdpagina heeft een achtergrondkleur die kan ingesteld worden (standaard
+% is zwart). De tekst is in het wit.
+
+\ProvidesClass{hogent-report-titlepage}[2019/01/09 Titelpagina bachelorproef HOGENT]
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage{titling}
+\RequirePackage{xcolor}
+\RequirePackage{afterpage}
+
+%-------------------------------------------------------------------------------
+% Code voor het invoegen van een titelpagina
+%-------------------------------------------------------------------------------
+% Let op als je aanpassingen maakt: de marge en grootte van het logo zijn op
+% elkaar afgestemd. De HOGENT huisstijlregels vragen dat het logo onderaan
+% rechts getoond wordt en op een afstand van de breedte van de letters HO in het
+% logo. Deze zijn ~56% van de breedte van de afbeelding.
+% 56% van 3 cm (breedte van het logo) is ongeveer 1,7 cm, vandaar deze marges.
+
+\newcommand{\inserttitlepage}[1][black]{%
+  \begin{titlepage}
+    % Marges proportioneel tov breedte logo
+    \newgeometry{top=1.7cm,bottom=1.7cm,left=1.7cm,right=1.7cm}
+    % Stel achtergrondkleur van de voorpagina in
+    \pagecolor{#1}
+    \begin{center}
+      \begingroup
+      \vspace*{3cm}
+      \sffamily\bfseries
+      \Huge\textcolor{white}{\@title}\\[1cm]
+      \Large\textcolor{white}{\@author}\\[1cm]
+      \large\textcolor{white}{\@date}
+      \vfill
+      \endgroup
+    \end{center}
+    % HOGENT logo komt onderaan rechts
+    \hfill\includegraphics[width=3cm]{HOGENT_Logo_Neg_rgb.png}
+    \restoregeometry
+    \pagecolor{white}
+  \end{titlepage}
+}
+
+\endinput
