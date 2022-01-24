@@ -31,6 +31,8 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 
+\RequirePackage{booktabs}
+
 %% Ensure the variables can be checked with \ifx\@variable\@empty
 \let\@author\@empty
 \let\@title\@empty
