@@ -25,7 +25,6 @@
   \tableofcontents
 \end{frame}
 
-
 \section{Inleiding}
 
 \subsection{Filosofie, geschiedenis}
@@ -102,7 +101,7 @@
 
   \begin{itemize}
     \item<+-> Enkel bezighouden met inhoud, goede en consistente opmaak gegarandeerd.
-    \item <+-> Stijl aanpassen zonder inhoud te wijzigen.
+    \item<+-> Stijl aanpassen zonder inhoud te wijzigen.
     \item<+-> Tekstformaat \(\Rightarrow\) geschikt voor versiebeheersysteem!
     \item<+-> Is de norm in verschillende onderzoeksdomeinen, o.a.\ computerwetenschappen
   \end{itemize}
@@ -138,33 +137,6 @@
 \end{frame}
 
 \section{Aan de slag met {\LaTeX}}
-
-\subsection{Werkomgeving opzetten}
-
-\begin{frame}
-  \frametitle{Werkomgeving opzetten}
-
-  (1) {\LaTeX} distributie
-
-  \begin{itemize}
-    \item Windows: MikTeX \url{http://miktex.org/}
-    \item MacOS: MacTeX distribution \url{http://www.tug.org/mactex/2011/}
-    \item Linux: zit in repositories
-    \begin{itemize}
-      \item Ubuntu, Debian: \texttt{sudo apt-get install texlive}
-      \item Fedora: \texttt{sudo dnf install texlive}
-    \end{itemize}
-    \item On-line werkomgeving: \url{https://www.overleaf.com/}
-  \end{itemize}
-
-  (2) {\LaTeX} editor
-
-  \begin{itemize}
-    \item Verschillende keuzes, afh.~besturingssysteem
-    \item vb. TexStudio \url{http://www.texstudio.org/}
-    \item Visual Studio Code + Latex Workshop plugin
-  \end{itemize}
-\end{frame}
 
 \subsection{Documentstructuur}
 
@@ -552,107 +524,57 @@ public class MyApp \{
 
 \end{frame}
 
-%% TODO: Voorbeeld minted toevoegen
+\begin{frame}[fragile]
+  \frametitle{Broncode invoegen}
+  \framesubtitle{\texttt{minted} package}
+
+  \begin{semiverbatim}
+  \\setminted\{%
+    bgcolor=gray!20,gobble=2, linenos,
+    numbers=left,frame=single\}
+
+  \\begin\{minted\}\{java\}
+    public class MyApp \{
+      public static void main(String args[]) \{
+        System.out.println("Hello World");
+      \}
+    \}
+  \\end\{minted\}
+  \end{semiverbatim}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Broncode invoegen}
+  \framesubtitle{\texttt{minted} package}
+  \setminted{bgcolor=gray!20,gobble=4,linenos,numbers=left,frame=single}
+  \begin{minted}{java}
+    public class MyApp {
+      public static void main(String args[]) {
+        System.out.println("Hello World");
+      }
+    }
+  \end{minted}
+\end{frame}
 
 \subsection{Literatuurlijst}
 
 \begin{frame}[fragile]
- \frametitle{Literatuurlijst}
+  \frametitle{Literatuurlijst}
 
- \begin{itemize}
-   \item<+-> Literatuurlijst is belangrijk onderdeel van een eindwerk
-   \item<+-> Strakke regels voor opmaak (HOGENT: APA-stijl)
-   \item<+-> Enkel \textit{publicaties} komen in aanmerking
-   \item<+-> Enkel werken waarnaar verwezen wordt in de tekst
-   \item<+-> {\LaTeX}, meer bepaald Bib{\LaTeX} helpt:
-   \begin{itemize}
-     \item<+-> ``bibliografische databank'' (in tekstformaat)
-     \item<+-> Automatische opmaak, sortering literatuurlijst
-     \item<+-> Verwijzingen vanuit uit de tekst (\verb|\textcite{}|)
-     \item<+-> Ondersteuning via externe tools (e.g. JabRef, Mendeley Desktop)
-   \end{itemize}
- \end{itemize}
-\end{frame}
+  \begin{itemize}
+    \item<+-> Literatuurlijst is belangrijk onderdeel van een eindwerk
+    \item<+-> Strakke regels voor opmaak (HOGENT: APA-stijl)
+    \item<+-> {\LaTeX}, meer bepaald Bib{\LaTeX} helpt:
+    \begin{itemize}
+      \item<+-> ``bibliografische databank'' (in tekstformaat)
+      \item<+-> Automatisch correcte opmaak
+      \item<+-> Verwijzingen vanuit uit de tekst (\verb|\textcite{}|)
+      \item<+-> Ondersteuning via externe tools (e.g. JabRef, Mendeley Desktop)
+    \end{itemize}
+  \end{itemize}
 
-\begin{frame}[fragile]
- \frametitle{Literatuurlijst}
-
- Voorbeeld inhoud Bib{\LaTeX}-bestand (*.bib):
-
-\begin{semiverbatim}
-\alert<2>{@book}\{\alert<4>{Knuth1998},
- \alert<3>{author} = \{Knuth, Donald E.\},
- \alert<3>{title} = \{The art of computer programming,  volume 3:
- sorting and searching\},
- \alert<3>{year} = \{1998\},
- publisher = \{Addison Wesley\},
- address = \{Redwood City, CA, USA\}
-\}
-\end{semiverbatim}
-
- \only<2>{Of: article, inproceedings, inbook, phdthesis, misc, \ldots}
- \only<3>{Sommige velden verplicht, afh. type publicatie}
- \only<4>{Verwijzing in de tekst:
-   \begin{itemize}
-     \item \alert{\texttt{\textbackslash{}textcite\{Knuth1998\}}} $\Rightarrow$ \textcite{Knuth1998}
-     \item \alert{\texttt{\textbackslash{}autocite\{Knuth1998\}}} $\Rightarrow$ \autocite{Knuth1998}
-   \end{itemize}
- }
-
-\end{frame}
-
-\begin{frame}[fragile,plain]
- \frametitle{Literatuurlijst}
-
- Bibliografie invoegen:
-\begin{semiverbatim}
-\\usepackage[backend=bibtex,style=apa]\{biblatex\} \% Preamble
-\\DeclareLanguageMapping\{dutch\}\{dutch-apa\}
-\\addbibresource\{<database>\}
-\dots
-Verwijzingen in de tekst~\\textcite\{label\}.
-\ldots
-\\printbibliography
-\end{semiverbatim}
-
- $\Rightarrow$
-
- \fullcite{Knuth1998}
-
-\end{frame}
-
-\begin{frame}
- \frametitle{Literatuurlijst}
-
- Korte teksten: genummerd, volgens voorkomen (e.g. article)
- \begin{center}
-   \includegraphics[width=.7\textwidth]{1/bib-nr}
- \end{center}
-
-\end{frame}
-
-\begin{frame}[plain]
- \frametitle{Literatuurlijst}
-
- Langere teksten: namen, alfabetisch (e.g. report, book)
- \begin{center}
-   \includegraphics[width=.7\textwidth]{1/bib-apa}
- \end{center}
-
-\end{frame}
-
-\begin{frame}
- \frametitle{HOGENT huisstijl}
-
-
- \begin{itemize}
-   \item HOGENT: ``APA''-stijl (American Psychological Association)
-   \item Zie Chamilo-cursus \href{https://chamilo.hogent.be/index.php?application=Chamilo\%5CApplication\%5CWeblcms&go=CourseViewer&course=22068&tool=LearningPath&tool_action=ComplexDisplay&publication=980981&preview_content_object_id=2280471&learning_path_action=Viewer&child_id=56546}{\textit{Kritisch denken en onderzoekscompetenties voor de bachelorstudent}}
-   \begin{itemize}
-     \item §5.3.2 \textit{Refereren}
-   \end{itemize}
- \end{itemize}
-
+  \pause Zie vervolg cursus!
 \end{frame}
 
 \section{Tot slot}
