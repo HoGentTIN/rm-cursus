@@ -1,0 +1,33 @@
+%% common.tex -- Code die in elk .tex-bestand terug komt
+
+%% Packages
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{comment,enumerate,hyperref}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{eurosym}
+\usepackage{booktabs}
+\usepackage{multicol,multirow}
+\usepackage{listings}
+
+\usepackage[outputdir=out]{minted}
+
+\usepackage[backend=biber,style=apa]{biblatex}
+\DeclareLanguageMapping{english}{english-apa}
+
+\usepackage{csquotes}
+
+%% Variabelen, elk academiejaar aan te passen
+\newcommand{\academicyear}{2021--2022}
+\newcommand{\lecturers}{Thomas Aelbrecht \and Lena De Mol \and Koen Mertens \and Jillisa Schittecatte \and Bert Van Vreckem}
+
+%% Macro's en commando's
+
+%% \alertbox: een kader voor tekst die moet opvallen
+\newcommand{\alertbox}[2][hgblue]{%
+  \setbeamercolor{alertbox}{bg=#1,fg=white}
+  \begin{beamercolorbox}[sep=2pt,center]{alertbox}
+    \textbf{#2}
+  \end{beamercolorbox}
+}
