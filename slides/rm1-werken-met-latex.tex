@@ -4,6 +4,7 @@
 
 \include{common.tex}
 
+%% TODO: bib naam aanpassen
 \addbibresource{rm1-werken-met-latex.bib}
 
 %---------- Info over de presentatie ------------------------------------------
@@ -23,6 +24,131 @@
   \frametitle{Inhoud}
 
   \tableofcontents
+\end{frame}
+\section{Aan de slag!}
+
+\begin{frame}
+  \frametitle{Opzetten werkomgeving}
+
+  \begin{itemize}
+    \item Maak repo aan voor opdracht paper (via link Chamilo)
+    \item Volg instructies fase 1: Opzetten werkomgeving
+          \begin{itemize}
+            \item Software installeren
+            \item Configuratie Git, LaTeX
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%% TODO: opsplitsen per OS (evt. enkel in de syllabus of leerpad)
+
+\begin{frame}
+  \frametitle{Installatie Software}
+
+  \begin{itemize}
+    \item Gebruik package manager!
+    \item Cfr.\ System Engineering Lab (1TI)!
+    \item Windows: Chocolatey
+    \item MacOS X: Homebrew
+    \item Linux: ingebouwd\ldots
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Configuratie}
+
+  \begin{itemize}
+    \item Git basisconfig!
+    \item {\TeX}studio, Jabref: ``moderne'' compiler
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Onderhoud Mik{\TeX}}
+
+  \begin{itemize}
+    \item Open Mik{\TeX} console als Administrator
+    \item Settings:
+          \begin{itemize}
+            \item Always install missing packages on-the-fly
+            \item Default paper format: A4
+          \end{itemize}
+    \item Updates: Check for updates
+          \begin{itemize}
+            \item In geval van fouten: installeer updates
+          \end{itemize}
+    \item Zorg dat Mik{\TeX} niet geblokkeerd wordt door firewall/antivirus
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Lettertypes}
+
+  HOGENT huisstijl:
+
+  \begin{itemize}
+    \item Montserrat Regular, ExtraBold: \url{https://fonts.google.com/specimen/Montserrat}
+    \item Code Pro Black: \url{https://www.dafontfree.net/freefonts-code-pro-black-f62435.htm}
+  \end{itemize}
+
+  Code-font met ligaturen (e.g. \({\leftarrow}\) i.p.v. \verb|<-|):
+
+  \begin{itemize}
+    \item Fira Code: \texttt{choco install firacode}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Configuratie TeXstudio}
+
+  \begin{itemize}
+    \item Options > Configure TeXstudio
+    \item Commands:
+          \begin{itemize}
+            \item XeLaTeX\@: \texttt{xelatex -synctex=1 -interaction=nonstopmode -shell-escape \%.tex}
+          \end{itemize}
+    \item Build:
+          \begin{itemize}
+            \item Default Compiler: XeLaTeX
+            \item Default Bibliography tool: Biber
+          \end{itemize}
+    \item Editor, enz.\ naar eigen voorkeur
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Een alternatief: VS Code}
+
+  \begin{itemize}
+    \item VS Code kan {\TeX}studio, Jupyter Notebook en Markdown editor vervangen
+    \item Configuratie is wat complexer
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Installatie}
+
+  \begin{itemize}
+    \item \texttt{choco install -y texlive}  (in plaats van Mik{\TeX})
+    \item \texttt{choco install -y vscode}
+    \item Extensies:
+          \begin{itemize}
+            \item {\LaTeX} Workshop (James Yu)
+            \item GitLens (GitKraken)
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Installatie testen}
+
+  \begin{itemize}
+    \item Nieuw, leeg document aanmaken
+    \item Krijg je een PDF?
+    \item Download sjabloon bachelorproef \url{https://github.com/HoGentTIN/bachproef-latex-sjabloon}
+    \item Compileer
+    \item Bevat de PDF ook een bibliografie?
+  \end{itemize}
 \end{frame}
 
 \section{Inleiding}
@@ -129,6 +255,7 @@
 
   \begin{itemize}
     \item Tobias Oetiker, et al., \emph{The Not So Short Introduction to {\LaTeXe}}, 2011 (a.k.a. ``lshort'', versie 5.01)
+    %% TODO: URL lshort
     \item {\TeX} --- {\LaTeX} StackExchange (Q \& A site): \url{http://tex.stackexchange.com/}
     \item \emph{{\LaTeX} Wikibook}, \url{http://en.wikibooks.org/wiki/LaTeX}
     \item Handleidingen van packages (pdf)
