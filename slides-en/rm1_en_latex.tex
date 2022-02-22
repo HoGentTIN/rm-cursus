@@ -4,7 +4,7 @@
 
 \include{common.tex}
 
-%\addbibresource{rm1-werken-met-latex.bib}
+\addbibresource{rm1-werken-met-latex.bib}
 
 %---------- Info over de presentatie ------------------------------------------
 
@@ -12,6 +12,7 @@
 \subtitle{Research Methods}
 \author{\lecturers}   % Pas waarden aan in common.tex
 \date{\academicyear}
+
 \begin{document}
 
 \begin{frame}
@@ -19,37 +20,38 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Content}
+  \frametitle{Inhoud}
 
   \tableofcontents
 \end{frame}
 
-\section{Introduction}
+\section{Inleiding}
 
-\subsection{Philosophy, history}
+\subsection{Filosofie, geschiedenis}
 
 \begin{frame}
-  \frametitle{Philosophy: why {\LaTeX}?}
+  \frametitle{Filosofie: waarom {\LaTeX}?}
 
   \begin{itemize}
-    \item<+-> WYSIWYG text editors force authors to take care of the design.
-    \item<+-> This results in bad, inconsistent design of documents.
-    \item<+-> Good design of texts is a \textit{specialty}, and is best not left to the authors.
-    \item<+-> {\LaTeX} ensures that authors need only think about \textit{content} and \textit{structure} of text.
+    \item<+-> WYSIWYG tekstverwerkers dwingen auteurs om de vormgeving te verzorgen.
+    \item<+-> Gevolg is slechte, inconsistente opmaak van documenten.
+    \item<+-> Goede vormgeving van teksten is een \textit{specialisatie}, en wordt best
+    uit handen van auteurs genomen.
+    \item<+-> {\LaTeX} zorgt dat auteurs enkel over de \textit{inhoud} en \textit{structuur} van de tekst moet nadenken.
   \end{itemize}
 \end{frame}
 
 \begin{frame}[plain]
-  \frametitle{History}
+  \frametitle{Geschiedenis}
 
   \begin{columns}[c]
 
     \column{.67\textwidth}
     \begin{itemize}
-      \item<+-> 1977: Donald Knuth thinks the proofs of his book \textit{The art of Computer Programming} look horrible.
-      \item<+-> 1978: he decided to write his own typesetting system, {\TeX}
-      \item<+-> 1989: Version 3.0, since then only bugfix-releases (converging to \(\pi\))
-      \item<+-> 1980s: Leslie Lamport develops markup language for {\TeX}: {\LaTeX}
+      \item<+-> 1977: Donald Knuth vindt de drukproeven van zijn boek \textit{The art of Computer Programming} afschuwelijk
+      \item<+-> 1978: Schreef dan maar zelf een tekstzetsysteem, {\TeX}
+      \item<+-> 1989: Versie 3.0, sindsdien enkel bugfix-releases (convergeren naar \(\pi\))
+      \item<+-> 1980s: Leslie Lamport ontwikkelt markup-taal voor {\TeX}: {\LaTeX}
     \end{itemize}
 
     \column{.33\textwidth}
@@ -61,12 +63,12 @@
   \end{columns}
 \end{frame}
 
-\subsection{Examples}
+\subsection{Voorbeelden}
 
 \begin{frame}
-  \frametitle{Examples---papers}
+  \frametitle{Voorbeelden---papers}
 
-  {\LaTeX} is the standard for scientific publications in computer sciences, maths, physics, etc..
+  {\LaTeX} is de norm voor wetenschappelijke publicaties in computerwetenschappen, wiskunde, fysica, enz.
 
   \begin{center}
     \includegraphics[height=.6\textheight]{1/latex-paper}
@@ -75,9 +77,9 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Examples---books}
+  \frametitle{Voorbeelden---boeken}
 
-  also: courses, theses, etc. 
+  Ook: cursussen, thesissen, enz.
 
   \begin{center}
     \includegraphics[height=.6\textheight]{1/latex-book}
@@ -86,32 +88,32 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Examples---presentations}
+  \frametitle{Voorbeelden---presentaties}
 
   \begin{center}
-    e.g. this presentation\ldots
+    vb.\ deze presentatie\ldots
   \end{center}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Advantages}
+  \frametitle{Voordelen}
 
   \begin{itemize}
-    \item<+-> Only take care of content, good and consistent design is guaranteed.
-    \item<+-> Adapt style without adapting content.
-    \item<+-> Text format \(\Rightarrow\) suitable for versioning system!
-    \item<+-> Is the standard in different research domains, computer sciences among others
+    \item<+-> Enkel bezighouden met inhoud, goede en consistente opmaak gegarandeerd.
+    \item<+-> Stijl aanpassen zonder inhoud te wijzigen.
+    \item<+-> Tekstformaat \(\Rightarrow\) geschikt voor versiebeheersysteem!
+    \item<+-> Is de norm in verschillende onderzoeksdomeinen, o.a.\ computerwetenschappen
   \end{itemize}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Disadvantages}
+  \frametitle{Nadelen}
 
   \begin{itemize}
-    \item<+-> Steep learning curve \(\Rightarrow\) copy paste examples, use of information sources, getting help
-    \item<+-> Sometimes the desired design is hard to accomplish (e.g. ~tables)
+    \item<+-> Zware leercurve \(\Rightarrow\) copy paste voorbeelden, gebruik infobronnen, vraag hulp
+    \item<+-> Soms is gewenste opmaak niet makkelijk te bereiken (vb.~tabellen)
   \end{itemize}
 
   \uncover<1->{%
@@ -120,74 +122,74 @@
   \end{center}}
 \end{frame}
 
-\subsection{Getting help}
+\subsection{Hulp zoeken}
 
 \begin{frame}
-  \frametitle{Getting help}
+  \frametitle{Hulp zoeken}
 
   \begin{itemize}
     \item Tobias Oetiker, et al., \emph{The Not So Short Introduction to {\LaTeXe}}, 2011 (a.k.a. ``lshort'', versie 5.01)
     \item {\TeX} --- {\LaTeX} StackExchange (Q \& A site): \url{http://tex.stackexchange.com/}
     \item \emph{{\LaTeX} Wikibook}, \url{http://en.wikibooks.org/wiki/LaTeX}
-    \item Manuals of packages (pdf)
+    \item Handleidingen van packages (pdf)
   \end{itemize}
 
 \end{frame}
 
-\section{Getting started with {\LaTeX}}
+\section{Aan de slag met {\LaTeX}}
 
-\subsection{Document structure}
+\subsection{Documentstructuur}
 
 \begin{frame}
-  \frametitle{Working method}
+  \frametitle{Werkwijze}
 
   \begin{itemize}
-    \item<+-> Write text in  {\LaTeX}
-    = text file! (markup language like HTML)
-    \item<+-> Compile (possibly multiple times)
-    \item<+-> Inspect result in PDF
+    \item<+-> Schrijf tekst in {\LaTeX}\\
+    = tekstbestand! (markuptaal zoals HTML)
+    \item<+-> Compileer (evt.\ verschillende keren)
+    \item<+-> Bekijk resultaat in PDF
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{{\LaTeX} commands}
+  \frametitle{{\LaTeX} commando's}
 
-  \begin{block}{Basic syntax}
-    \verb|\command name[optional,arguments]{arg1}{arg2}|
+  \begin{block}{Basis-syntax}
+    \verb|\commandonaam[optionele,argumenten]{arg1}{arg2}|
   \end{block}
 
   \pause
 
-  e.g. :
+  Bijvoorbeeld:
 
   \begin{itemize}
     \item<+-> \verb|\documentclass[a4paper,pdftex,12pt]{article}|
     \item<+-> \verb|\'{e}l\`{e}ve| \(\Rightarrow\) \'el\`eve
     \item<+-> \verb|\begin{itemize}|\\
-    \verb|\item list|\\
+    \verb|\item lijst|\\
     \verb|\end{itemize}|
   \end{itemize}
 
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Build a document }
+  \frametitle{Een document opbouwen}
 
   \begin{center}
     \alert{%
-      \only<1>{Define the nature of the document (here: article)}
-      \only<2>{``body'' of the document}
-      \only<3>{Document content}
-      \only<4>{Define extra functionality }
-      \only<5>{Title, author ``preamble''}
-      \only<6>{Title insertion in document}
+      \only<1>{Definitie documentsoort (hier: artikel)}
+      \only<2>{``body'' van het document}
+      \only<3>{Documentinhoud}
+      \only<4>{Extra functionaliteit beschikbaar maken}
+      \only<5>{Titel, auteur komt in ``preamble''}
+      \only<6>{Titel in document invoegen}
     }
   \end{center}
 
   \begin{semiverbatim}
     \uncover<1->{\alert<1>{\\documentclass[a4paper,12pt]\{article\}}}
     \uncover<4->{\alert<4>{\\usepackage[dutch]\{babel\}}}
-    \uncover<5->{\alert<5>{\\title\{Minimal \{\\LaTeX\} document\}}}
+    \uncover<5->{\alert<5>{\\title\{Minimaal \{\\LaTeX\} document\}}}
     \uncover<5->{\alert<5>{\\author\{Bert \{Van Vreckem\}\}}}
     \uncover<5->{\alert<5>{\\date\{\\today\}}}
     \uncover<2->{\alert<2>{\\begin\{document\}}}
@@ -199,7 +201,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Result}
+  \frametitle{Resultaat}
 
   \begin{center}
     \includegraphics[height=.6\textheight]{1/minimaal-document}
@@ -207,7 +209,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Document types}
+  \frametitle{Documenttypes}
 
   \begin{center}
     \begin{semiverbatim}
@@ -219,12 +221,12 @@
     \begin{center}
       \begin{tabular}{ll}
         \toprule
-        TYPE & nature of document \\
+        TYPE & soort document \\
         \midrule
-        \texttt{article} & article, paper, short text \\
-        \texttt{beamer} & presentation \\
-        \texttt{book} & book \\
-        \texttt{report} & (long) report, thesis, paper, \ldots \\
+        \texttt{article} & artikel, paper, korte tekst \\
+        \texttt{beamer} & presentatie \\
+        \texttt{book} & boek \\
+        \texttt{report} & (lang) rapport, thesis, verslag, \ldots \\
       \end{tabular}
     \end{center}
   }
@@ -232,104 +234,104 @@
     \begin{center}
       \begin{tabular}{ll}
         \toprule
-        OPTION & nature of document \\
+        OPTION & soort document \\
         \midrule
-        \texttt{12pt} & 12-point letters (instead of 10pt) \\
-        \texttt{a4paper} & A4 (instead of Am. Letter) \\
-        \texttt{twocolumn} & common for articles \\
-        \texttt{twoside} & for double sided printing \\
+        \texttt{12pt} & 12-puntsletters (ipv 10pt) \\
+        \texttt{a4paper} & A4 (ipv Am. Letter) \\
+        \texttt{twocolumn} & gebruikelijk bij artikels \\
+        \texttt{twoside} & voor dubbelzijdig afdrukken \\
       \end{tabular}
     \end{center}
   }
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Document structure}
+  \frametitle{Documentstructuur}
 
   \begin{center}
     \begin{tabular}{ll}
-      \verb?\part? & (no influence on chapter numbers) \\
-      \verb?\chapter? & (only in \texttt{book}, \texttt{report}) \\
+      \verb?\part? & (geen invloed op hoofdstuknummers) \\
+      \verb?\chapter? & (enkel in \texttt{book}, \texttt{report}) \\
       \verb?\section? & \\
       \verb?\subsection? & \\
-      \verb?\subsubsection? & (not in \texttt{book}, \texttt{report}) \\
+      \verb?\subsubsection? & (niet in \texttt{book}, \texttt{report}) \\
       \verb?\paragraph? & \\
       \verb?\subparagraph? & \\
       &\\
-      \verb?\appendix? & from here on a \verb?\chapter? generates an  appendix  \\
-      \verb?\label{?\texttt{\ldots}\verb?}? & for references (with \verb|\ref{LABEL}|)
+      \verb?\appendix? & vanaf hier wordt \verb?\chapter? een Bijlage \\
+      \verb?\label{?\texttt{\ldots}\verb?}? & voor verwijzingen (met \verb|\ref{LABEL}|)
     \end{tabular}
   \end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Preamble---Useful packages}
+  \frametitle{Preamble---Nuttige packages}
 
   \begin{description}
-    \item[\texttt{\textbackslash{}usepackage\{amsfonts\}}] AMS math packages: extra mathematical
-    \item[\texttt{\textbackslash{}usepackage\{amsmath\}}] symbols (e.g.\ number sets
+    \item[\texttt{\textbackslash{}usepackage\{amsfonts\}}] AMS math packages: extra wiskundige
+    \item[\texttt{\textbackslash{}usepackage\{amsmath\}}] symbolen (o.a.\ getallenverzamelingen
     \item[\texttt{\textbackslash{}usepackage\{amssymb\}}] \(\mathbb{N}, \mathbb{R}, \mathbb{Z}, \mathbb{Q}\), etc.)
     \pause
-    \item[\texttt{\textbackslash{}usepackage[dutch]\{babel\}}] Language settings: word split, commands for special characters (``dutch'' for NL)
+    \item[\texttt{\textbackslash{}usepackage[dutch]\{babel\}}] Taalinstellingen: woordsplitsingen, commando's voor speciale karakters (``dutch'' voor NL)
     \pause
-    \item[\texttt{\textbackslash{}usepackage\{eurosym\}}] Euro-symbol (\euro)
+    \item[\texttt{\textbackslash{}usepackage\{eurosym\}}] Euro-symbool (\euro)
     \pause
-    \item[\texttt{\textbackslash{}usepackage\{fancyhdr\}}] Page formatting with header and footer
+    \item[\texttt{\textbackslash{}usepackage\{fancyhdr\}}] Pagina-opmaak met hoofd- en voettekst
     \pause
-    \item[\texttt{\textbackslash{}usepackage\{graphicx\}}] Insert figures
+    \item[\texttt{\textbackslash{}usepackage\{graphicx\}}] Invoegen van figuren
   \end{description}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Preamble---Useful packages}
+  \frametitle{Preamble---Nuttige packages}
 
   \begin{description}
-    \item[\texttt{\textbackslash{}usepackage[pdftex,bookmarks=true]\{hyperref\}}] PDF gets clickable links \& references, table of contents \pause
-    \item[\texttt{\textbackslash{}usepackage[utf8]\{inputenc\}}] use accents in text (e.g. é instead of \verb|\'e|) \pause
-    \item[\texttt{\textbackslash{}usepackage\{listings\}}] Format source code \pause
-    \item[\texttt{\textbackslash{}usepackage\{multirow\}}] Text in different cells in tables \pause
-    \item[\texttt{\textbackslash{}usepackage\{rotating\}}] Tables and figures rotate \pause
-    \item[\texttt{\textbackslash{}usepackage\{lipsum\}}] Filling text (lorem ipsum dolor sit amet\ldots)
+    \item[\texttt{\textbackslash{}usepackage[pdftex,bookmarks=true]\{hyperref\}}] PDF krijgt klikbare links \& verwijzingen, inhoudstafel \pause
+    \item[\texttt{\textbackslash{}usepackage[utf8]\{inputenc\}}] Accenten gebruiken in tekst (vb. é ipv \verb|\'e|) \pause
+    \item[\texttt{\textbackslash{}usepackage\{listings\}}] Broncode mooi opmaken \pause
+    \item[\texttt{\textbackslash{}usepackage\{multirow\}}] Tekst over verschillende cellen in tabellen \pause
+    \item[\texttt{\textbackslash{}usepackage\{rotating\}}] Tabellen en figuren roteren \pause
+    \item[\texttt{\textbackslash{}usepackage\{lipsum\}}] Vultekst (lorem ipsum dolor sit amet\ldots)
   \end{description}
 \end{frame}
 
-\subsection{Text writing}
+\subsection{Tekst schrijven}
 
 \begin{frame}[fragile]
- \frametitle{Tekst format}
+ \frametitle{Tekstopmaak}
 
  \begin{itemize}
-   \item<+-> Special symbols ({\LaTeX} syntax): \% \$ \& \{ \} \textbackslash{} etc.: \\
+   \item<+-> Speciale tekens ({\LaTeX} syntax): \% \$ \& \{ \} \textbackslash{} enz: \\
    \begin{semiverbatim}
      \\\% \\\$ \\\& \\\{ \\\} \\textbackslash\{\}
    \end{semiverbatim}
-   \item<+-> Ligatures: \textrm{fi fl ffi ffl} (automatic formatting)
-   \item<+-> Accents: \'{e} \`{e} \^{e} \"{e} \={e} \c{c} etc.
+   \item<+-> Ligaturen: \textrm{fi fl ffi ffl} (automatisch opgemaakt)
+   \item<+-> Accenten: \'{e} \`{e} \^{e} \"{e} \={e} \c{c} enz.
    \begin{semiverbatim}
-     \\'\{e\} \\`\{e\} \\^\{e\} \\"\{e\} \\=\{e\} \\c\{c\} etc.
+     \\'\{e\} \\`\{e\} \\^\{e\} \\"\{e\} \\=\{e\} \\c\{c\} enz.
    \end{semiverbatim}
    \item<+-> Ellipsis (\ldots): \texttt{\textbackslash{}ldots}
-   \item<+-> Quotes: `single' ``double''
+   \item<+-> Aanhalingstekens: `enkel' ``dubbel''
    \begin{verbatim}
-   `single' ``double''
+   `enkel' ``dubbel''
    \end{verbatim}
  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
- \frametitle{Letter styles}
+ \frametitle{Letterstijlen}
 
  \begin{center}
    \begin{tabular}{ll}
      \toprule
-     Command & result \\
+     Commando & resultaat \\
      \midrule
-     \verb?\emph{xxx}?   & \emph{Emphasis} (\textrm{\emph{italic}} of \textsf{\emph{`slanted'}})\\
-     \verb?\textit{xxx}? & \textit{Italic text} \\
-     \verb?\textbf{xxx}? & \textbf{Bold text} \\
-     \verb?\texttt{xxx}? & \texttt{Mono spaced letters} \\
-     \verb?\textrm{xxx}? & \textrm{Serif letters}  \\
-     \verb?\textsf{xxx}? & \textsf{Sans Serif letters}  \\
+     \verb?\emph{xxx}?   & \emph{Benadrukken} (\textrm{\emph{cursief}} of \textsf{\emph{`slanted'}})\\
+     \verb?\textit{xxx}? & \textit{Cursieve tekst} \\
+     \verb?\textbf{xxx}? & \textbf{Vetgedrukte tekst} \\
+     \verb?\texttt{xxx}? & \texttt{Monogespatieerde letters} \\
+     \verb?\textrm{xxx}? & \textrm{Schreefletters}  \\
+     \verb?\textsf{xxx}? & \textsf{Schreefloze letters}  \\
      \verb?\textsc{xxx}? & \textsc{Small Caps} \\
    \end{tabular}
  \end{center}
@@ -337,21 +339,21 @@
 \end{frame}
 
 \begin{frame}[fragile]
- \frametitle{List environments}
+ \frametitle{Lijstomgevingen}
 
  \begin{columns}[c]
    \column{.49\textwidth}
    \begin{verbatim}
    \begin{itemize}
-   \item A part
-   \item Another part
+   \item Een onderdeel
+   \item Nog een onderdeel
    \end{itemize}
    \end{verbatim}
 
    \column{.49\textwidth}
    \begin{itemize}
-     \item A part
-     \item Another part
+     \item Een onderdeel
+     \item Nog een onderdeel
    \end{itemize}
  \end{columns}
 
@@ -361,32 +363,32 @@
    \column{.49\textwidth}
    \begin{verbatim}
    \begin{enumerate}
-   \item A part
+   \item Een onderdeel
      \begin{enumerate}
-     \item extra level
+     \item extra niveau
      \end{enumerate}
-   \item Another part
+   \item Nog een onderdeel
    \end{enumerate}
    \end{verbatim}
 
    \column{.49\textwidth}
    \begin{enumerate}
-     \item a part
+     \item Een onderdeel
      \begin{enumerate}
-       \item extra level
+       \item extra niveau
      \end{enumerate}
-     \item Another part
+     \item Nog een onderdeel
    \end{enumerate}
  \end{columns}
 
 \end{frame}
 
-\section{Figures, tables, etc.\ insert}
+\section{Figuren, tabellen, enz.\ invoegen}
 
-\subsection{Figures}
+\subsection{Figuren}
 
 \begin{frame}[fragile,plain]
- \frametitle{Insert figures}
+ \frametitle{Figuren invoegen}
 
  \begin{columns}[c]
    \column{.65\textwidth}
@@ -395,7 +397,7 @@
 \alert<1>{\\begin\{figure\}}
 \alert<2>{\\includegraphics[width=\\textwidth]
  \{1/donald-knuth\}}
-\alert<3>{\\caption\{\alert<4>{\\label\{fig:don\}}Donald Knuth, author of
+\alert<3>{\\caption\{\alert<4>{\\label\{fig:don\}}Donald Knuth, auteur van
  \{\\TeX\}\}}
 \alert<1>{\\end\{figure\}}
 \end{semiverbatim}
@@ -403,7 +405,7 @@
    \column{.35\textwidth}
    \begin{figure}
      \includegraphics[width=\textwidth]{1/donald-knuth}
-     \caption{\label{fig:don}Donald Knuth, author of {\TeX}}
+     \caption{\label{fig:don}Donald Knuth, auteur van {\TeX}}
    \end{figure}
 
  \end{columns}
@@ -413,7 +415,7 @@
 \subsection{Tabellen}
 
 \begin{frame}[fragile]
- \frametitle{Insert tables}
+ \frametitle{Tabellen invoegen}
 
  \begin{columns}[c]
    \column{.6\textwidth}
@@ -423,14 +425,15 @@
 \alert<3>{\\begin\{tabular\}\{\alert<4>{l||c|r}\}}
 \alert<4>{\\hline}
 cel11 \alert<5>{&}
-\alert<7>{\\multicolumn\{2\}\{c\}\{cell12\}} \alert<6>{\\\\}
+\alert<7>{\\multicolumn\{2\}\{c\}\{cel12\}} \alert<6>{\\\\}
 \alert<4>{\\hline \\hline}
-cell21 \alert<5>{&} cell22 \alert<5>{&}
-\alert<7>{\\multirow\{2\}\{*\}\{cell23\}} \alert<6>{\\\\}
-cell31 \alert<5>{&} cell32 \alert<5>{&} \alert<6>{\\\\}
+cel21 \alert<5>{&} cel22 \alert<5>{&}
+\alert<7>{\\multirow\{2\}\{*\}\{cel23\}} \alert<6>{\\\\}
+cel31 \alert<5>{&} cel32 \alert<5>{&} \alert<6>{\\\\}
 \alert<3>{\\end\{tabular\}}
-\alert<2>{\\caption\{An example of what you can do with tables\}
- \\label\{tab:example_table\}}
+\alert<2>{\\caption\{Een voorbeeldje van
+ wat je met tabellen kan doen\}
+ \\label\{tab:vb_tabel\}}
 \alert<1>{\\end\{table\}}
 \end{semiverbatim}
 
@@ -438,23 +441,23 @@ cell31 \alert<5>{&} cell32 \alert<5>{&} \alert<6>{\\\\}
    \begin{table}
      \begin{tabular}{l||c|r}
        \hline
-       cel11 & \multicolumn{2}{c}{cell12} \\
+       cel11 & \multicolumn{2}{c}{cel12} \\
        \hline \hline
-       cel21 & cel22 & \multirow{2}{*}{cell23} \\
+       cel21 & cel22 & \multirow{2}{*}{cel23} \\
        cel31 & cel32 & \\
      \end{tabular}
-     \caption{An example of what you can do with tables}
-     \label{tab:example_tabel}
+     \caption{Een voorbeeldje van wat je met tabellen kan doen}
+     \label{tab:vb_tabel}
    \end{table}
 
  \end{columns}
 \end{frame}
 
-\subsection{Source code}
+\subsection{Broncode}
 
 \begin{frame}[fragile]
- \frametitle{Insert source code}
- \framesubtitle{Simplest form: \texttt{verbatim}}
+ \frametitle{Broncode invoegen}
+ \framesubtitle{Eenvoudigste vorm: \texttt{verbatim}}
 
 \begin{semiverbatim}
 \alert{\\begin\{verbatim\}}
@@ -479,7 +482,7 @@ public class MyApp {
 \end{frame}
 
 \begin{frame}[fragile]
- \frametitle{Insert source code}
+ \frametitle{Broncode invoegen}
  \framesubtitle{\texttt{listings} package}
 
 \begin{semiverbatim}
@@ -500,7 +503,7 @@ public class MyApp \{
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Insert source code}
+  \frametitle{Broncode invoegen}
   \framesubtitle{\texttt{listings} package}
 
   \lstset{%
@@ -522,7 +525,7 @@ public class MyApp \{
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Insert source code}
+  \frametitle{Broncode invoegen}
   \framesubtitle{\texttt{minted} package}
 
   \begin{semiverbatim}
@@ -542,7 +545,7 @@ public class MyApp \{
 
 
 \begin{frame}[fragile]
-  \frametitle{Insert source code}
+  \frametitle{Broncode invoegen}
   \framesubtitle{\texttt{minted} package}
   \setminted{bgcolor=gray!20,gobble=4,linenos,numbers=left,frame=single}
   \begin{minted}{java}
@@ -554,41 +557,41 @@ public class MyApp \{
   \end{minted}
 \end{frame}
 
-\subsection{Literature}
+\subsection{Literatuurlijst}
 
 \begin{frame}[fragile]
-  \frametitle{Literature}
+  \frametitle{Literatuurlijst}
 
   \begin{itemize}
-    \item<+-> A literature list is an important part of a thesis
-    \item<+-> Stringent rules for formatting (HOGENT: APA-stijl)
-    \item<+-> {\LaTeX}, more precisely Bib{\LaTeX} helps:
+    \item<+-> Literatuurlijst is belangrijk onderdeel van een eindwerk
+    \item<+-> Strakke regels voor opmaak (HOGENT: APA-stijl)
+    \item<+-> {\LaTeX}, meer bepaald Bib{\LaTeX} helpt:
     \begin{itemize}
-      \item<+-> ``bibliografic database'' (in text format)
-      \item<+-> Automatic correct formatting
-      \item<+-> References from the text (\verb|\textcite{}|)
-      \item<+-> Support via external tools (e.g. JabRef, Mendeley Desktop)
+      \item<+-> ``bibliografische databank'' (in tekstformaat)
+      \item<+-> Automatisch correcte opmaak
+      \item<+-> Verwijzingen vanuit uit de tekst (\verb|\textcite{}|)
+      \item<+-> Ondersteuning via externe tools (e.g. JabRef, Mendeley Desktop)
     \end{itemize}
   \end{itemize}
 
-  \pause More later in this course!
+  \pause Zie vervolg cursus!
 \end{frame}
 
-\section{Finally}
+\section{Tot slot}
 
 \begin{frame}[fragile]
- \frametitle{Finally}
+ \frametitle{Tot slot}
 
-  Many things haven't been discussed!
+  Een heleboel niet besproken!
 
   \begin{itemize}
-    \item<+-> Mathematical formulas, e.g.
+    \item<+-> Wiskundige formules, vb.
     \begin{semiverbatim}
       \$x=-\\frac\{b \\pm \\sqrt\{b\^{}2 - 4ac\}\}\{2a\}\$
     \end{semiverbatim}
     \(x=-\frac{b \pm \sqrt{b^2 - 4ac}}{2a}\)
-    \item<+-> Hundreds of packages (RTFM, Google is your friend)
-    \item<+-> Presentations using Beamer (use e.g. \ the template at \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
+    \item<+-> Honderden packages (RTFM, Google is your friend)
+    \item<+-> Presentaties met Beamer (baseer je bv.\ op het sjabloon op \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
 
   \end{itemize}
 \end{frame}
