@@ -7,7 +7,7 @@
 
 %---------- Info over de presentatie ------------------------------------------
 
-\title{Module 4. Een bibliografische databank bijhouden.}
+\title{Module 4. Keeping a bibliographic database.}
 \subtitle{Research Methods}
 \author{\lecturers}   % Pas waarden aan in common.tex
 \date{\academicyear}
@@ -19,22 +19,22 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Inhoud}
+  \frametitle{Content}
 
   \tableofcontents
 \end{frame}
 
-\section{Literatuurstudie in {\LaTeX}.}
+\section{Literature study in {\LaTeX}.}
 
 \begin{frame}[fragile]
-  \frametitle{Bronvermelding en referentielijst in {\LaTeX}.}
+  \frametitle{Source citation and reference list in {\LaTeX}.}
 
-  Bib{\LaTeX} en Biber
+  Bib{\LaTeX} and Biber
 
   \vspace{18pt}
 
-  \verb|artikel.tex|: Hoofdtekst\\
-  \verb|artikel.bib|: Bibliografische databank (bewerk met bv.~JabRef)
+  \verb|article.tex|: Main text\\
+  \verb|article.bib|: Bibliografic database (edit using e.g.~JabRef)
 
   \vspace{18pt}
 
@@ -43,40 +43,40 @@
   \begin{verbatim}
   \usepackage[backend=biber,style=apa]{biblatex}
   \DeclareLanguageMapping{dutch}{dutch-apa}
-  \addbibresource{artikel.bib}
+  \addbibresource{article.bib}
   \end{verbatim}
 
 \end{frame}
 
-\subsection{Een bibliografische databank aanleggen.}
+\subsection{Making a bibliographic database.}
 
 \begin{frame}
-  \frametitle{Bibliografische gegevens in Jabref.}
+  \frametitle{Bibliografic data in Jabref.}
 
-  Info die \textbf{altijd} ingevuld moet worden:
+  fields that \textbf{always} need to be filled:
 
   \begin{description}
-    \item[Author] Familienaam, Voornaam and Familienaam, Voornaam and Familienaam, Voornaam\ldots
-    \item[Title] v/h artikel, boek, \ldots
-    \item[Year] of datum van publicatie
-    \item[Bibtexkey] id van deze bron, gebruikt bij refereren (tip: klik op sleutel-icoon)
+    \item[Author] Surname, firstname and surname, firstname and surname, firstname\ldots
+    \item[Title] of the article, book, \ldots
+    \item[Year] or publication date
+    \item[Bibtexkey] id of this source, used when referencing, (tip: click on the key icoon)
   \end{description}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Bibliografische gegevens in Jabref.}
-  \framesubtitle{Extra info voor Article}
+  \frametitle{Bibliografic data in Jabref.}
+  \framesubtitle{Extra fields for Article}
 
   \begin{description}
-    \item[Journal] Naam van het tijdschrift
-    \item[Volume] Jaargang
-    \item[Number] Nummer binnen de jaargang (optioneel)
+    \item[Journal] Name of the journal
+    \item[Volume] Volume
+    \item[Number] Number within the volume (optional)
     \item[Pages] \verb|mmm--nnn|
   \end{description}
 
   \bigskip
 
-  \textbf{Voorbeeld:}
+  \textbf{Example:}
 
   \bigskip
 
@@ -84,17 +84,17 @@
 \end{frame}
 
 \begin{frame}[plain]
-  \frametitle{Bibliografische gegevens in Jabref.}
-  \framesubtitle{Extra info voor Electronic}
+  \frametitle{Bibliografic data in Jabref.}
+  \framesubtitle{Extra fields for Electronic}
 
   \begin{description}
-    \item[Url] Hyperlink naar de bron
-    \item[Urldate] Datum van raadplegen
+    \item[Url] Hyperlink to source
+    \item[Urldate] Visit date
   \end{description}
 
   \bigskip
 
-  \textbf{Voorbeeld:}
+  \textbf{Example:}
 
   \bigskip
 
@@ -103,13 +103,13 @@
 \end{frame}
 
 \begin{frame}[plain]
-  \frametitle{Bibliografische gegevens in Jabref.}
-  \framesubtitle{Extra info voor InProceedings}
+  \frametitle{Bibliografic data in Jabref.}
+  \framesubtitle{Extra fields for InProceedings}
 
   \begin{description}
-    \item[Booktitle] ``Proceedings of the [naam conferentie]''
-    \item[Editor] Redacteur(s) (optioneel)
-    \item[Pages] paginanummers (optioneel)
+    \item[Booktitle] ``Proceedings of the [name conference]''
+    \item[Editor] Editor(s) (optional)
+    \item[Pages] Page numbers (optional)
   \end{description}
 
   \medskip
@@ -120,55 +120,55 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Bibliografische gegevens in Jabref.}
+  \frametitle{Bibliografic data in Jabref.}
 
-  Vul zoveel mogelijk info in (maakt zoeken gemakkelijker):
+  Fill out as much information as possible (facilitates searching):
 
   \begin{description}
-    \item[DOI] Digital Object Identifier: uniek ID voor artikel, hiermee kan je automatisch alle velden invullen
-    \item[URL] ook al is het niet echt een Electronic bron
-    \item[Keywords] Sleutelwoorden
-    \item[File] PDF van de publicatie
-    \item[Abstract] Samenvatting
-    \item[Comments] Je eigen samenvatting/opmerkingen
+    \item[DOI] Digital Object Identifier: unique ID for article, automatically fill in every field
+    \item[URL] even if it is not a real Electronic source
+    \item[Keywords] Keywords
+    \item[File] PDF of the publication
+    \item[Abstract] Summary
+    \item[Comments] Your own summary/remarks
   \end{description}
 
 \end{frame}
 
-\subsection{Refereren naar de literatuur.}
+\subsection{Referencing literature.}
 
 \begin{frame}[fragile]
-  \frametitle{Bronvermelding en referentielijst in {\LaTeX}.}
+  \frametitle{Source citation and reference list in {\LaTeX}.}
 
   \begin{itemize}
-    \item Verwijzingen in de tekst:
+    \item References in the text:
 
     \begin{itemize}
       \item \verb|\textcite{Knuth1998}| \(\Rightarrow\) Knuth (1998)
       \item \verb|\autocite{Knuth1998}| \(\Rightarrow\) (Knuth, 1998)
     \end{itemize}
 
-    \item Literatuurlijst invoegen: \verb|\printbibliography|
+    \item Insert reference list: \verb|\printbibliography|
 
-    \item Compileren (in TexStudio):
+    \item Compile (in TexStudio):
 
     \begin{enumerate}
-      \item Build/Compile (F5): bronnen worden nog niet toegevoegd, ``keys'' van bronnen in het vet aangeduid
-      \item Bibliography (F8): selecteert de gerefereerde bronnen en maakt ze klaar
-      \item Build/Compile (F5): effectief invoegen verwijzingen en literatuurlijst
+      \item Build/Compile (F5): sources are not added yet, ``keys'' of sources are marked in bold
+      \item Bibliography (F8): selects the referenced sources and prepares them 
+      \item Build/Compile (F5): inserts references in the text and generates the reference list
     \end{enumerate}
   \end{itemize}
 
-  Zie de voorziene sjablonen of de cursus voor voorbeelden!
+  Checkout the provided templates or the course syllabus for examples!
 \end{frame}
 
 \begin{frame}
-  \frametitle{En nu?}
+  \frametitle{What now?}
 
   \begin{itemize}
-    \item Verwerk wat je gelezen hebt tot een doorlopende tekst
-    \item Stijl/structuur nabootsen van gelezen artikels!
-    \item Structureren, bv. ahv Mind Map
+    \item Process what you read to a easily readable text
+    \item Mimic the style/structure of the articles that you read!
+    \item Structure, e.g. using a mind map
       \begin{itemize}
         \item Xmind, Minder, FreeMind, Vym, \ldots
       \end{itemize}
@@ -176,9 +176,9 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Meer info}
+  \frametitle{More information}
 
-  De inhoud van deze les is verwerkt in een ``Praktische gids voor de bachelorproef''
+  The content of this class is compiled into a ``Praktische gids voor de bachelorproef''
 
   \vspace{12pt}
 
