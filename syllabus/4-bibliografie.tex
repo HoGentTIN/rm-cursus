@@ -8,28 +8,26 @@ Voordat je op zoek gaat naar informatie is het belangrijk om je eerst voor te be
 
 Het is ondoenbaar om manueel een bibliografie en vermeldingen in de tekst bij te houden.  Gelukkig bestaan er verschillende applicaties die gespecialiseerd zijn in het bijhouden van een bibliografische databank, zgn. \emph{reference managers}.
 
-HOGENT stelt zelf Endnote voor, maar het nadeel is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt. In deze sectie wordt Jabref voorgesteld, een open source applicatie voor het bijhouden van bibliografische gegevens, die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt het bestandsformaat van Bib{\LaTeX}, het ingebouwde systeem voor bibliografieën.
+HOGENT stelt zelf Endnote voor, maar het nadeel is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt. In deze sectie wordt JabRef voorgesteld, een open source applicatie voor het bijhouden van bibliografische gegevens, die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt het bestandsformaat van Bib{\LaTeX}, het ingebouwde systeem voor bibliografieën.
 
-Als je meer gedetailleerde informatie over Bib{\LaTeX} nodig hebt die niet in deze gids te vinden is, raadpleeg dan de handleiding~\autocite{LehmanEtAl2016}.
+Als je meer gedetailleerde informatie over Bib{\LaTeX} nodig hebt, die niet in deze gids te vinden is, raadpleeg dan de handleiding~\autocite{LehmanEtAl2016}.
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{jabref-screenshot}
-  \caption[Jabref]{\textbf{Jabref.} Centraal in de gebruikersinterface vind je een \emph{overzicht} van de verschillende bronnen in deze bibliografische databank, in dit geval vier. De \emph{pdf-icoontjes} links bij de eerste en vierde bron geven aan dat de bron lokaal opgeslagen is als pdf. Als je er op klikt, wordt de pdf geopend. De \emph{wereldbol-icoontjes} bij de tweede en vierde bron duiden op een url die je in de webbrowser kan openen als je er op klikt. Onderaan bevindt zich een \emph{detailvenster} met de bijgehouden gegevens voor de vierde bron. Deze worden opgedeeld in verschillende tabbladen, o.a.~verplichte gegevens (``Required fields''), optionele (``Optional'') en andere (``Other fields''), enz. In dit geval zijn de namen van de auteurs ingevuld (zie Sectie~\ref{sub:algemene_bibliografische_gegevens}). Er zijn in dit geval geen redacteurs (``Editors''), en dat veld is dan ook leeg gebleven. Het veld ``Bibtexkey'' onderaan is automatisch gegenereerd (zie Sectie~\ref{sub:jabref_instellingen}) door te klikken op het \emph{sleutelsymbool} in de knoppenbalk links.}
+  \caption[JabRef]{\textbf{JabRef.} Centraal in de gebruikersinterface vind je een \emph{overzicht} van de verschillende bronnen in deze bibliografische databank, in dit geval vier. De \emph{pdf-icoontjes} links bij de eerste en vierde bron geven aan dat de bron lokaal opgeslagen is als pdf. Als je hierop klikt, wordt de pdf geopend. De \emph{wereldbol-icoontjes} bij de tweede en vierde bron duiden op een url die je in de webbrowser kan openen als je hierop klikt. Onderaan bevindt zich een \emph{detailvenster} met de bijgehouden gegevens voor de vierde bron. Deze worden opgedeeld in verschillende tabbladen, o.a.~verplichte gegevens (``Required fields''), optionele (``Optional'') en andere (``Other fields''), enz. In dit geval zijn de namen van de auteurs ingevuld (zie Sectie~\ref{sub:algemene_bibliografische_gegevens}). Er zijn in dit geval geen redacteurs (``Editors''), en dat veld is dan ook leeg gebleven. Het veld ``Bibtexkey'' onderaan is automatisch gegenereerd (zie Sectie~\ref{sub:jabref_instellingen}) door te klikken op het \emph{sleutelsymbool} in de knoppenbalk links.}
   \label{fig:jabref}
 \end{figure}
 
 \subsection{JabRef instellingen}
 \label{sub:jabref_instellingen}
 
-% TODO: richtlijnen bijwerken naar laatste versie Jabref
-
-Je kan Jabref downloaden van \url{http://www.jabref.org/} en installeren op zowel Windows, MacOS als Linux. Bij het voor de eerste keer opstarten is het nuttig om volgende instellingen aan te passen:
+Je kan JabRef downloaden van \url{http://www.jabref.org/} en installeren op zowel Windows, MacOS als Linux. Wanneer je JabRef voor het eerst opent, is het nuttig om volgende instellingen aan te passen:
 
 \begin{itemize}
-  \item Kies in het menu voor File > Switch to BibLaTeX mode. Dit maakt de bestandsindeling van de bibliografische databank compatibel met het aangeboden {\LaTeX}-sjabloon voor de bachelorproef.
+  \item Kies in het menu voor File > Switch to BibLaTeX mode. Dit maakt de bestandsindeling van de bibliografische databank compatibel met het aangeboden {\LaTeX}-sjabloon voor de bachelorproef. Om deze instelling aan te passen, moet je een bib-bestand openen.
   \item Kies in het menu voor Options > Preferences en dan voor de categorie ``BibTeX key generator''. Elke bron in de databank wordt geïdentificeerd door een unieke sleutel die je kan automatisch laten genereren. Je kan de vorm ervan zelf instellen. Het standaardformaat is de familienaam van de eerste auteur gevolgd door het publicatiejaar, bv. ``Knuth1998''. Je kan dit naar eigen smaak aanpassen, maar kies dit vooraf en hou je er aan. Je zal deze sleutel gebruiken om vanuit de tekst te verwijzen naar je bronnen, bv. met het commando \verb|\parencite{Knuth1998}|.
-  \item Kies in het Preferences-venster voor de categorie File en geef een directory op voor het bijhouden van PDFs van de gevonden bronnen onder ``Main file directory''. Het is heel interessant om de gevonden artikels te downloaden en onder die directory bij te houden. Nog beter is om als naam van het bestand de BibTeX key te nemen (bv. Knuth1998.pdf). Je kan het bestand dan makkelijk openen vanuit Jabref.
+  \item Kies in het Preferences-venster voor de categorie File en geef een directory op voor het bijhouden van PDFs van de gevonden bronnen onder ``Main file directory''. Het is heel interessant om de gevonden artikels te downloaden en onder die directory bij te houden. Nog beter is om als naam van het bestand de BibTeX key te nemen (bv. Knuth1998.pdf). Je kan het bestand dan makkelijk openen vanuit JabRef.
 \end{itemize}
 
 Je kan de andere instellingen nakijken en eventueel naar wens aanpassen, maar de hierboven opgesomde zijn de belangrijkste.
@@ -37,7 +35,7 @@ Je kan de andere instellingen nakijken en eventueel naar wens aanpassen, maar de
 \subsection{Algemene bibliografische gegevens}
 \label{sub:algemene_bibliografische_gegevens}
 
-De bedoeling van een bibliografie is de lezer toelaten je bronnen zelf op te zoeken en te beoordelen op betrouwbaarheid. Dat betekent dat je voldoende informatie moet opgeven zodat de bron terug te vinden is. Afhankelijk van het soort bron (artikel in een journal, boek, website, enz.) moet je andere informatie opgeven. Dit wordt verderop uitgediept. Drie elementen zijn sowieso \emph{altijd} essentieel: de \textbf{auteur}, de \textbf{titel} van de bron en het \textbf{jaar} (of datum) van publicatie. Als één van deze drie ontbreekt, wordt het bijzonder moeilijk om de oorsprong en de kwaliteit van de bron te evalueren. Dit soort bronnen kan je bijhouden ter info, maar zijn meestal niet geschikt om op te nemen in een bibliografie. Als de auteur onbekend is, is het niet immers mogelijk om te beoordelen of die wel de autoriteit heeft om op een objectieve en diepgaande manier over het onderwerp te schrijven. Als het jaartal niet opgegeven is, is het erg moeilijk om na te gaan in hoeverre deze bron nog niet achterhaald is door recentere ontwikkelingen in het vakgebied.
+De bedoeling van een bibliografie is de lezer toelaten jouw bronnen zelf op te zoeken en te beoordelen op betrouwbaarheid. Dat betekent dat je voldoende informatie moet opgeven zodat de bron terug te vinden is. Afhankelijk van het soort bron (artikel in een journal, boek, website, enz.) moet je andere informatie opgeven. Dit wordt verderop uitgediept. Drie elementen zijn sowieso \emph{altijd} essentieel: de \textbf{auteur}, de \textbf{titel} van de bron en het \textbf{jaar} (of datum) van publicatie. Als één van deze drie ontbreekt, wordt het bijzonder moeilijk om de oorsprong en de kwaliteit van de bron te evalueren. Dit soort bronnen kan je bijhouden ter info, maar zijn meestal niet geschikt om op te nemen in een bibliografie. Als de auteur onbekend is, is het immers niet mogelijk om te beoordelen of die wel de autoriteit heeft om op een objectieve en diepgaande manier over het onderwerp te schrijven. Als het jaartal niet opgegeven is, is het erg moeilijk om na te gaan in hoeverre deze bron nog niet achterhaald is door recentere ontwikkelingen in het vakgebied.
 
 Enkele tips bij het invullen van auteursnamen:
 
@@ -46,7 +44,7 @@ Enkele tips bij het invullen van auteursnamen:
   \item Als de auteur een bedrijf of organisatie is, met een naam bestaande uit verschillende woorden, zet die dan tussen accolades: bv. ``\{The Linux Foundation\}''. Zoniet probeert {\LaTeX} dit als een persoonsnaam te interpreteren. ``Foundation'' wordt dan de familienaam, ``The'' en ``Linux'' de twee voornamen.
   \item Als je meerdere auteurs hebt, scheid elke naam dan met \texttt{and}, bv. ``Bernard, Anita and Buysse, Jens and Van Vreckem, Bert''.
   \item Na invullen van de auteursna(a)m(en) klik je op de knop met het sleutel-icoon (zie Figuur~\ref{fig:jabref}) om een unieke sleutel te genereren voor deze bron.
-  \item Naast een auteurveld is er ook een veld voor eventuele redacteur(en) (\emph{editor}) voorzien. Minstens één van de twee moet ingevuld zijn, soms allebei. Dit gebeurt bijvoorbeeld in een boek dat samengesteld is uit hoofdstukken die telkens door andere auteurs geschreven zijn en waar je naar één bepaald hoofdstuk wil verwijzen. Verderop vind je daar een voorbeeld van.
+  \item Naast een auteurveld is er ook een veld voor eventuele redacteur(s) (\emph{editor}) voorzien. Minstens één van beide moet ingevuld zijn, soms allebei. Dit gebeurt bijvoorbeeld in een boek dat samengesteld is uit hoofdstukken die telkens door andere auteurs geschreven zijn en waar je naar één bepaald hoofdstuk wil verwijzen. Verderop vind je daar een voorbeeld van.
 \end{itemize}
 
 Merk trouwens op dat in een bibliografie \textbf{enkel werken mogen opgenomen zijn waarnaar verwezen wordt vanuit de tekst}. {\LaTeX} doet dit standaard automatisch, dus als je bronnen in de lijst mist, dan betekent dit dat je die niet in de tekst gebruikt hebt.
@@ -68,14 +66,14 @@ Enkele velden die zinvol zijn om altijd trachten in te vullen:
 \subsection{Specifieke bibliografische gegevens}
 \label{sub:specifieke_bibliografische_gegevens}
 
-In deze sectie wordt voor de meest relevante soorten bronnen uitgelegd hoe deze correct bij te houden en in de bibliografie op te nemen. JabRef geeft zelf al enige aanwijzingen over welke informatie minstens nodig is: in het detailvenster (zie Afbeelding~\ref{fig:jabref}) moet je minstens het tabblad ``Required fields'' invullen. Voor elke soort publicatie (zie Sectie~\ref{sub:publicatievormen}) vind je verderop een overzicht van de in te vullen velden en wat die precies betekenen, en hoe de referentie in de literatuurlijst er uit zal zien.
+In deze sectie wordt voor de meest relevante soorten bronnen uitgelegd hoe deze correct bij te houden en in de bibliografie op te nemen. JabRef geeft zelf al enige aanwijzingen over welke informatie minstens nodig is: in het detailvenster (zie Afbeelding~\ref{fig:jabref}) moet je minstens het tabblad ``Required fields'' invullen. Voor elk soort publicatie (zie Sectie~\ref{sub:publicatievormen}) vind je verderop een overzicht van de in te vullen velden en wat die precies betekenen, en hoe de referentie in de literatuurlijst er uit zal zien.
 
 Bij het toevoegen van een nieuwe bron aan een bibliografische databank moet je eerst het type selecteren (zie Afbeelding~\ref{fig:jabref-entrytypes}). Hieronder bespreken we enkel de belangrijkste die relevant zijn voor een bachelorproef.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.6\linewidth]{img/jabref-entrytypes}
-  \caption[Soorten bronnen in JabRef]{\textbf{Soorten bronnen in Jabref.} Bij het toevoegen van een nieuwe bron in JabRef (Ctrl+N) moet je eerst het soort publicatie kiezen. Afhankelijk van het soort moet in de literatuurlijst immers andere informatie gegeven worden.}
+  \caption[Soorten bronnen in JabRef]{\textbf{Soorten bronnen in JabRef.} Bij het toevoegen van een nieuwe bron in JabRef (Ctrl+N) moet je eerst het soort publicatie kiezen. Afhankelijk van het soort moet in de literatuurlijst immers andere informatie gegeven worden.}
   \label{fig:jabref-entrytypes}
 \end{figure}
 
@@ -154,7 +152,7 @@ Voorbeeld:
 }
 \end{verbatim}
 
-In de bibliografie: \fullcitebib{VanVreckemEtAl2013}
+In de bibliografie ziet dit er zo uit: \fullcitebib{VanVreckemEtAl2013}
 
 \paragraph{InBook}
 
@@ -162,7 +160,7 @@ Dit type gebruik je als je wil verwijzen naar een specifiek hoofdstuk in een boe
 
 \begin{description}
   \item[Author] De auteur(s) van het hoofdstuk,
-  \item[Editor] De redacteur(en) van het boek (indien van toepassing),
+  \item[Editor] De redacteur(s) van het boek (indien van toepassing),
   \item[Year] Jaartal waarin het boek werd uitgegeven,
   \item[Title] Titel van het \emph{hoofdstuk},
   \item[Pages] Begin- en eindpagina van het hoofdstuk,
@@ -202,7 +200,8 @@ Voorbeeld
 \end{verbatim}
 
 
-In de bibliografie: \fullcitebib{Meyr2008}
+In de bibliografie ziet dit er zo uit:
+\fullcitebib{Meyr2008}
 
 %% TODO: boek, thesis, manual, \ldots
 
@@ -264,9 +263,9 @@ In de bibliografie: \fullcitebib{Hykes2013}
 \section{Op zoek naar relevante informatie}
 \label{sec:op_zoek_naar_relevante_informatie}
 
-Via de HOGENT bib krijg je toegang tot een grote hoeveelheid wetenschappelijke en vakliteratuur die niet publiek beschikbaar zijn. Dit gaat veel verder dan de boeken die in de bib beschikbaar zijn. Daarnaast zijn immers nog elektronische bronnen (ebooks, tijdschriften, enz.) te raadplegen. Ook (goede) bachelorproeven van vorige jaren kan je op deze manier vinden. De catalogus is te raadplegen via \url{https://bib.hogent.be/zoeken/}.
+Via de HOGENT bib krijg je toegang tot een grote hoeveelheid wetenschappelijke en vakliteratuur die niet publiek beschikbaar zijn. Dit gaat veel verder dan de boeken die in de bib beschikbaar zijn. Daarnaast zijn immers nog elektronische bronnen (ebooks, tijdschriften, enz.) te raadplegen. Ook (goede) bachelorproeven van vorige jaren kan je op deze manier vinden. De catalogus is te raadplegen via \url{https://www.hogent.be/student/bibliotheken/}.
 
-Databanken die niet publiek beschikbaar zijn kan je raadplegen als je op de campus bent, of thuis via Apollox: \url{https://apollox.hogent.be/}. Voor ons vakgebied zijn in het bijzonder volgende databanken interessant:
+Databanken die niet publiek beschikbaar zijn kan je raadplegen als je op de campus bent, of thuis via de HOGENT VPN. Voor ons vakgebied zijn in het bijzonder volgende databanken interessant:
 
 \begin{itemize}
   \item Elsevier ScienceDirect
@@ -275,7 +274,7 @@ Databanken die niet publiek beschikbaar zijn kan je raadplegen als je op de camp
   \item Google Scholar
 \end{itemize}
 
-Google Scholar is een zoekmachine voor wetenschappelijke literatuur die zowel in publiek toegankelijke (``open access'') als betalende publicaties zoekt. Als je Scholar gebruikt vanop de campus of via Apollox, krijg je automatisch toegang tot de publicaties waar de HOGENT bib een abonnement op heeft.
+Google Scholar is een zoekmachine voor wetenschappelijke literatuur die zowel in publiek toegankelijke (``open access'') als betalende publicaties zoekt. Als je Scholar gebruikt vanop de campus of via de VPN, krijg je automatisch toegang tot de publicaties waarop de HOGENT bib een abonnement heeft.
 
 Andere, publiek toegankelijke startpunten voor het zoeken:
 
@@ -288,24 +287,24 @@ Andere, publiek toegankelijke startpunten voor het zoeken:
   
   \item Ga op zoek naar voor je vakgebied relevante conferenties, workshops, symposia, enz. Je hoeft je daarbij niet te beperken tot conferenties in eigen land! Voorbeelden zijn Devoxx\footnote{\url{https://devoxx.be/}} (Java), Google IO\footnote{\url{https://events.google.com/io2016/}} (Android), WWDC\footnote{\url{https://developer.apple.com/wwdc/}} (iOS), Configuration Management Camp\footnote{\url{http://cfgmgmtcamp.eu/}} (Linux Systeembeheer), enz. Lanyrd\footnote{\url{http://lanyrd.com/topics/}} is een website waar je vele conferenties kan terugvinden over allerlei onderwerpen en verspreid over heel de wereld.
   
-  Meer en meer worden de lezingen van conferenties gefilmd en gepubliceerd op Youtube of Vimeo \footnote{Voor Devoxx bijvoorbeeld op \url{https://www.youtube.com/user/parleysdotcom}}. Je kan ook de sprekers opzoeken en nagaan of ze hun slides gepubliceerd hebben op Slideshare\footnote{\url{https://slideshare.net/}} of Speakerdeck\footnote{\url{https://speakerdeck.com/}}.
+  Meer en meer worden de lezingen van conferenties gefilmd en gepubliceerd op Youtube of Vimeo \footnote{Voor Devoxx bijvoorbeeld op \url{https://www.youtube.com/channel/UCCBVCTuk6uJrN3iFV\_3vurg}}. Je kan ook de sprekers opzoeken en nagaan of ze hun slides gepubliceerd hebben op Slideshare\footnote{\url{https://slideshare.net/}} of Speakerdeck\footnote{\url{https://speakerdeck.com/}}.
   
   \item Zijn er lokaal verenigingen die geïnteresseerd zijn in je vakgebied? Bijvoorbeeld OWASP Belgium\footnote{\url{https://www.owasp.org/index.php/Belgium}} (beveiliging van mobiele en webapplicaties). Je kan naar zulke groepen zoeken via Meetup\footnote{\url{https://meetup.com/}} of ook via LinkedIn\footnote{\url{https://www.linkedin.com/}} (zoek specifiek naar groepen zoals het Belgian IT Infrastructure Network\footnote{\url{https://www.linkedin.com/groups/2092569}}). Kijk eens na of er binnenkort evenementen in de buurt zijn en ga er naartoe.
   
   \item Wie zijn de belangrijkste namen in de ``community''? Keynote-speakers op conferenties, auteurs van de belangrijkste boeken over het onderwerp, enz. Volg deze personen op Twitter, zoek uit of ze een blog hebben, actief zijn op LinkedIn, enz. Lees al wat je kan vinden dat ze geschreven hebben de laatste jaren.
   
-  \item Zoek uit of er nieuwsbrieven bestaan over je onderwerp, die periodiek updates uit sturen over de actualiteit binnen dat vakgebied. Voorbeelden zijn Cron.Weekly\footnote{\url{https://www.cronweekly.com/}} (Linux systeembeheer) of DevOps Weekly\footnote{\url{http://www.devopsweekly.com/}}.
+  \item Zoek uit of er nieuwsbrieven bestaan over je onderwerp, die periodiek updates uit sturen over de actualiteit binnen dat vakgebied. Voorbeelden zijn Cron.Weekly\footnote{\url{https://www.cronweekly.com/}} (Linux systeembeheer), DevOps Weekly\footnote{\url{http://www.devopsweekly.com/}} of JS Weekly (en aanverwanten)\footnote{\url{https://javascriptweekly.com/}}.
 \end{itemize}
 
 Het bijhouden van al je bronnen is tijdrovend, maar essentieel voor een goed onderbouwde bachelorproef! Besteed hier dus de nodige aandacht aan en controleer of de informatie over je bronnen correct is ingevuld in JabRef.
 
-Alle relevante informatie die je in de loop van je onderzoek hebt verzameld en gelezen wordt dan gesynthetiseerd in een doorlopende tekst waarin je in je eigen woorden de situatie in het onderzoeksdomein schetst, met op gepaste plaatsen verwijzingen naar de literatuur. Hier gaan we dieper op in in Hoofdstuk~\ref{ch:schrijven}.
+Alle relevante informatie die je in de loop van je onderzoek hebt verzameld en gelezen wordt dan gesynthetiseerd in een doorlopende tekst waarin je in je eigen woorden de situatie in het onderzoeksdomein schetst, met op gepaste plaatsen verwijzingen naar de literatuur. Hierop gaan we dieper in in Hoofdstuk~\ref{ch:schrijven}.
 
 \section{Samenvatting}
 \label{sec:bibliografie-samenvatting}
 
 \begin{itemize}
-  \item Zet je bibliografische databank op (bv. met Jabref) voordat je op zoek gaat naar informatie over je onderwerp en hou van wat je vindt nauwgezet zoveel mogelijk informatie bij.
+  \item Zet je bibliografische databank op (bv. met JabRef) voordat je op zoek gaat naar informatie over je onderwerp en hou van wat je vindt nauwgezet zoveel mogelijk informatie bij.
   \item Zorg dat je altijd minstens de auteur, titel en jaartal hebt en daarnaast minstens alle andere verplichte informatie voor dat type publicatie correct noteert.
   \item Naast het raadplegen van publiek toegankelijke bronnen is het ook interessant om via de HOGENT bib informatie over je onderwerp op te zoeken.
   \item Gebruik de APA stijl.
