@@ -1,0 +1,45 @@
+\documentclass[english,dit,report]{hogentreport}
+
+\usepackage{lipsum}
+\usepackage{subcaption}
+
+\graphicspath{{img/}}
+
+\addbibresource{examples.bib}  % Voorbeelden voor het hst over bibliografie
+\addbibresource{references.bib}  % Referenties in de tekst
+
+\author{Bert {Van Vreckem}, Thomas Aelbrecht, Koen Mertens}
+\title[IT Syllabus]{Research Methods}
+\academicyear{2021--2022}
+
+\begin{document}
+
+\maketitle
+
+\include{preface}
+
+%---------- Inhoudstafel ------------------------------------------------------
+%\usechapterimagefalse
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+%---------- Corpus ------------------------------------------------------------
+
+\include{0-introduction}
+\include{1-latex-prep}
+\include{2-researchquestion}
+\include{3-literaturestudy}
+\include{4-bibliography}
+\include{5-researchmethods}
+\include{6-reporting}
+
+%---------- Back matter -------------------------------------------------------
+% In de bibliografie niet de bronnen uit voorbeeld.bib afdrukken. Alle bronnen
+% in voorbeeld.bib moeten in het veld ``keywords'' ook de term ``voorbeeld''
+% bevatten.
+\printbibliography[notkeyword=voorbeeld]
+\addcontentsline{toc}{chapter}{\textcolor{title}{\IfLanguageName{dutch}{Bibliografie}{Bibliography}}}
+
+\end{document}
