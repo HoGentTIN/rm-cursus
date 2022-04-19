@@ -1,20 +1,20 @@
 \chapter{Preparation, working with \LaTeX{}}
 \label{ch:preparation}
 
-In this chapter we treat the initial work, starting to write a bachelor's thesis. You will find some recommendations useful tools and the research process.
+In this chapter we treat the initial work, starting to write a bachelor's thesis. You will find some recommendations on useful tools and the research process.
 
 \section{{\LaTeX} use}
 \label{sec:latex-use}
 
-Most students are used to writing formatted text in a classic word processor environment(typically MS Word). For your bachelor's thesis it is advisable to abandon this habit.
+Most students are used to writing formatted text in a classic word processor environment (typically MS Word). For your bachelor's thesis it is advisable to abandon this habit.
 
-Word, especially with the default template, gives a layout that is not suitable for publication. Once the length and complexity of a Word document increases (and it certainly does with a thesis), you will have to deal with inconsistencies in the layout of your text, page numbering and poorly positioned images.
+Word, especially with the default template, produces a layout that is not suitable for publication. Once the length and complexity of a Word document increases (and it certainly does with a thesis), you will have to deal with inconsistencies in the layout of your text, page numbering and poorly positioned images.
 
 When you copy text from another (preparatory) document or from a website, the original layout is copied. If it's not consistent with your main document, you'll have to adjust everything. This is a very time consuming and error prone job.
 
-A classic word processor based on the WYSIWYG principle\footnote{\emph{What You See Is What You Get}, as you may know}, allows you to fine-tune where text appears on the paper, but actually this great freedom is a disadvantage in this case. A sleek and professional design is a specialty that requires great attention to often finicky details. As a computer scientist, we do not have the necessary knowledge to realize this. Moreover, when you spend a significant amount of time designing your document, you are distracted from the core goal: the content of the text!
+A classic word processor based on the WYSIWYG principle\footnote{What You See Is What You Get}, allows you to fine-tune the positioning of the text in the paper, but actually this great freedom will turn out as a disadvantage in this case. A sleek and professional design is a specialty that requires great attention to often finicky details. As a computer scientist, we do not have the necessary knowledge to realize this. Moreover, when you spend a significant amount of time designing your document, you are distracted from the core goal: the content of the text!
 
-Another disadvantage of the classic word processor is the binary file format. This makes it impossible to put a document into a version control system (see Section~\ref{sec:version control system}). Soon different versions of the document start to live side by side: `bach ​​test 3.docx', `bach ​​test 5 March 30.docx', `final draft.docx', `final draft after feedback.docx', `final final draft. docx' \dots. You have versions on your laptop, on dropbox, on your fixed PC and in your mailbox. In the long run, the overview is lost, you forget to copy pieces of text or you make other mistakes.
+Another disadvantage of the classic word processor is the binary file format. This makes it impossible to put a document into a version control system (see Section~\ref{sec:versioncontrolsystem}). Soon different versions of the document start to live side by side: `bach ​​test 3.docx', `bach ​​test 5 March 30.docx', `final draft.docx', `final draft after feedback.docx', `final final draft. docx' \dots. You have versions on your laptop, on dropbox, on your fixed PC and in your mailbox. In the long run, the overview is lost, you forget to copy pieces of text or you make other mistakes.
 
 {\LaTeX} is recommended for formatting a long text with a professional and sleek design. As you know, this is a \emph{text typesetting system} with a markup language (like HTML) that specializes in formatting text on paper. You write source code in {\LaTeX} markup, a `compiler' generates a PDF. {\LaTeX} is text based, so you can put this in a version control system.
 
@@ -22,19 +22,19 @@ Admittedly, {\LaTeX} does have some drawbacks. There's a learning curve that sho
 
 For the rest of this guide, we'll assume you're using {\LaTeX}. Yet, this is not intended to be a {\LaTeX} manual, there are plenty of other sources available for that~\parencite{Oetiker2015}.
 
-You can find a {\LaTeX} template for preparing the bachelor's thesis in the Github repository \url{https://github.com/HoGentTIN/bachproef-latex-template}. You can download the template via the green button at the top right. Cloning the repository or creating a fork is not recommended. After all, doing this will provide you with the entire history of the template, which is not relevant to your work.
+You can find a {\LaTeX} template for preparing the bachelor's thesis in the Github repository \url{https://github.com/HoGentTIN/bachproef-latex-template}. Don't forget to change the language to English. You can download the template via the green button at the top right. Cloning the repository or creating a fork is not recommended. After all, doing this will provide you with the entire history of the template, which is not relevant to your work.
 
 
 \section{Bibliographic database}
 \label{sec:bibliografic-database}
 
-A mandatory part of a bachelor's thesis is a literature study. This is to familiarize yourself with the research domain (see Chapter~\ref{ch:literature research}). It is important to keep track of what you read, so that you can refer to your sources when writing the introduction. Referring to sources and setting up a bibliography must be done in a strictly defined manner. This is something that you don't have to do manually, there are several software packages that largely automate this: bibliographic databases.
+A mandatory part of a bachelor's thesis is a literature study. This is to familiarize yourself with the research domain (see Chapter~\ref{ch:literaturestudy}). It is important to keep track of what you read, so that you can refer to your sources when writing the introduction. Referring to sources and setting up a bibliography must be done in a strictly defined manner. This is something that you don't have to do manually, there are several software packages that largely automate this: bibliographic databases.
 
 A bibliographic database allows you to keep structured metadata about the works read: title, author, year, and such, but also (clickable) URLs, PDFs of articles, notes, etc.
 
 There are several possibilities, but JabRef\footnote{\url{http://www.jabref.org/}} is perhaps the most interesting for our purposes. JabRef is an open source bibliographic database written in Java and ideally suited for working with {\LaTeX}. It uses the same file format as Bib{\LaTeX}, the bibliography system built into {\LaTeX}.
 
-The way in which a bibliography and references in the text should be written is fixed. However, there are different formatting styles. One of these is the so-called \textbf{APA style} which comes from the American Psychological Association (APA). It is the main standard for publications in the field of social sciences. The official guide to the APA style is very extensive and can therefore be inconvenient to use. The {\LaTeX} template for the bachelor's thesis already has the APA style built-in, so you don't have to worry about the correct formatting at all. This happens automatically, provided you keep the bibliographic data (eg title, author, year of publication) correctly in Jabref. More about that in Section~\ref{sec:publications_keeping_in_jabref}.
+The way in which a bibliography and references in the text should be written is fixed. However, there are different formatting styles. One of these is the so-called \textbf{APA style} which comes from the American Psychological Association (APA). It is the main standard for publications in the field of social sciences. The official guide to the APA style is very extensive and can therefore be inconvenient to use. The {\LaTeX} template for the bachelor's thesis already has the APA style built-in, so you don't have to worry about the correct formatting at all. This happens automatically, provided you keep the bibliographic data (eg title, author, year of publication) correctly in Jabref. More about that in Section~\ref{sec:publicationsjabref}.
 
 \textbf{Please note!!} The use of the APA style is mandatory throughout HOGENT. This applies to the layout of the bibliography as well as references to sources in the text.
 

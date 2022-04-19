@@ -1,7 +1,7 @@
-\chapter{Onderzoeksmethoden}
-\label{ch:onderzoeksmethoden}
+\chapter{Research methods}
+\label{ch:researchmethods}
 
-In dit onderwerp vind je aanbevelingen in verband met een aantal vaak gebruikte onderzoeksmethoden. Meer bepaald bespreken we de aanpak van een vergelijkende studie, hoe je correct experimenten opzet en hoe je op een correcte manier rapporteert over bekomen resultaten (in het bijzonder cijfermateriaal).
+In this chapter you will find recommendations related to some commonly used research methods. More specifically, we discuss the approach of a comparative study, how to correctly set up experiments and how to report correctly on the results obtained (in particular figures).
 
 % Belang van correcte methodologie
 %
@@ -22,109 +22,109 @@ In dit onderwerp vind je aanbevelingen in verband met een aantal vaak gebruikte 
 % wanneer pas je elk toe?
 % Vaak heb je een combinatie van deze technieken nodig om je onderzoeksvra(a)g(en) goed en onderbouwd te kunnen beantwoorden.
 
-\section{De vergelijkende studie}
-\label{sec:vergelijkende-studie}
+\section{The comparative study}
+\label{sec:comparativestudy}
 
-Een type onderwerp dat vaak gekozen wordt voor een bachelorproef is een vergelijkende studie. Je bent op zoek naar een oplossing voor een probleem in de vorm van een software- of hardware-product, platform, dienst, enz. De bedoeling van de studie is om alle mogelijke alternatieven naast elkaar te zetten en een keuze te maken over de meest geschikte.
+A topic that is often chosen for a bachelor's thesis is a comparative study. You are looking for a solution for a problem in the form of a software or hardware product, platform, service, etc. The aim of the study is to compare all possible alternatives and to make a choice for the most suitable one.
 
-De ervaring leert dat een vergelijkende studie pas echt goed is als er een concreet doel is, een reële situatie waar de geselecteerde oplossing ook werkelijk zal toegepast worden. Het gevaar bestaat dat de studie zich beperkt tot het achter elkaar opsommen van enkele arbitrair gekozen mogelijkheden. Er volgt een paragraafje uitleg, soms gewoon van Wikipedia gehaald, met een opsomming van wat voor- en nadelen, maar niet gestructureerd en zonder rode draad. Een bepaald aspect als ``gebruiksvriendelijkheid'' wordt dan bijvoorbeeld in één product besproken, maar niet voor de andere, enz. De eigen inbreng is dan miniem: een dagje zoeken op Wikipedia, samenvatten of verder uitschrijven, klaar. Dit is op zich dus onvoldoende.
+Experience shows that a comparative study is only really good if there is a concrete goal, a real situation where the selected solution will actually be applied. There is a threat that the study will be limited to listing a few arbitrarily chosen options. A section of explanation follows, sometimes simply taken from Wikipedia, with a summary of some advantages and disadvantages, but not structured and without a common thread. A certain aspect such as ``user-friendliness'' is then discussed in one product, but not for the other, etc. Your own input is then minimal: a day's search on Wikipedia, summarize or further write it out, done. This is therefore insufficient.
 
-Maar hoe pak je het dan \emph{wel} aan?
+But how \emph{do} you go about then?
 
-Laat ons veronderstellen dat je na je afstuderen aan de slag wil als webontwikkelaar, en je bent op zoek naar een geschikt PHP-framework om je websites mee te bouwen.
+Let's assume that you want to work as a web developer after graduation, and you are looking for a suitable PHP framework to build your websites with.
 
-\subsection{Requirements-analyse}
-\label{ssec:requirements-analyse}
+\subsection{Requirements-analysis}
+\label{ssec:requirements-analysis}
 
-Om een goede keuze te maken begin je met het verzamelen van \emph{requirements}, zowel \textit{functionele} als \emph{niet-functionele}, bijvoorbeeld:
+To make a good choice, start by collecting \emph{requirements}, both \textit{functional} and \emph{non-functional}, e.g.:
 
 \begin{itemize}
-\item Functionele requirements
+\item Functional requirements
   \begin{itemize}
-  \item Ondersteuning voor HTML5/CSS3
-  \item Responsive design
-  \item Er moet een authenticatiemodule in zitten dat OpenID, Facebook- en Google-authenticatie ondersteunt
+ \item HTML5/CSS3 support
+ \item Responsive design
+ \item It must contain an authentication module that supports OpenID, Facebook and Google authentication
   \item \ldots
   \end{itemize}
-\item Niet-functionele requirements
+\item Non-functional requirements
   \begin{itemize}
-  \item Moet bestand zijn tegen de top-10 beveiligingsproblemen van OWASP\footnote{\url{https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project}}
-  \item Wachtwoorden worden opgeslagen volgens de state-of-the art (\emph{salted} en \emph{hashed})
-  \item Moet open source zijn
-  \item Moet gratis zijn
+ \item Must be able to withstand OWASP's top-10 vulnerabilities\footnote{\url{https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project}}
+ \item Passwords are stored according to the state-of-the-art (\emph{salted} and \emph{hashed})
+ \item Must be open source
+ \item Must be free
   \item \ldots
   \end{itemize}
 \end{itemize}
 
-Als je het onderzoek doet voor een ``klant'' (i.e. je co-promotor), dan betrek je uiteraard alle belanghebbenden bij dit proces! Je lijst de requirements op en verdeelt ze onder naar belangrijkheid, bijvoorbeeld via de MoSCoW-techniek~\parencite{Nordenstam2014}. Je verdeelt de requirements dan in categorieën zoals ``must-have'', ``should-have'' en ``nice-to-have''.
+If you are doing the research for a ``client'' (i.e. your co-promoter), then you naturally involve all stakeholders in this process! You list the requirements and divide them according to importance, for example using the MoSCoW technique~\parencite{Nordenstam2014}. You then divide the requirements into categories such as ``must-have'', ``should-have'' and ``nice-to-have''.
 
 \subsection{Long list}
 \label{ssec:long-list}
 
-Dan zoek je \emph{zoveel mogelijk} alternatieven die in aanmerking komen om gebruikt te worden, m.a.w.~al diegenen die je kan vinden. Je noemt ze in deze \emph{long list} (die soms kan bestaan uit tientallen alternatieven) bij naam, met eventueel vermelding van een website en een beschrijving in één zin. Elk alternatief toets je af aan de requirements, voor zover dit al mogelijk is aan de hand van informatie die je op de website vindt of via andere bronnen. Zaken die je niet kan verifiëren laat je gewoon open om later na te kijken of misschien zelfs te negeren (als het bv.~gaat om een onbelangrijke feature, of als verschillende andere must-haves niet voldaan zijn). Je sorteert de long list dan volgens het aantal voldane requirements, en maakt hier een overzichtelijke tabel van. Hopelijk heb je een aantal alternatieven overgehouden die voldoen aan alle must-haves en zoveel mogelijk should-haves en nice-to-haves.
+Then you look for \emph{as many as possible} alternatives that are eligible to be used, i.e. ~all the ones you can find. You mention them in this \emph{long list} (which can sometimes consist of dozens of alternatives) by name, possibly mentioning a website and a description in one sentence. You check each alternative against the requirements, if this is possible already based on the information that you find on the website or from other sources. You just leave things you can't verify to check later or maybe even ignore them (e.g. if it's an insignificant feature, or if several other must-haves aren't met). You then sort the long list according to the number of requirements met, and make a clear table of this. Hopefully you've been left with some alternatives that meet all the must-haves and as many should-haves and nice-to-haves as possible.
 
-\subsection{Short list en proof-of-concept}
+\subsection{Short list and proof-of-concept (POC)}
 \label{ssec:short-list-poc}
 
- De meest veelbelovende alternatieven weerhoud je voor de volgende fase. De alternatieven in deze \emph{short list} ga je in meer detail bespreken en verder tegenover elkaar afwegen. Zet eventueel een \emph{proof-of-concept} op (zie Sectie \ref{sec:poc-testopstelling}), waarin je één of enkele van de meest veelbelovende alternatieven uitprobeert aan de hand van eenzelfde vastgelegd \emph{scenario} waarin je de requirements die je nog niet hebt kunnen verifiëren aan bod laat komen.
+Keep the most promising alternatives for the next phase. You will discuss the alternatives in this \emph{short list} in more detail and compare them further. If necessary, set up a \emph{proof-of-concept} (see Section \ref{sec:poctestsetup}), in which you try out one or more of the most promising alternatives based on the same defined \emph{scenario} in which you discuss the requirements that you have not yet been able to verify.
 
-\subsection{Conclusie}
-\label{ssec:vgl-studie-conclusie}
+\subsection{Conclusion}
+\label{ssec:comparativestudyconclusion}
 
-Tenslotte geef je je \emph{aanbeveling}, het alternatief dat het beste aansluit bij de requirements, en wat eventueel nog moet gedaan worden om het nog beter geschikt te maken.
+Finally, you give your \emph{recommendation}, the alternative that best meets the requirements, and what else needs to be done to make it even more suitable.
 
-\section{Proof-of-concept of testopstelling}
-\label{sec:poc-testopstelling}
+\section{Proof-of-concept or test setup}
+\label{sec:poctestsetup}
 
-Met een proof-of-concept of testopstelling wil je aantonen dat een voorgestelde of veelbelovende oplossing voor de onderzoeksvraag ook realiseerbaar is in de praktijk. Vaak is het nodig verschillende varianten naast elkaar op te zetten, zodat je nog onderling kan vergelijken.
+With a proof-of-concept or test setup you want to demonstrate that a proposed or promising solution for the research question can also be realized in practice. It is often necessary to set up different variants next to each other, so that you can still compare.
 
-Een goede testopstelling voldoet aan drie eigenschappen \autocite{Liberman2015}:
+A good test setup satisfies three properties \autocite{Liberman2015}:
 
 \begin{description}
-  \item[Reproduceerbaarheid] in staat zijn om de testopstelling opnieuw op te zetten (eventueel door een onafhankelijke partij) en de analyse opnieuw uit te voeren zodat je kan verifiëren dat je gelijkaardige resultaten krijgt.
-  \item[Repliceerbaarheid] lijkt op het voorgaande, maar is sterker uitgedrukt: bij een repliceerbare testopstelling is het mogelijk dat een onafhankelijke partij deze \textit{exact} opnieuw kan opzetten en dezelfde resultaten zal bekomen.
-  \item[Herbruikbaarheid] varianten kunnen opzetten van de testomgeving zodat deze onderling kunnen vergeleken worden.
+  \item[Reproducibility] be able to rebuild the test setup (possibly by an independent party) and run the analysis again so that you can verify that you get similar results.
+  \item[Replicability] is similar to the above, but expressed more strongly: with a replicable test set-up it is possible that an independent party can repeat this \textit{exact} setup and obtain the same results.
+  \item[Reusability] can set up variants of the test environment so that they can be compared.
 \end{description}
 
-De beste manier om dit te bereiken is door het proces te automatiseren.
+The best way to achieve this is to automate the process.
 
-\subsection{Reproduceerbaarheid}
-\label{ssec:reproduceerbaarheid}
+\subsection{Reproducibility}
+\label{ssec:reproducibility}
 
-Een minimumverwachting van de tekst van een bachelorproef is dat de lezer in staat moet zijn om aan de hand van de beschrijving de testopstelling te reproduceren en je conclusies moet kunnen verifiëren. Dat betekent ook dat je beschrijving voldoende gedetailleerd moet zijn. Geef aan het begin van deze sectie in je tekst een duidelijke afbeelding met een schema van de opgezette testomgeving. Beschrijf vervolgens in detail:
+A minimum expectation of a bachelor's thesis text is that the reader must be able to reproduce the test set-up on the basis of the description and must be able to verify your conclusions. That also means that your description must be sufficiently detailed. At the beginning of this section, give a clear picture in your text with a schema of the set up test environment. Then describe in detail:
 
 \begin{itemize}
-  \item Welke hardware werd er gebruikt? Computers, netwerkapparatuur, andere ict-infrastructuur. Welke specificaties hebben deze apparaten (CPU, geheugen, type en grootte harde schijven, snelheid netwerkinterfaces, enz.)?
-  \item Welke softwarepakketten zijn er geïnstalleerd die relevant zijn voor de testopstelling? Welke specifieke edities en/of versienummers?
-  \item Hoe is de installatieprocedure precies verlopen? Welke instellingen zijn er aangepast, en hoe zijn alle componenten geconfigureerd?
+ \item What hardware was used? Computers, network equipment, other ICT infrastructure. What specifications do these devices have (CPU, memory, hard drive type and size, network interface speed, etc.)?
+ \item Which software packages are installed that are relevant for the test setup? Which specific editions and/or version numbers?
+ \item How exactly did the installation procedure go? Which settings have been adjusted, and how are all components configured?
 \end{itemize}
 
-\subsection{Repliceerbaarheid}
-\label{ssec:repliceerbaarheid}
+\subsection{Replicability}
+\label{ssec:replicability}
 
-Het is zowel voor jezelf als voor de lezer van je bachelorproef belangrijk om het opzetten van de testomgeving zo veel mogelijk te automatiseren, bijvoorbeeld door het schrijven van een installatiescript. Op deze manier bereik je de \textit{repliceerbaarheid} van je testopstelling.
+It is important for both you and the reader of your bachelor's thesis to automate the setting up of the test environment as much as possible, for example by writing an installation script. In this way you achieve the \textit{replicability} of your test setup.
 
-Voor veel situaties kan je een proof-of-concept uitwerken met virtuele machines. Op die manier creëer je een afgeschermde omgeving zonder dat je extra software moet installeren op je fysieke systeem. Vagrant\footnote{\url{https://www.vagrantup.com/}} is een interessante tool om reproduceerbare virtuele testomgevingen volledig geautomatiseerd op te zetten. Het is zelf geen virtualisatiesysteem, maar het spreekt VirtualBox, VMWare of Hyper-V aan vanop de command-line. Je beschrijft in een configuratiebestand (\texttt{Vagrantfile}) welke VMs je nodig hebt, met hoeveel processorkernen/geheugen/schijfruimte, met welk besturingssysteem, enz. Via een script of configuration management system (zoals Ansible) kan je de precieze configuratie van de VMs beschrijven (installatie software, gebruikers, netwerkservices, configuratiebestanden, enz.). De code/configuratie om een Va\-grant-\-omgeving op te zetten is erg compact, volledig tekstgebaseerd en kan dus worden bijgehouden in een versiebeheersysteem.
+For many situations you can develop a proof-of-concept with virtual machines. In this way you create a protected environment without having to install additional software on your physical system. Vagrant\footnote{\url{https://www.vagrantup.com/}} is an interesting tool to set up fully automated reproducible virtual test environments. It is not itself a virtualization system, but it addresses VirtualBox, VMWare or Hyper-V from the command-line. You describe in a configuration file (\texttt{Vagrantfile}) which VMs you need, with how many processor cores/memory/disk space, with which operating system, etc. Via a script or configuration management system (such as Ansible) you can determine the precise configuration of the Describe VMs (software installation, users, network services, configuration files, etc.). The code/configuration to set up a Va\-grant-\ environment is very compact, completely text-based and thus can be maintained in a version control system.
 
-Ook Docker\footnote{\url{https://docker.com/}} is een interessante tool hiervoor. Docker is een vorm van zgn.~containervirtualisatie. Virtuele machines (containers) hebben geen eigen OS, maar bevatten in principe enkel een applicatie. Het OS van het fysieke systeem wordt hergebruikt door de containers. Dat maakt dat containers een stuk efficiënter zijn qua schijf- en geheugengebruik voor het fysieke systeem. Er zijn echter een aantal beperkingen waardoor Docker niet altijd bruikbaar is als platform voor een testopstelling.
+Docker\footnote{\url{https://docker.com/}} is also an interesting tool for this. Docker is a form of so-called container virtualization. Virtual machines (containers) do not have their own OS, but in principle only contain an application. The OS of the physical system is reused by the containers. This makes containers a lot more efficient in terms of disk and memory usage for the physical system. However, there are a number of limitations that make Docker not always useful as a platform for a test setup.
 
-Als je merkt dat je een fout gemaakt hebt in de configuratie van je testopstelling, dan kan je het installatiescript aanpassen en de gehele testomgeving opnieuw opzetten. Als je dit manueel zou moeten doen, ben je wellicht minstens een dag kwijt. Bovendien heb je de kans dat je een kleinigheid over het hoofd ziet en dus niet in staat bent de testomgeving opnieuw exact te replicerne. Het initialiseren van een Linux-VM met Vagrant of Docker duurt typisch slechts enkele minuten. Windows-systemen nemen een stuk meer tijd in beslag. Het OS is op zich al een stuk groter\footnote{Ca.~4GB voor Windows Server Core tegenover 256 à 512MB voor een minimale installatie van een Linux distributie. Installatie van applicaties hebben nog een bijkomende impact op de schijfgrootte van de VM.}
+If you notice that you have made a mistake in the configuration of your test setup, you can adjust the installation script and set up the entire test environment again. If you had to do this manually, you might lose at least a day. In addition, there is a chance that you will overlook a small detail and therefore not be able to replicate the test environment exactly again. Initializing a Linux VM with Vagrant or Docker typically only takes a few minutes. Windows systems take a lot more time. The OS itself is a lot bigger\footnote{Approx.~4GB for Windows Server Core compared to 256 to 512MB for a minimal installation of a Linux distribution. Application installations have an additional impact on the disk size of the VM.}
 
-Een uitgebreide handleiding van Vagrant of Docker valt buiten het bereik van deze gids. Een voorbeeld ter illustratie is te vinden op \url{https://github.com/bertvv/lampstack}. Hier wordt een Apache webserver opgezet met een MariaDB databank, PHPMyAdmin, en Wordpress.
+A comprehensive tutorial of Vagrant or Docker is beyond the scope of this guide. An example to illustrate can be found at \url{https://github.com/bertvv/lampstack}. Here an Apache web server is set up with a MariaDB database, PHPMyAdmin, and Wordpress.
 
-\subsection{Herbruikbaarheid}
-\label{ssec:herbruikbaarheid}
+\subsection{Reusability}
+\label{ssec:reusability}
 
-Door het gehele proces te automatiseren creëer je een bijkomend voordeel: het is een stuk makkelijker om gelijkaardige varianten van een testopstelling te creëren. Stel dat je de performantie-impact van een cache op een databasesysteem wil meten. De installatie van beide varianten (met/zonder cache) zijn zeer gelijkaardig. In een Vagant-omgeving kan je 2 VMs creëren, met hetzelfde installatiescript voor de basisopstelling, en een apart script om de verschillende configuratie-varianten te realiseren.
+By automating the entire process, you create an additional advantage: it is a lot easier to create similar variants of a test setup. Suppose you want to measure the performance impact of a cache on a database system. The installation of both variants (with/without cache) are very similar. In a Vagant environment you can create 2 VMs, with the same installation script for the basic setup, and a separate script to realize the different configuration variants.
 
-\section{Experimenten uitvoeren en verzamelen van kwantitatieve data}
-\label{sec:experimenten-uitvoeren}
+\section{Conducting experiments and collecting quantitative data}
+\label{sec:conductingexpertiments}
 
-Wanneer je een experiment opzet waarbij je kwantitatieve data gaat verzamelen, bijvoorbeeld voor een performantievergelijking, gelden dezelfde richtlijnen als bij een proof-of-concept: het is belangrijk dat die reproduceerbaar, repliceerbaar en herbruikbaar is. Wellicht start je vanaf een vooraf gedefinieerde testopstelling, en ga je herhaaldelijk eenzelfde handeling uitvoeren en metingen doen.
+When you set up an experiment in which you are going to collect quantitative data, for example for a performance comparison, the same guidelines apply as for a proof-of-concept: it is important that it is reproducible, replicable and reusable. You may start from a predefined test setup, and you will repeatedly perform the same action and take measurements.
 
-Ook hier is het belangrijk het uitvoeren van het experiment en het opslaan van testresultaten te automatiseren, bijvoorbeeld aan de hand van een shell-script. Als je een experiment manueel moet uitvoeren, wordt dit al snel een erg tijdrovende bezigheid. Stel je voor dat je telkens je het experiment wil uitvoeren op een knop moet drukken, ongeveer vijf à tien minuten moet wachten en dan de uitvoer naar Excel moet kopiëren en plakken en dan het rekenblad nog eens moet bewerken zodat je enkel de cijfers overhoudt om statistisch te verwerken. Deze werkwijze is onhoudbaar. Je moet immers voortdurend aanwezig en aandachtig blijven tijdens het uitvoeren. Bij elke manuele handeling is er bovendien een kans op het maken van fouten.
+Here too it is important to automate the execution of the experiment and to save your test results, for example by means of a shell script. If you have to perform an experiment manually, this quickly becomes a very time-consuming activity. Imagine that every time you want to run the experiment you have to press a button, wait about five to ten minutes and then copy and paste the output to Excel and then edit the spreadsheet again so that you are only left with the numbers to statistically to process. This method is untenable. After all, you have to be constantly present and attentive while performing. Moreover, with every manual operation there is a chance of making mistakes.
 
-Een script dat het experiment in verschillende varianten kan uitvoeren zonder interactie door de gebruiker, en ook meteen de resultaten kan opslaan in een geschikt bestandsformaat bespaart je enorm veel tijd. Je kan het experiment 's nachts laten draaien en op die manier kan je het ook voldoende herhalen om statistisch bruikbare resultaten te bekomen. Als een experiment mislukt, volstaat het om het script te verbeteren en het opnieuw uit te voeren. Het is ook makkelijker om verschillende varianten te schrijven (zoals het eerdere voorbeeld van database-queries met of zonder cache).
+A script that can run the experiment in different variants without user interaction, and also immediately saves the results in a suitable file format saves you a lot of time. You can run the experiment overnight and that way you can repeat it enough to get statistically useful results. If an experiment fails, all you need to do is improve the script and run it again. It is also easier to write different variants (like the earlier example of database queries with or without cache).
 
 % TODO:
 % - vergelijk je de juiste dingen? Zijn neveneffecten uitgeschakeld?

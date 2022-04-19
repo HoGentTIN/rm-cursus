@@ -1,5 +1,5 @@
-\chapter{A bibliografic database}
-\label{ch:bibliografie}
+\chapter{A bibliographic database}
+\label{ch:bibliography}
 
 \section{Gathering publications in JabRef}
 \label{sec:publicationsjabref}
@@ -8,14 +8,14 @@ Before you start searching for information, first prepare yourself to keep all s
 
 It is impossible to manually maintain a bibliography and entries in the text. Fortunately, there are several applications that specialized in maintaining a bibliographic database, so-called \emph{reference managers}.
 
-HOGENT proposes Endnote itself, but the disadvantage is that this is a commercial application, which you no longer have access to after you graduate. This section introduces JabRef, an open source bibliographic record keeping application developed specifically for {\LaTeX}. JabRef uses the file format of Bib{\LaTeX}, the built-in bibliography system.
+HOGENT proposes Endnote, but Endnote is a commercial application, which you no longer have free access to after you graduate. This section introduces JabRef, an open source bibliographic record keeping application developed specifically for {\LaTeX}. JabRef uses the file format of Bib{\LaTeX}, the built-in bibliography system.
 
 If you need more detailed information about Bib{\LaTeX} that is not in this guide, please refer to the manual~\autocite{LehmanEtAl2016}.
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{jabref-screenshot}
-  \caption[JabRef]{\textbf{JabRef.} In the center of the user interface you will find an \emph{overview} of the different sources in this bibliographic database, in this case four. The \emph{pdf-icons} on the left of the first and fourth source indicate that the source is stored locally as a PDF. Clicking this will open the PDF. The \emph{globe icons} at the second and fourth source indicate a url that you can open in the web browser when you click on it. At the bottom is a \emph{detail pane} with the tracked data for the fourth source. These are divided into different tabs, including required data (``Required fields''), optional (``Optional'') and others (``Other fields''), etc. In this case, the names of the authors are filled in (see Section~\ref{sub:general_bibliographical_data}). In this case there are no editors (``Editors''), and that field is left empty. The field ``Bibtexkey'' at the bottom is automatically generated (see Section~\ref{sub:jabref_settings}) by clicking on the \emph{key symbol} in the toolbar on the left.} 
+  \caption[JabRef]{\textbf{JabRef.} In the center of the user interface you will find an \emph{overview} of the different sources in this bibliographic database, in this case four. The \emph{pdf-icons} on the left of the first and fourth source indicate that the source is stored locally as a PDF. Clicking this will open the PDF. The \emph{globe icons} at the second and fourth source indicate a url that you can open in the web browser when you click on it. At the bottom is a \emph{detail pane} with the tracked data for the fourth source. These are divided into different tabs, including required data (``Required fields''), optional (``Optional'') and others (``Other fields''), etc. In this case, the names of the authors are filled in (see Section~\ref{sub:generalbibliographicaldata}). In this case there are no editors (``Editors''), and that field is left empty. The field ``Bibtexkey'' at the bottom is automatically generated (see Section~\ref{sub:jabrefsettings}) by clicking on the \emph{key symbol}.} 
   \label{fig:jabref}
 \end{figure}
 
@@ -33,7 +33,7 @@ You can download JabRef from \url{http://www.jabref.org/} and install it on Wind
 You can check the other settings and adjust them to your liking, but the ones listed above are the most important.
 
 \subsection{General bibliographic data}
-\label{sub:general_bibliographic_data}
+\label{sub:generalbibliographicaldata}
 
 The purpose of a bibliography is to allow the reader to look up your sources themselves and to assess them for reliability. This means that you must provide sufficient information so that the source can be found. Depending on the type of source (article in a journal, book, website, etc.) you have to provide different information. This will be explored further on. Three elements are \emph{always} essential: the \textbf{author}, the \textbf{title} of the source and the \textbf{year} (or date) of publication. If one of these three is missing, it becomes very difficult to evaluate the origin and quality of the resource. You can keep that kind of sources for information, but they are usually not suitable for inclusion in a bibliography. After all, if the author is unknown, it is not possible to judge whether he or she has the authority to write about the subject in an objective and in-depth manner. If the year is not specified, it is very difficult to determine to what extent this source has not yet been superseded by more recent developments in the field.
 
@@ -48,9 +48,9 @@ Some tips when entering author names:
     \item In addition to an author field, there is also a field for any editor(s) (\emph{editor}). At least one of the two must be completed, sometimes both. This happens, for example, in a book that is composed of chapters that are written by different authors and where you want to refer to one specific chapter. You will find an example of this further on in this text.   
 \end{itemize}
 
-Note that in a bibliography \textbf{only works referenced from the text} may be included. {\LaTeX} does this automatically by default, so if you're missing sources in the list, it means you didn't use them in the text.
+Note that in a bibliography, \textbf{only works referenced from the text} may be included. {\LaTeX} does this automatically by default, so if you're missing sources in the list, it means you didn't use them in the text.
 
-Always try to keep as much information as possible about your sources, so that it will be easier to find them later. Although this is a time consuming process, and not all of this information is included in the bibliography, consulting the database is much easier. Pay sufficient attention to this and also check the result in the bibliography itself. Are the authors represented correctly? Do you have a year? Has a URL and date of consultation been specified for an online source (see below)? etc.
+Always try to keep as much information as possible about your sources, so that it will be easier to find them later. Although this is a time consuming process, and not all of this information is included in the bibliography, consulting the database is much easier. Pay sufficient attention to this and also check the result in the bibliography itself. Are the authors represented correctly? Do you have a year mentioned? Has a URL and date of consultation been specified for an online source (see below)? etc.
 
 Some fields that are always useful to fill in:
 
@@ -67,7 +67,7 @@ Some fields that are always useful to fill in:
 \subsection{Specific bibliographic data}
 \label{sub:specific_bibliographic_data}
 
-For the most relevant types of sources, this section explains how to properly track and include them in the bibliography. JabRef already gives some indications about which information is at least required: in the details window (see Image~\ref{fig:jabref}) you must at least fill in the tab ``Required fields''. For each type of publication (see Section~\ref{sub:publication types}) below you will find an overview of the fields to be filled in, what they mean exactly, and what the reference in the bibliography will look like.
+For the most relevant types of sources, this section explains how to properly track and include them in the bibliography. JabRef already gives some indications about which information is at least required: in the details window (see Image~\ref{fig:jabref}) you must at least fill in the tab ``Required fields''. For each type of publication below you will find an overview of the fields to be filled in, what they mean exactly, and what the reference in the bibliography will look like.
 
 When adding a new source to a bibliographic database, you must first select the type (see Image~\ref{fig:jabref-entrytypes}). Below we only discuss the most important ones that are relevant for a bachelor's thesis.
 
@@ -209,7 +209,7 @@ In the bibliography it looks like this: \fullcitebib{Meyr2008}
 
 This type of publication includes almost all online sources that cannot be classified under any other category: blog articles, articles in online professional journals or portal sites, YouTube videos of presentations at trade conferences, online documentation, etc.
 
-Note that you may \emph{not} include the general website of organizations, software packages, etc. in your reference list. You can put this in a footnote.
+Note that you may \emph{not} include the general website of organizations, software packages, etc. in your reference list. You should put this in a footnote.
 
 The following fields are required:
 
@@ -261,7 +261,7 @@ Another example is one from a presentation at a trade conference that was publis
 In the bibliography: \fullcitebib{Hykes2013}
 
 \section{Searching for relevant information}
-\label{sec:Searching_for_relevant_information}
+\label{sec:searchingforrelevantinformation}
 
 The HOGENT library provides access to a large amount of scientific and professional literature that is not publicly available. This goes far beyond the books available in the library. After all, electronic sources (ebooks, magazines, etc.) can also be consulted. You can also find (good) bachelor's theses from previous years this way. The catalog can be consulted via \url{https://www.hogent.be/student/libraries/}.
 
@@ -296,7 +296,7 @@ Other publicly available search starting points:
 
 Keeping track of all your sources is time-consuming, but essential for a sound bachelor thesis! So pay the necessary attention to this and check whether the information about your sources is entered correctly in JabRef.
 
-All relevant information that you have collected and read in the course of your research is then synthesized in a continuous text in your own words where you discuss the situation in the research domain, with references to the literature at appropriate places. We will go into more detail in Chapter~\ref{ch:writing}.
+All relevant information that you have collected and read in the course of your research is then synthesized in a continuous text in your own words where you discuss the situation in the research domain, with references to the literature at appropriate places. We will go into more detail in Chapter~\ref{ch:reportingresults}.
 
 \section{Summary}
 \label{sec:bibliography-summary}
