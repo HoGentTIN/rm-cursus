@@ -184,6 +184,174 @@
 
 \end{frame}
 
+\section{Cybersecurity: risico-analyse}
+
+\begin{frame}
+  \frametitle{Cybersecurity-gerelateerde onderwerpen}
+
+  Uit voorstellen studenten:
+
+  \begin{itemize}
+    \item Welke cyberaanvallen komen het meest voor?
+    \item Hoe gebeurt password cracking?
+    \item Hoe kunnen bedrijven/personen zich beschermen?
+    \item Ik wil ``iets'' rond cybersecurity doen
+  \end{itemize}
+
+  \bigskip
+
+  \alertbox{Een BP rond cybersecurity begint best bij een concrete casus!}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Probleem bij cybersecurity-aanpak}
+
+  \begin{itemize}
+    \item Niet systematisch
+    \begin{itemize}
+      \item $\Rightarrow$ focus op minder belangrijke aspecten
+    \end{itemize}
+    \item Niet grondig
+    \begin{itemize}
+      \item Firewall op de router is onvoldoende!
+    \end{itemize}
+    \item Budgettair
+    \begin{itemize}
+      \item Kosten zonder ROI
+    \end{itemize}
+    \item Onproductief beleid
+    \begin{itemize}
+      \item bv.\ Password policy
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Een cybersecurity casus}
+
+  \begin{itemize}
+    \item Eén specifiek bedrijf
+    \item Een specifiek type server/apparaat
+      \begin{itemize}
+        \item bv.\ ActiveDirectory, webapplicatieserver, \ldots
+        \item bv.\ (edge) router, firewall, \ldots
+      \end{itemize}
+    \item Een specifieke (web)applicatie
+      \begin{itemize}
+        \item bv.\ webapps uit IT-cursussen?
+      \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Systematische aanpak: risico-analyse}
+
+  Jackson, C. (2010) \textit{Network Security Auditing.} Cisco Press.
+
+  \begin{enumerate}
+    \item Systeem beschrijven
+    \item Huidige maatregelen oplijsten
+    \item Bedreigingen identificeren
+    \item Zwakheden identificeren
+    \item Waarschijnlijkheid inschatten
+    \item Impact inschatten
+    \item Risico bepalen
+    \item Aanbevelingen formuleren
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Systeem beschrijven}
+
+  \begin{itemize}
+    \item Hoe? Interview met belanghebbenden
+    \item Hardware, software, apparatuur, services, \ldots oplijsten
+    \item Schema/overzicht opstellen
+    \item Welke data?
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Bedreigingen identificeren}
+
+  \begin{itemize}
+    \item Hoe? 
+      \begin{itemize}
+        \item Interview met belanghebbenden
+        \item Literatuurstudie
+      \end{itemize}
+    \item Mogelijke scenario's aanvallen beschrijven
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Zwakheden identificeren}
+
+  \begin{itemize}
+    \item Hoe? Experiment
+    \begin{itemize}
+      \item Zet testomgeving op!
+      \item Vermijd productiesystemen.
+    \end{itemize}
+    \item Pen-testing technieken
+    \item Vulnerability scanning
+      \begin{itemize}
+        \item bv. OWASP ZAP, Wapiti, OpenVAS, Lynis, \ldots
+      \end{itemize}
+    \item Fuzzing
+    \item \ldots
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Huidige maatregelen oplijsten}
+
+  \begin{itemize}
+    \item Interview met belanghebbenden
+    \item Toegangsbeveiliging, niveau's
+    \item Security policy (bv.\ wachtwoorden, enz.)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Risico bepalen}
+
+  \centering
+  
+  Risico = waarschijnlijkheid $\times$ impact
+
+  \includegraphics[height=.7\textheight]{5/risk-severity-matrix}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Aanbevelingen}
+
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \includegraphics[width=\textwidth]{5/risk-matrix-severity-and-likelihood.png}
+    \end{column}
+
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item \textbf{Mitigate:} Actie ondernemen, probleem oplossen
+        \item \textbf{Control:} Transfereren naar andere entiteit (bv.\ uitbesteden naar IT service provider, securityspecialisten)
+        \item \textbf{Share:} Verzekering nemen
+        \item \textbf{Accept:} Niets doen
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\end{frame}
+
 \section{Proof-of-concept of testopstelling}
 
 \begin{frame}
@@ -234,7 +402,7 @@
   \begin{itemize}
     \item Gedetailleerde procedurehandleiding
     \item Automatiseren! Bv.\ Vagrant, Docker
-    \item Installatiescript, configbestanden, enz.\ in Github-repo!
+    \item Installatiescript, configbestanden, docs, enz.\ in Github-repo!
   \end{itemize}
 
 \end{frame}
@@ -413,10 +581,12 @@
         \item Wat ga je concreet doen?
         \item Waarom? Wat is de doelstelling?
         \item Wat is het concrete resultaat?
+        \item Hoe ga je het aanpakken (onderzoeksmethode)?
       \end{itemize}
     \item Schatting tijdverloop (normale BP):
       \begin{itemize}
         \item Begin: start semester 2
+        \item Per week 4d stage, 1d BP (géén paasvakantie!)
         \item Deadline: vrijdag eerste examenweek
       \end{itemize}
   \end{itemize}
