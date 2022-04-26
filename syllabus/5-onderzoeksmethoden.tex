@@ -1,7 +1,7 @@
 \chapter{Onderzoeksmethoden}
 \label{ch:onderzoeksmethoden}
 
-In dit onderwerp vind je aanbevelingen in verband met een aantal vaak gebruikte onderzoeksmethoden. Meer bepaald bespreken we de aanpak van een vergelijkende studie, hoe je correct experimenten opzet en hoe je op een correcte manier rapporteert over bekomen resultaten (in het bijzonder cijfermateriaal).
+In dit hoofdstuk vind je aanbevelingen in verband met een aantal vaak gebruikte onderzoeksmethoden. Meer bepaald bespreken we de aanpak van een vergelijkende studie, hoe je correct experimenten opzet en hoe je op een correcte manier rapporteert over bekomen resultaten (in het bijzonder cijfermateriaal).
 
 % Belang van correcte methodologie
 %
@@ -43,7 +43,7 @@ Om een goede keuze te maken begin je met het verzamelen van \emph{requirements},
   \begin{itemize}
   \item Ondersteuning voor HTML5/CSS3
   \item Responsive design
-  \item Er moet een authenticatiemodule in zitten dat OpenID, Facebook- en Google-authenticatie ondersteunt
+  \item Er moet een authenticatiemodule in zitten die OpenID, Facebook- en Google-authenticatie ondersteunt
   \item \ldots
   \end{itemize}
 \item Niet-functionele requirements
@@ -108,7 +108,7 @@ Voor veel situaties kan je een proof-of-concept uitwerken met virtuele machines.
 
 Ook Docker\footnote{\url{https://docker.com/}} is een interessante tool hiervoor. Docker is een vorm van zgn.~containervirtualisatie. Virtuele machines (containers) hebben geen eigen OS, maar bevatten in principe enkel een applicatie. Het OS van het fysieke systeem wordt hergebruikt door de containers. Dat maakt dat containers een stuk efficiënter zijn qua schijf- en geheugengebruik voor het fysieke systeem. Er zijn echter een aantal beperkingen waardoor Docker niet altijd bruikbaar is als platform voor een testopstelling.
 
-Als je merkt dat je een fout gemaakt hebt in de configuratie van je testopstelling, dan kan je het installatiescript aanpassen en de gehele testomgeving opnieuw opzetten. Als je dit manueel zou moeten doen, ben je wellicht minstens een dag kwijt. Bovendien heb je de kans dat je een kleinigheid over het hoofd ziet en dus niet in staat bent de testomgeving opnieuw exact te replicerne. Het initialiseren van een Linux-VM met Vagrant of Docker duurt typisch slechts enkele minuten. Windows-systemen nemen een stuk meer tijd in beslag. Het OS is op zich al een stuk groter\footnote{Ca.~4GB voor Windows Server Core tegenover 256 à 512MB voor een minimale installatie van een Linux distributie. Installatie van applicaties hebben nog een bijkomende impact op de schijfgrootte van de VM.}
+Als je merkt dat je een fout gemaakt hebt in de configuratie van je testopstelling, dan kan je het installatiescript aanpassen en de gehele testomgeving opnieuw opzetten. Als je dit manueel zou moeten doen, ben je wellicht minstens een dag kwijt. Bovendien heb je de kans dat je een kleinigheid over het hoofd ziet en dus niet in staat bent de testomgeving opnieuw exact te repliceren. Het initialiseren van een Linux-VM met Vagrant of Docker duurt typisch slechts enkele minuten. Windows-systemen nemen een stuk meer tijd in beslag. Het OS is op zich al een stuk groter\footnote{Ca.~4GB voor Windows Server Core tegenover 256 à 512MB voor een minimale installatie van een Linux distributie. Installatie van applicaties hebben nog een bijkomende impact op de schijfgrootte van de VM.}
 
 Een uitgebreide handleiding van Vagrant of Docker valt buiten het bereik van deze gids. Een voorbeeld ter illustratie is te vinden op \url{https://github.com/bertvv/lampstack}. Hier wordt een Apache webserver opgezet met een MariaDB databank, PHPMyAdmin, en Wordpress.
 
