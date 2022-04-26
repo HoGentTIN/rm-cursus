@@ -3,10 +3,11 @@
 \usecolortheme{hgwhite} % witte achtergrond, zwarte tekst
 
 \include{common}
+\usepackage{wasysym}
 
 %---------- Info over de presentatie ------------------------------------------
 
-\title{Module 5. Onderzoeksmethoden.}
+\title{Module 5. Research methods.}
 \subtitle{Research Methods}
 \author{\lecturers}   % Pas waarden aan in common.tex
 \date{\academicyear}
@@ -18,16 +19,405 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Inhoud}
+  \frametitle{Content}
 
   \tableofcontents
 \end{frame}
 
-% - Kwalitatief vs kwantitatief
-% - Technieken die van pas komen bij BP IT
-%   - vgl. studie: stappenplan
-%   - analyse product
-%   - experiment opzetten
-%   - omgaan met cijfermateriaal: reproduceerbaarheid!
+\begin{frame}
+  \frametitle{Objective}
+
+  \begin{itemize}
+    \item Writing out a methodology/action plan
+    \item How to perform a comparative study
+    %\item Risico-analyse (cybersecurity)  % TODO (eventueel)
+    \item Proof-of-concept (POC)
+    \item Collecting quantitative data
+    \item Pitfall: the questionnaire  
+  \end{itemize}
+\end{frame}
+
+\section{Action plan}
+
+\begin{frame}
+  \frametitle{Methodology}
+
+  \begin{itemize}
+      \item = part of your bachelor thesis proposal
+      \item writing an action plan
+      \begin{itemize}
+          \item Split into phases
+          \item Research techniques used
+          \item Objective/result of each phase
+          \item Order/Dependencies
+          \item Timing   
+    \end{itemize}
+  \end{itemize}
+
+  \alertbox{The more detailed your action plan, the easier it is to get started!}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+  \small
+  To start off the research, an investigation will be conducted how to create a design system, by building a simple component library from an existing library and using it to set up a design system. This will also help to gain a better understanding of the other research questions. Second, a comparative study will be performed on component libraries and design systems, and where and when you use them with some examples. Finally, the advantages of an own design system will be investigated by conducting some interviews with employees of companies that have implemented it. A questionnaire will therefore be written, also pointing out the disadvantages of a design system, and proving a design system worthwhile or not.   
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Common mistakes}
+
+  \begin{itemize}
+      \item Insufficiently elaborated
+      \item Sequence of phases is incorrect (e.g.\ start with proof-of-concept)
+      \item Too vague (e.g.\ ``research'')
+      \item Unsuitable techniques
+      \item Unmeasurable or subjective criteria (e.g.\ `user-friendliness', `popularity')  
+      \item \ldots
+  \end{itemize}
+
+\end{frame}
+
+\section{Performing a comparative study}
+
+\begin{frame}
+  \frametitle{Phases}
+
+  \alertbox{Always start with a specific case!}
+
+  \begin{itemize}
+    \item Collecting requirements     
+    \item Long list
+    \item Short list
+    \item Proof-of-Concept
+    \item Conclusions
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Collecting requirements}
+
+  \begin{itemize}
+      \item \textbf{Objective:} List minimal criteria for a good solution 
+      \item \textbf{Techniques:}
+      \begin{itemize}
+          \item Interviews with stakeholders (e.g.\ co-promoter?)
+          \item MoSCoW method (must have, should have, etc.)
+      \end{itemize}
+      \item \textbf{Result:} list of requirements
+      \begin{itemize}
+          \item Ordered by importance
+          \item Functional/non-functional   
+      \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Long list}
+
+  \begin{itemize}
+    \item \textbf{Objective:} List options
+    \item \textbf{Technique:} literature search
+    \begin{itemize}
+        \item Collect as many options as possible, don't exclude anything beforehand!
+        \item Check against requirements, based on available information
+    \end{itemize}
+    \item \textbf{Result:} list with all options found (with reference)
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Short list}
+
+  \begin{itemize}
+   \item \textbf{Objective:} Selection of most interesting options
+   \item \textbf{Technique:} Requirements/options summary table
+   \item \textbf{Result:} Choice of 1 or some options to elaborate further
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example}
+  \framesubtitle{Requirements summary table}
+
+  \centering
+  \begin{tabular}{cccc|cc|cccc}
+    \toprule
+    Option & \multicolumn{3}{c}{M}       & \multicolumn{2}{c}{S} & \multicolumn{4}{c}{C}                 \\ \midrule
+    A           & \CIRCLE & \CIRCLE & ?       & \CIRCLE   & ?         & \CIRCLE & \CIRCLE & ? & \CIRCLE \\
+    B           & \CIRCLE & ---      & \CIRCLE & ---        & \CIRCLE   & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE \\
+    C           & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE   & ---        & \CIRCLE & \CIRCLE & \CIRCLE & --- \\ \bottomrule
+    \end{tabular}
+
+    \bigskip
+
+    (\CIRCLE = requirement met; --- = requirement not met; ? = no info available)
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Proof-of-concept}
+
+  \begin{itemize}
+   \item \textbf{Objective:} Validate whether the best option can solve the problem.
+   \item \textbf{Technique:} Test setup/proof-of-concept
+   \item \textbf{Result:} Prototype of ICT solution for the problem from the research question
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Drawing conclusions}
+
+  \begin{itemize}
+   \item Recommend the best possible option
+   \item Identify remaining gaps
+  \end{itemize}
+
+\end{frame}
+
+\section{Proof-of-concept or test-setup}
+
+\begin{frame}
+  \frametitle{Proof-of-concept/test-setup}
+
+  \begin{itemize}
+    \item Objective:
+    \begin{itemize}
+        \item Demonstrate that the proposed solution is feasible
+        \item Setup for conducting experiments
+    \end{itemize}
+    \item Important properties:
+    \begin{itemize}
+        \item Reproducibility
+        \item Replicability
+        \item Reusability
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproducibility}
+
+  \alertbox{Give the reader enough information to reproduce your test setup}
+
+  \bigskip
+
+  \begin{itemize}
+   \item Which hardware? specs?
+   \begin{itemize}
+       \item Computers, network equipment, \ldots
+   \end{itemize}
+   \item Which software?
+   \item Installation and configuration?
+   \item Add image with test setup schedule!
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Replicability}
+
+  \alertbox{You should be able to quickly build your set-up again}
+
+  \bigskip
+
+  \begin{itemize}
+   \item Detailed procedure manual
+   \item Automate! E.g.\ Vagrant, Docker
+   \item Install script, config files, etc.\ in Github repo!
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reusability}
+
+  \alertbox{You can create similar variants of a test setup}
+
+  \bigskip
+
+  \begin{itemize}
+    \item Compare options
+    \item Compare configuration differences
+  \end{itemize}
+
+\end{frame}
+
+\section{Quantitative data}
+
+\begin{frame}
+  \frametitle{Quantitative data collection}
+
+  Bv.\ performatiemetingen
+
+  \begin{itemize}
+    \item Reproducible, replicable, reusable
+    \item Automate experiments (e.g.\ shell script)
+    \item Save results in convenient format
+    \begin{itemize}
+        \item Text based
+        \item Computer readable
+        \item e.g. CSV, JSON, YAML
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Quantitative data processing}
+
+  \begin{itemize}
+    \item Use statistical software (Pyhon, R)
+    \item Suitable visualization and analysis techniques
+    \begin{itemize}
+        \item See Data Science \& AI!
+        \item Show variance in the data
+        \item Apply statistical tests
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+  
+\begin{frame}
+  \frametitle{Bivariate analysis: overview}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Independent} & \textbf{Dependent} & \textbf{Test/Metric}    \\
+    \midrule
+    Qualitative          & Qualitative        & $\chi^2$-test           \\
+                         &                    & Cramér's $V$            \\
+    Qualitative          & Quantitative       & two-sample $t$-test     \\
+                         &                    & Cohen's $d$             \\
+    Quantitative         & Quantitative       & Regression, correlation \\
+    \bottomrule
+  \end{tabular}
+
+  \bigskip
+
+  \alertbox{There are more statistical techniques than the ones we've seen in DSAI!}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Quantitative data processing}
+
+  Suppose the research question is `Which DB system has the best performance: A or B?'
+  
+  \begin{itemize}
+      \item<+-> Which experiment are you going to set up?
+      % Test setup with DB A and B
+      % Repeat queries on A and B, measure time
+      \item<+-> What are the independent and dependent variables?
+      % Independent: DB System (A or B)
+      % Dep: response time
+      \item<+-> What kind of graph would you use to visualize this?
+      % boxplot, density diagram (kdeplot)
+      % Bar chart of averages? ONLY IF YOU ALSO SHOW SPREAD using error bars, but this only makes sense if data is clearly normally distributed
+      \item<+-> Which techniques can answer the research question?
+      % t-test for 2 independent samples
+  \end{itemize}
+
+ 
+\end{frame}
+
+\begin{frame}    
+    \frametitle{Tips when processing data}    
+    \begin{itemize}
+        \item NEVER change raw data (CSV)
+        \item Automate the workflow as much as possible
+        \begin{itemize}
+            \item Python script or Jupyter Notebook
+            \item Import CSV
+            \item Data cleaning
+            \item Visualization
+            \item Analysis
+        \end{itemize}
+        \item Keep track of your code in Git!
+    \end{itemize}
+ 
+  \alertbox{Think of reproducibility and replicability!}
+
+\end{frame}
+
+\section{Pitfall: the questionnaire}
+
+\begin{frame}
+  \frametitle{The questionnaire}
+
+ \alertbox{For a bachelor thesis applied computer science a survey is usually not recommended!}
+ 
+ \bigskip
+ 
+ \begin{itemize}
+     \item Often unsuitable for answering research question
+     \item Often too few respondents
+     \item Frequently unusable results
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{Sampling}
+ 
+ See also Data Science \& AI
+ 
+ \begin{itemize}
+     \item Well-defined population (sampling frame!)
+     \item Random
+     \item Sufficiently large
+     \item Representative (stratified)
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Common problems}
+
+ \begin{itemize}
+     \item Population is not/poorly defined
+     \item Sample is not random
+     \begin{itemize}
+         \item online survey
+         \item convenience sampling
+     \end{itemize}
+     \item Very low response rate
+     \item Bad questions $\Rightarrow$ useless answers
+     \begin{itemize}
+         \item Open questions
+         \item Gauging opinion, not facts
+     \end{itemize}
+     \item No representativeness check
+ \end{itemize}
+
+\end{frame}
+
+\section{Assignment}
+
+\begin{frame}
+  \frametitle{Writing the methodology}
+
+  \begin{itemize}
+      \item Write out action plan (Methodology)
+      \item Divide research into different phases
+      \begin{itemize}
+          \item What exactly are you going to do?
+          \item Why? What is the objective?
+          \item What is the concrete result?
+      \end{itemize}
+      \item Estimate time course (normal bachelor thesis):
+      \begin{itemize}
+          \item Start: start semester 2
+          \item Deadline: Friday of the first exam week
+      \end{itemize}
+  \end{itemize}
+
+\end{frame}
 
 \end{document}
