@@ -29,11 +29,10 @@
 
   \begin{itemize}
     \item Writing out a methodology/action plan
-    \item How to perform a comparative study
-    %\item Risico-analyse (cybersecurity)  % TODO (eventueel)
+    \item How to perform a comparative study   
     \item Proof-of-concept (POC)
     \item Collecting quantitative data
-    \item Pitfall: the questionnaire  
+    \item Pitfall: the questionnaire      
   \end{itemize}
 \end{frame}
 
@@ -178,8 +177,174 @@
    \item Recommend the best possible option
    \item Identify remaining gaps
   \end{itemize}
-
 \end{frame}
+
+\section{Cybersecurity: risk assessment}
+
+\begin{frame}
+    \frametitle{Cybersecurity related topics}
+    
+    From students' proposals: 
+    
+    \begin{itemize}
+        \item Which cyber attacks are most frequent?
+        \item How does password cracking work?
+        \item How can companies/persons protect themselves?
+        \item I want to do ``something'' on cybersecurity
+    \end{itemize}
+    
+    \bigskip
+    
+    \alertbox{A bachelor thesis on cybersecurity is best when it handles a specific case!}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Problems with cybersecurity approach}
+    
+    \begin{itemize}
+       \item Not systematic
+       \begin{itemize}
+           \item $\Rightarrow$ focus on less important aspects
+       \end{itemize}
+       \item Not thorough
+       \begin{itemize}
+           \item Firewall on the router is insufficient!
+       \end{itemize}
+       \item Budget
+       \begin{itemize}
+           \item Costs without ROI
+       \end{itemize}
+       \item Unproductive measures
+       \begin{itemize}
+           \item eg\ password policy
+       \end{itemize}
+   \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{A cybersecurity case}
+    
+   \begin{itemize}
+       \item One specific company
+       \item A specific type of server/device
+       \begin{itemize}
+           \item eg.\ ActiveDirectory, web application server, \ldots
+           \item eg.\ (edge) router, firewall, \ldots
+       \end{itemize}
+       \item A specific (web) application
+       \begin{itemize}
+           \item e.g. webapps from IT courses?
+       \end{itemize}
+   \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Systematic approach: risk assessment}
+    
+    Jackson, C. (2010) \textit{Network Security Auditing.} Cisco Press.
+    
+    \begin{enumerate}
+       \item Describe system
+       \item List current measures
+       \item Identify threats
+       \item Identify weaknesses
+       \item Estimate probability
+       \item Estimate Impact
+       \item Determine risk
+       \item Formulate recommendations
+    \end{enumerate}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{System description}
+    
+    \begin{itemize}
+       \item How? Stakeholder Interview
+       \item List hardware, software, equipment, services, \ldots
+       \item Set up schedule/overview
+       \item What data?
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Threat identification}
+    
+    \begin{itemize}
+       \item How?
+       \begin{itemize}
+           \item Interview with stakeholders
+           \item Literature study
+       \end{itemize}
+       \item Describe possible attack scenarios
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Weakness identification}
+    
+    \begin{itemize}
+       \item How? Experiment
+       \begin{itemize}
+           \item Set up test environment!
+           \item Avoid production systems.
+       \end{itemize}
+       \item Pen-testing techniques
+       \item Vulnerability scanning
+       \begin{itemize}
+           \item eg OWASP ZAP, Wapiti, OpenVAS, Lynis, \ldots
+       \end{itemize}
+       \item Fuzzing
+       \item \ldots
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{List current measures}    
+    \begin{itemize}
+        \item Interview with stakeholders
+        \item Access protection, levels
+        \item Security policy (e.g.\ passwords, etc.)
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Risk assessment}
+    
+    \centering
+    
+    Risk = Probability $\times$ impact
+    
+    \includegraphics[height=.7\textheight]{5/risk-severity-matrix}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Recommendations}
+    
+    \begin{columns}
+        \begin{column}{.5\textwidth}
+            \includegraphics[width=\textwidth]{5/risk-matrix-severity-and-likelihood.png}
+        \end{column}
+        
+        \begin{column}{.5\textwidth}
+            \begin{itemize}
+              \item \textbf{Mitigate:} Take action, solve problem
+              \item \textbf{Control:} Transfer to another entity (e.g.\ outsource to IT service provider, security specialists)
+              \item \textbf{Share:} Take insurance
+              \item \textbf{Accept:} Do nothing
+            \end{itemize}
+        \end{column}
+    \end{columns}    
+\end{frame}
+
 
 \section{Proof-of-concept or test-setup}
 
