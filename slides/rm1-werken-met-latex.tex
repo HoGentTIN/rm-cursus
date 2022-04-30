@@ -4,7 +4,6 @@
 
 \include{common}
 
-%% TODO: bib naam aanpassen
 \addbibresource{rm1-werken-met-latex.bib}
 
 %---------- Info over de presentatie ------------------------------------------
@@ -254,8 +253,8 @@
   \frametitle{Hulp zoeken}
 
   \begin{itemize}
-    \item Tobias Oetiker, et al., \emph{The Not So Short Introduction to {\LaTeXe}}, 2011 (a.k.a. ``lshort'', versie 5.01)
-    %% TODO: URL lshort
+    \item Tobias Oetiker, et al., \emph{The Not So Short Introduction to {\LaTeXe}}, (a.k.a. ``lshort''):
+    \url{https://tobi.oetiker.ch/lshort/lshort.pdf}
     \item {\TeX} --- {\LaTeX} StackExchange (Q \& A site): \url{http://tex.stackexchange.com/}
     \item \emph{{\LaTeX} Wikibook}, \url{http://en.wikibooks.org/wiki/LaTeX}
     \item Handleidingen van packages (pdf)
@@ -510,180 +509,6 @@
 
 \end{frame}
 
-\section{Figuren, tabellen, enz.\ invoegen}
-
-\subsection{Figuren}
-
-\begin{frame}[fragile,plain]
- \frametitle{Figuren invoegen}
-
- \begin{columns}[c]
-   \column{.65\textwidth}
-
-\begin{semiverbatim}
-\alert<1>{\\begin\{figure\}}
-\alert<2>{\\includegraphics[width=\\textwidth]
- \{1/donald-knuth\}}
-\alert<3>{\\caption\{\alert<4>{\\label\{fig:don\}}Donald Knuth, auteur van
- \{\\TeX\}\}}
-\alert<1>{\\end\{figure\}}
-\end{semiverbatim}
-
-   \column{.35\textwidth}
-   \begin{figure}
-     \includegraphics[width=\textwidth]{1/donald-knuth}
-     \caption{\label{fig:don}Donald Knuth, auteur van {\TeX}}
-   \end{figure}
-
- \end{columns}
-
-\end{frame}
-
-\subsection{Tabellen}
-
-\begin{frame}[fragile]
- \frametitle{Tabellen invoegen}
-
- \begin{columns}[c]
-   \column{.6\textwidth}
-   \small
-\begin{semiverbatim}
-\alert<1>{\\begin\{table\}}
-\alert<3>{\\begin\{tabular\}\{\alert<4>{l||c|r}\}}
-\alert<4>{\\hline}
-cel11 \alert<5>{&}
-\alert<7>{\\multicolumn\{2\}\{c\}\{cel12\}} \alert<6>{\\\\}
-\alert<4>{\\hline \\hline}
-cel21 \alert<5>{&} cel22 \alert<5>{&}
-\alert<7>{\\multirow\{2\}\{*\}\{cel23\}} \alert<6>{\\\\}
-cel31 \alert<5>{&} cel32 \alert<5>{&} \alert<6>{\\\\}
-\alert<3>{\\end\{tabular\}}
-\alert<2>{\\caption\{Een voorbeeldje van
- wat je met tabellen kan doen\}
- \\label\{tab:vb_tabel\}}
-\alert<1>{\\end\{table\}}
-\end{semiverbatim}
-
-   \column{.4\textwidth}
-   \begin{table}
-     \begin{tabular}{l||c|r}
-       \hline
-       cel11 & \multicolumn{2}{c}{cel12} \\
-       \hline \hline
-       cel21 & cel22 & \multirow{2}{*}{cel23} \\
-       cel31 & cel32 & \\
-     \end{tabular}
-     \caption{Een voorbeeldje van wat je met tabellen kan doen}
-     \label{tab:vb_tabel}
-   \end{table}
-
- \end{columns}
-\end{frame}
-
-\subsection{Broncode}
-
-\begin{frame}[fragile]
- \frametitle{Broncode invoegen}
- \framesubtitle{Eenvoudigste vorm: \texttt{verbatim}}
-
-\begin{semiverbatim}
-\alert{\\begin\{verbatim\}}
-public class MyApp \{
- public static void main(String args[]) \{
-   System.out.println("Hello World");
- \}
-\}
-\alert{\\end\{verbatim\}}
-\end{semiverbatim}
-
- \(\Rightarrow\)
-
-\begin{verbatim}
-public class MyApp {
- public static void main(String args[]) {
-   System.out.println("Hello World");
- }
-}
-\end{verbatim}
-
-\end{frame}
-
-\begin{frame}[fragile]
- \frametitle{Broncode invoegen}
- \framesubtitle{\texttt{listings} package}
-
-\begin{semiverbatim}
-\\lstset\{\%
-language=java,  breaklines=true,  numbers=left,
-frame=single, caption=\{Mijn eerste Java-programma.\},
-label=code:helloworld\}
-
-\alert{\\begin\{lstlisting\}}
-public class MyApp \{
- public static void main(String args[]) \{
-   System.out.println("Hello World");
- \}
-\}
-\alert{\\end\{lstlisting\}}
-\end{semiverbatim}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Broncode invoegen}
-  \framesubtitle{\texttt{listings} package}
-
-  \lstset{%
-    language=java,    breaklines=true,
-    numbers=left,     frame=single,
-    caption={Mijn eerste Java-programma.},
-    label=code:helloworld,
-    gobble=2
-  }
-
-  \begin{lstlisting}
-  public class MyApp {
-    public static void main(String args[]) {
-      System.out.println("Hello World");
-    }
-  }
-  \end{lstlisting}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Broncode invoegen}
-  \framesubtitle{\texttt{minted} package}
-
-  \begin{semiverbatim}
-  \\setminted\{%
-    bgcolor=gray!20,gobble=2, linenos,
-    numbers=left,frame=single\}
-
-  \\begin\{minted\}\{java\}
-    public class MyApp \{
-      public static void main(String args[]) \{
-        System.out.println("Hello World");
-      \}
-    \}
-  \\end\{minted\}
-  \end{semiverbatim}
-\end{frame}
-
-
-\begin{frame}[fragile]
-  \frametitle{Broncode invoegen}
-  \framesubtitle{\texttt{minted} package}
-  \setminted{bgcolor=gray!20,gobble=4,linenos,numbers=left,frame=single}
-  \begin{minted}{java}
-    public class MyApp {
-      public static void main(String args[]) {
-        System.out.println("Hello World");
-      }
-    }
-  \end{minted}
-\end{frame}
-
 \subsection{Literatuurlijst}
 
 \begin{frame}[fragile]
@@ -712,11 +537,7 @@ public class MyApp \{
   Een heleboel niet besproken!
 
   \begin{itemize}
-    \item<+-> Wiskundige formules, vb.
-    \begin{semiverbatim}
-      \$x=-\\frac\{b \\pm \\sqrt\{b\^{}2 - 4ac\}\}\{2a\}\$
-    \end{semiverbatim}
-    \(x=-\frac{b \pm \sqrt{b^2 - 4ac}}{2a}\)
+    \item<+-> Figuren, tabellen, wiskundige formules (zie later)
     \item<+-> Honderden packages (RTFM, Google is your friend)
     \item<+-> Presentaties met Beamer (baseer je bv.\ op het sjabloon op \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
 
