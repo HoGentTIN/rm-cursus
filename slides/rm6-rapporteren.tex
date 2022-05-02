@@ -148,6 +148,72 @@
 
 \end{frame}
 
+\begin{frame}
+  \frametitle{Overfull/underfull hbox}
+
+  \includegraphics[height=.7\textheight]{6/hbox-warnings}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Overfull/underfull hbox}
+  \framesubtitle{Wellicht de vaakst voorkomende compiler-warning!}
+
+  \begin{itemize}
+    \item \textbf{Oorzaak:} afbeelding past niet binnen de paginamarges
+    \item \textbf{Oplossing:} afbeelding herschalen, bv:
+  \end{itemize}
+
+\begin{verbatim}
+\includegraphics[width=.49\textwidth]{img/polygl-persist}
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Overfull/underfull hbox}
+  \framesubtitle{Wellicht de vaakst voorkomende compiler-warning!}
+
+  \begin{itemize}
+    \item \textbf{Oorzaak:}
+    \begin{itemize}
+      \item Te veel of te weinig tekst om marges mooi op te vullen
+      \item Meestal door samengesteld woord, bv. ``microservices\textcolor{red}{\textbf{--}}architecturen''
+      ({\LaTeX} zal enkel nog op die plaats splitsen)
+    \end{itemize}
+    \item \textbf{Oplossing:} correcte splitsing opgeven, bv.:
+    \begin{itemize}
+      \item In de tekst: \verb|ar\-chi\-tec\-tu\-ren|
+      \item Preamble: \verb|\hyphenation{ar-chi-tec-tu-ren}|
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Overfull/underfull hbox}
+  \framesubtitle{Wellicht de vaakst voorkomende compiler-warning!}
+
+  \begin{itemize}
+    \item \textbf{Oorzaak:} URL is te lang, wordt niet gesplitst
+    \item \textbf{Oplossing:} \texttt{breaklinks}-optie van \texttt{hyperref}-package aanzetten, vb.
+  \end{itemize}
+
+\begin{verbatim}
+\usepackage[bookmarks=true,breaklinks]{hyperref}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Overfull/underfull hbox}
+
+  \textbf{N.B.} Het is een \emph{waarschuwing}, geen \emph{fout}! Niet elke hbox-waarschuwing moet opgelost worden!
+
+  \centering
+  \includegraphics[height=.6\textheight]{6/hbox-fixed}
+
+\end{frame}
+
 \section{Vlottende omgevingen}
 
 \begin{frame}
@@ -177,7 +243,7 @@
     \item Gebruik Figure-omgeving
     \item Geef elke afbeelding een label
     \item Verwijs in de tekst naar de afbeelding
-    \item Voorzie uitgebreide bijtekst (caption)
+    \item Voorzie uitgebreid bijschrift (caption)
     \item Bronvermelding indien nodig!
   \end{itemize}
 
@@ -284,7 +350,23 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 
 \end{frame}
 
-%% TODO list of figures/tables
+\begin{frame}[fragile]
+  \frametitle{List of Figures/Tables}
+
+  \begin{itemize}
+    \item Je kan een lijst van figuren en tabellen invoegen:
+\begin{verbatim}
+\listoffigures    % Figuren
+\listoftables     % Tabellen
+\listoflistings   % Broncode
+\end{verbatim}
+    \item Volledige caption wordt overgenomen!
+    \item Voorzie een korte beschrijving:
+    
+      \verb|\caption[Korte omschrijving]{Lang bijschrift}|
+  \end{itemize}
+
+\end{frame}
 
 \section{Wiskundige formules}
 
@@ -358,7 +440,7 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 
 \end{frame}
 
-\subsection{Broncode}
+\section{Broncode}
 
 \begin{frame}[fragile]
  \frametitle{Broncode invoegen}
@@ -522,6 +604,22 @@ public class MyApp \{
     \item Future proof!
   \end{itemize}
 
+\end{frame}
+
+\section{Oefening, opdracht}
+
+\begin{frame}
+  \frametitle{Oefening, opdracht}
+
+  \begin{itemize}
+    \item Probeer deze dingen uit! Vraag hulp waar nodig.
+    \begin{itemize}
+      \item Testdocument of kopie paper
+    \end{itemize}
+    \item Afwerken paper, zie:
+    
+    \url{https://github.com/HoGentTIN/rm-paper/blob/main/instructies/6-afwerken.md}
+  \end{itemize}
 \end{frame}
 
 \end{document}
