@@ -93,6 +93,27 @@
   Gebruik twee ``backquotes'' (links) of twee enkele aanhalingstekens (rechts)
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Let op voor speciale tekens!}
+
+  \begin{itemize}
+    \item Sommige tekens hebben speciale betekenis voor {\LaTeX}
+    \item Mag je ook niet in Jabref gebruiken!
+    \item Gebruik in plaats daarvan de commando's:
+  \end{itemize}
+
+  \bigskip
+
+\begin{center}
+  \begin{tabular}{rccc}
+    \toprule
+    \textbf{Symbool}  & \&        & \$        & \_        \\
+    \textbf{Commando} & \verb+\&+ & \verb+\$+ & \verb+\_+ \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+\end{frame}
+
 \begin{frame}
   \frametitle{Welk commando voor dit symbool?}
 
@@ -164,7 +185,7 @@
     \item \textbf{Oplossing:} afbeelding herschalen, bv:
   \end{itemize}
 
-\begin{verbatim}
+  \begin{verbatim}
 \includegraphics[width=.49\textwidth]{img/polygl-persist}
 \end{verbatim}
 
@@ -176,16 +197,16 @@
 
   \begin{itemize}
     \item \textbf{Oorzaak:}
-    \begin{itemize}
-      \item Te veel of te weinig tekst om marges mooi op te vullen
-      \item Meestal door samengesteld woord, bv. ``microservices\textcolor{red}{\textbf{--}}architecturen''
-      ({\LaTeX} zal enkel nog op die plaats splitsen)
-    \end{itemize}
+          \begin{itemize}
+            \item Te veel of te weinig tekst om marges mooi op te vullen
+            \item Meestal door samengesteld woord, bv. ``microservices\textcolor{red}{\textbf{--}}architecturen''
+                  ({\LaTeX} zal enkel nog op die plaats splitsen)
+          \end{itemize}
     \item \textbf{Oplossing:} correcte splitsing opgeven, bv.:
-    \begin{itemize}
-      \item In de tekst: \verb|ar\-chi\-tec\-tu\-ren|
-      \item Preamble: \verb|\hyphenation{ar-chi-tec-tu-ren}|
-    \end{itemize}
+          \begin{itemize}
+            \item In de tekst: \verb|ar\-chi\-tec\-tu\-ren|
+            \item Preamble: \verb|\hyphenation{ar-chi-tec-tu-ren}|
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -199,7 +220,7 @@
     \item \textbf{Oplossing:} \texttt{breaklinks}-optie van \texttt{hyperref}-package aanzetten, vb.
   \end{itemize}
 
-\begin{verbatim}
+  \begin{verbatim}
 \usepackage[bookmarks=true,breaklinks]{hyperref}
 \end{verbatim}
 \end{frame}
@@ -262,8 +283,8 @@
   \alert<3>{\\includegraphics[width=.8\\textwidth]
     \{images/chart\}}
   \alert<4>{\\caption\{\alert<5>{\\label\{fig:chart\}}We zien jaar
-    na jaar een stijgende trend in
-    de data \alert<6>{\\autocite\{Doe2021\}}.\}}
+  na jaar een stijgende trend in
+  de data \alert<6>{\\autocite\{Doe2021\}}.\}}
 \alert<1>{\\end\{figure\}}
 \end{semiverbatim}
 
@@ -355,15 +376,15 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 
   \begin{itemize}
     \item Je kan een lijst van figuren en tabellen invoegen:
-\begin{verbatim}
+          \begin{verbatim}
 \listoffigures    % Figuren
 \listoftables     % Tabellen
 \listoflistings   % Broncode
 \end{verbatim}
     \item Volledige caption wordt overgenomen!
     \item Voorzie een korte beschrijving:
-    
-      \verb|\caption[Korte omschrijving]{Lang bijschrift}|
+
+          \verb|\caption[Korte omschrijving]{Lang bijschrift}|
   \end{itemize}
 
 \end{frame}
@@ -386,7 +407,7 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 \begin{frame}[fragile]
   \frametitle{Voorbeelden}
 
-\begin{verbatim}
+  \begin{verbatim}
   \[\overline{x} = \sum_{i=1}^{n} x_i\]
 \end{verbatim}
 
@@ -404,7 +425,7 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 \begin{frame}[fragile]
   \frametitle{Voorbeelden}
 
-\begin{verbatim}
+  \begin{verbatim}
 \[s = \sqrt{\frac{1}{n-1} 
   \sum_{i=1}^{n} (x_i - \overline{x})^2} \]
 \end{verbatim}
@@ -427,12 +448,12 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 
   \begin{itemize}
     \item Python/Jupiter Notebooks
-    
-    bv. \url{https://github.com/HoGentTIN/dsai-en-labs/blob/main/7-time-series/demo-time-series.ipynb}
+
+          bv. \url{https://github.com/HoGentTIN/dsai-en-labs/blob/main/7-time-series/demo-time-series.ipynb}
 
     \item In webpagina's: via \href{https://www.mathjax.org}{MathJax}
 
-    \url{http://docs.mathjax.org/en/latest/input/tex/index.html}
+          \url{http://docs.mathjax.org/en/latest/input/tex/index.html}
 
     \item In bv.~reveal.js presentaties
     \item \ldots
@@ -443,15 +464,15 @@ trend waar te nemen (zie Figuur~\ref{fig:chart}).
 \section{Broncode}
 
 \begin{frame}[fragile]
- \frametitle{Broncode invoegen}
- \framesubtitle{Eenvoudigste vorm: \texttt{verbatim}}
+  \frametitle{Broncode invoegen}
+  \framesubtitle{Eenvoudigste vorm: \texttt{verbatim}}
 
 \begin{semiverbatim}
 \alert{\\begin\{verbatim\}}
 public class MyApp \{
- public static void main(String args[]) \{
-   System.out.println("Hello World");
- \}
+  public static void main(String args[]) \{
+    System.out.println("Hello World");
+  \}
 \}
 \alert{\\end\{verbatim\}}
 \end{semiverbatim}
@@ -470,20 +491,20 @@ public class MyApp {
 \end{frame}
 
 \begin{frame}[fragile]
- \frametitle{Broncode invoegen}
- \framesubtitle{\texttt{listings} package}
+  \frametitle{Broncode invoegen}
+  \framesubtitle{\texttt{listings} package}
 
 \begin{semiverbatim}
 \\lstset\{\%
-language=java,  breaklines=true,  numbers=left,
-frame=single, caption=\{Mijn eerste Java-programma.\},
-label=code:helloworld\}
+  language=java,  breaklines=true,  numbers=left,
+  frame=single, caption=\{Mijn eerste Java-programma.\},
+  label=code:helloworld\}
 
 \alert{\\begin\{lstlisting\}}
 public class MyApp \{
- public static void main(String args[]) \{
-   System.out.println("Hello World");
- \}
+  public static void main(String args[]) \{
+    System.out.println("Hello World");
+  \}
 \}
 \alert{\\end\{lstlisting\}}
 \end{semiverbatim}
@@ -516,19 +537,19 @@ public class MyApp \{
   \frametitle{Broncode invoegen}
   \framesubtitle{\texttt{minted} package}
 
-  \begin{semiverbatim}
-  \\setminted\{%
-    bgcolor=gray!20,gobble=2, linenos,
-    numbers=left,frame=single\}
+\begin{semiverbatim}
+\\setminted\{%
+  bgcolor=gray!20,gobble=2, linenos,
+  numbers=left,frame=single\}
 
-  \\begin\{minted\}\{java\}
-    public class MyApp \{
-      public static void main(String args[]) \{
-        System.out.println("Hello World");
-      \}
+\\begin\{minted\}\{java\}
+  public class MyApp \{
+    public static void main(String args[]) \{
+      System.out.println("Hello World");
     \}
-  \\end\{minted\}
-  \end{semiverbatim}
+  \}
+\\end\{minted\}
+\end{semiverbatim}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -579,7 +600,7 @@ public class MyApp \{
     \end{column}
   \end{columns}
 
-  
+
 \end{frame}
 
 \begin{frame}
@@ -587,20 +608,20 @@ public class MyApp \{
 
   \begin{itemize}
     \item Makkelijker zoeken in directory tree
-    \begin{itemize}
-      \item e.g.~\href{https://github.com/ggreer/the_silver_searcher}{The Silver Searcher/\texttt{ag}}
-    \end{itemize}
+          \begin{itemize}
+            \item e.g.~\href{https://github.com/ggreer/the_silver_searcher}{The Silver Searcher/\texttt{ag}}
+          \end{itemize}
     \item Omzetten in gelijk welk formaat
-      \begin{itemize}
-        \item Website, presentatie, PDF, \ldots
-        \item \url{https://pandoc.org}
-        \item \url{https://www.mkdocs.org}
-        \item \url{https://pages.github.com}
-      \end{itemize}
+          \begin{itemize}
+            \item Website, presentatie, PDF, \ldots
+            \item \url{https://pandoc.org}
+            \item \url{https://www.mkdocs.org}
+            \item \url{https://pages.github.com}
+          \end{itemize}
     \item Workflow automatiseren
-    \begin{itemize}
-      \item Python/Bash script kan met tekst omgaan!
-    \end{itemize}
+          \begin{itemize}
+            \item Python/Bash script kan met tekst omgaan!
+          \end{itemize}
     \item Future proof!
   \end{itemize}
 
@@ -613,12 +634,12 @@ public class MyApp \{
 
   \begin{itemize}
     \item Probeer deze dingen uit! Vraag hulp waar nodig.
-    \begin{itemize}
-      \item Testdocument of kopie paper
-    \end{itemize}
+          \begin{itemize}
+            \item Testdocument of kopie paper
+          \end{itemize}
     \item Afwerken paper, zie:
-    
-    \url{https://github.com/HoGentTIN/rm-paper/blob/main/instructies/6-afwerken.md}
+
+          \url{https://github.com/HoGentTIN/rm-paper/blob/main/instructies/6-afwerken.md}
   \end{itemize}
 \end{frame}
 
