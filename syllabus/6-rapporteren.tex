@@ -1,4 +1,4 @@
-\chapter{Resultaten rapporteren}
+\chapter{Resultaten rapporteren}%
 \label{ch:resultaten-rapporteren}
 
 %
@@ -9,7 +9,7 @@ Op een bepaald moment heb je een heleboel informatie verzameld en geanalyseerd, 
 
 In deze gids beperken we ons tot enkele belangrijke punten en specifieke aanbevelingen voor de opmaak van de tekst in {\LaTeX}. Een meer omvattend overzicht kan je o.a.~vinden in het boek van~\textcite{Pollefliet2011}.
 
-\section{Algemene richtlijnen}
+\section{Algemene richtlijnen}%
 \label{ch:algemene-richtlijnen}
 
 Wanneer je een tekst schrijft, wil je uiteraard je best doen om deze zo aangenaam mogelijk te maken om te lezen. Er zijn echter een aantal dingen waar je moet op letten. In je bachelorproef toon je aan dat je een professionele instelling hebt en een gezonde dosis maturiteit op zak hebt. Dat moet ook tot uiting komen in je schrijfstijl. De tekst moet professioneel en objectief overkomen. Vermijd in het bijzonder volgende zaken:
@@ -17,7 +17,7 @@ Wanneer je een tekst schrijft, wil je uiteraard je best doen om deze zo aangenaa
 \begin{itemize}
   \item Schrijven vanuit je eigen standpunt is uit den boze. Gebruik dus nooit de \textbf{ik-vorm}. Die geeft immers de indruk dat je je \emph{eigen mening} geeft, en als junior in je vakgebied heb je daarvoor onvoldoende autoriteit. De beweringen die je in je bachelorproef doet moeten objectieve aantoonbare feiten zijn, die ofwel gesteund worden door een verwijzing naar gezaghebbende vakliteratuur, hetzij volgen uit je eigen onderzoeksresultaaten.
   \item Gebruik geen \textbf{spreektaal}. Blijf formeel en zakelijk.
-  \item Gebruik geen \textbf{vage termen} om een hoeveelheid aan te duiden, bv. lang, groot, snel, populair, {\ldots} Quantificeer al deze uitspraken met cijfers en meeteenheden (uiteraard ondersteund door literatuurverwijzingen of resultaten van eigen onderzoek).
+  \item Gebruik geen \textbf{vage termen} om een hoeveelheid aan te duiden, bv.\ lang, groot, snel, populair, {\ldots} Quantificeer al deze uitspraken met cijfers en meeteenheden (uiteraard ondersteund door literatuurverwijzingen of resultaten van eigen onderzoek).
   \item Gebruik geen \textbf{toekomstige tijd.} Op het moment dat je afgewerkte bachelorproef gelezen wordt, is het een verslag van in het verleden uitgevoerd onderzoek. Dus niet ``Eerst zal worden gekeken naar\ldots'' maar ``Eerst werd onderzocht\ldots''
 \end{itemize}
 
@@ -69,7 +69,7 @@ Begin elk hoofstuk (en sectie) met een inleidende paragraaf die aangeeft wat de 
 % In hoofdstuk N+1 \ldots
 % \ldots
 
-\section{Afbeeldingen}
+\section{Afbeeldingen}%
 \label{sec:afbeeldingen}
 
 Het invoegen van afbeeldingen in een {\LaTeX}-document is \'e\'en van de struikelblokken voor beginnende gebruikers van het tekstzetsysteem. In een klassieke WYSIWYG tekstverwerker ben je gewend om zelf te bepalen waar een afbeelding op het papier terecht zal komen. Meestal doe je dat dan meteen onder het deel van de tekst waar naar de afbeelding verwezen wordt. In een groter document wordt dit problematisch. Het is immers mogelijk dat door toevoegingen van tekst vóór de afbeelding, die de ondermarge gaat overschrijden. De tekstverwerker zal dan wellicht de afbeelding naar de volgende bladzijde verplaatsen en je krijgt onderaan extra witruimte. Dit ziet er niet goed uit, en je verliest dan kostbare tijd met het goed positioneren van de afbeeldingen ten opzichte van de tekst.
@@ -105,7 +105,7 @@ Een alternatief is werken met \emph{vector graphics}, m.a.w.~figuren die in het 
 % Twee commando's: (Auteur, jaar) of Auteur (jaar)
 
 
-\section{Visualisatie van cijfermateriaal}
+\section{Visualisatie van cijfermateriaal}%
 \label{sec:visualisatie-cijfermateriaal}
 
 In de cursus Data Science \& AI wordt het goed visualiseren van cijfermateriaal in detail besproken en geoefend. Toch zien we dat in de bachelorproef nog heel veel fouten gemaakt worden met foute conclusies als gevolg. Daarom komen we hier nog even terug op dit onderwerp.
@@ -117,24 +117,20 @@ Stel, je voert een performantievergelijking uit tussen twee systemen, A en B. Je
 \begin{figure}
   \begin{subfigure}{.5\textwidth}
     \includegraphics[width=\textwidth]{voorbeelden/barplot.png}
-    \caption{Staafdiagram van gemiddelden. Dit is onvoldoende om een conclusie te trekken}
-    \label{fig:barplot}
+    \caption{\label{fig:barplot}Staafdiagram van gemiddelden. Dit is onvoldoende om een conclusie te trekken}
   \end{subfigure}
   \begin{subfigure}{.5\textwidth}
     \includegraphics[width=\textwidth]{voorbeelden/barplot-errorbars.png}
-    \caption{Staafdiagram met \textit{error bars} die de grootte van de steekproefstandaardafwijking voorstellen. Door de grote spreiding is het verschil tussen beide categorieën ineens veel minder uitgesproken.}
-    \label{fig:barplot-errorbars}
+    \caption{\label{fig:barplot-errorbars}Staafdiagram met \textit{error bars} die de grootte van de steekproefstandaardafwijking voorstellen. Door de grote spreiding is het verschil tussen beide categorieën ineens veel minder uitgesproken.}
   \end{subfigure}
   
   \begin{subfigure}{.5\textwidth}
     \includegraphics[width=\textwidth]{voorbeelden/boxplot-jitter.png}
-    \caption{Boxplot met individuele observaties weergegeven als punten. Hiermee is de spreiding van de data nog duidelijker.}
-    \label{fig:boxplot-jitter}
+    \caption{\label{fig:boxplot-jitter}Boxplot met individuele observaties weergegeven als punten. Hiermee is de spreiding van de data nog duidelijker.}
   \end{subfigure}
   \begin{subfigure}{.5\textwidth}
     \includegraphics[width=\textwidth]{voorbeelden/density-plot.png}
-    \caption{Kansdichtheid met steekproefgemiddelden aangeduid als een verticale stippellijn. Hier wordt duidelijk dat de resultaten van het experiment niet normaal verdeeld zijn. Dat maakt dat een staafdiagram met error bars eigenlijk niet geschikt is voor deze data.}
-    \label{fig:density-plot}
+    \caption{\label{fig:density-plot}Kansdichtheid met steekproefgemiddelden aangeduid als een verticale stippellijn. Hier wordt duidelijk dat de resultaten van het experiment niet normaal verdeeld zijn. Dat maakt dat een staafdiagram met error bars eigenlijk niet geschikt is voor deze data.}
   \end{subfigure}
   
   \caption[Visualiseren van cijfergegevens]{Verschillende manieren om dezelfde data te visualiseren.}

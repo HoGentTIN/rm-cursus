@@ -1,4 +1,4 @@
-\chapter{Onderzoeksmethoden}
+\chapter{Onderzoeksmethoden}%
 \label{ch:onderzoeksmethoden}
 
 In dit hoofdstuk vind je aanbevelingen in verband met een aantal vaak gebruikte onderzoeksmethoden. Meer bepaald bespreken we de aanpak van een vergelijkende studie, hoe je correct experimenten opzet en hoe je op een correcte manier rapporteert over bekomen resultaten (in het bijzonder cijfermateriaal).
@@ -22,7 +22,7 @@ In dit hoofdstuk vind je aanbevelingen in verband met een aantal vaak gebruikte 
 % wanneer pas je elk toe?
 % Vaak heb je een combinatie van deze technieken nodig om je onderzoeksvra(a)g(en) goed en onderbouwd te kunnen beantwoorden.
 
-\section{De vergelijkende studie}
+\section{De vergelijkende studie}%
 \label{sec:vergelijkende-studie}
 
 Een type onderwerp dat vaak gekozen wordt voor een bachelorproef is een vergelijkende studie. Je bent op zoek naar een oplossing voor een probleem in de vorm van een software- of hardware-product, platform, dienst, enz. De bedoeling van de studie is om alle mogelijke alternatieven naast elkaar te zetten en een keuze te maken over de meest geschikte.
@@ -33,7 +33,7 @@ Maar hoe pak je het dan \emph{wel} aan?
 
 Laat ons veronderstellen dat je na je afstuderen aan de slag wil als webontwikkelaar, en je bent op zoek naar een geschikt PHP-framework om je websites mee te bouwen.
 
-\subsection{Requirements-analyse}
+\subsection{Requirements-analyse}%
 \label{ssec:requirements-analyse}
 
 Om een goede keuze te maken begin je met het verzamelen van \emph{requirements}, zowel \textit{functionele} als \emph{niet-functionele}, bijvoorbeeld:
@@ -43,7 +43,7 @@ Om een goede keuze te maken begin je met het verzamelen van \emph{requirements},
   \begin{itemize}
   \item Ondersteuning voor HTML5/CSS3
   \item Responsive design
-  \item Er moet een authenticatiemodule in zitten die OpenID, Facebook- en Google-authenticatie ondersteunt
+  \item Er moet een authenticatiemodule in zitten die OpenID, Facebook- en Goo\-gle-authenticatie ondersteunt
   \item \ldots
   \end{itemize}
 \item Niet-functionele requirements
@@ -56,24 +56,24 @@ Om een goede keuze te maken begin je met het verzamelen van \emph{requirements},
   \end{itemize}
 \end{itemize}
 
-Als je het onderzoek doet voor een ``klant'' (i.e. je co-promotor), dan betrek je uiteraard alle belanghebbenden bij dit proces! Je lijst de requirements op en verdeelt ze onder naar belangrijkheid, bijvoorbeeld via de MoSCoW-techniek~\parencite{Nordenstam2014}. Je verdeelt de requirements dan in categorieën zoals ``must-have'', ``should-have'' en ``nice-to-have''.
+Als je het onderzoek doet voor een ``klant'' (i.e.\ je co-promotor), dan betrek je uiteraard alle belanghebbenden bij dit proces! Je lijst de requirements op en verdeelt ze onder naar belangrijkheid, bijvoorbeeld via de MoSCoW-techniek~\parencite{Nordenstam2014}. Je verdeelt de requirements dan in categorieën zoals ``must-have'', ``should-have'' en ``nice-to-have''.
 
-\subsection{Long list}
+\subsection{Long list}%
 \label{ssec:long-list}
 
 Dan zoek je \emph{zoveel mogelijk} alternatieven die in aanmerking komen om gebruikt te worden, m.a.w.~al diegenen die je kan vinden. Je noemt ze in deze \emph{long list} (die soms kan bestaan uit tientallen alternatieven) bij naam, met eventueel vermelding van een website en een beschrijving in één zin. Elk alternatief toets je af aan de requirements, voor zover dit al mogelijk is aan de hand van informatie die je op de website vindt of via andere bronnen. Zaken die je niet kan verifiëren laat je gewoon open om later na te kijken of misschien zelfs te negeren (als het bv.~gaat om een onbelangrijke feature, of als verschillende andere must-haves niet voldaan zijn). Je sorteert de long list dan volgens het aantal voldane requirements, en maakt hier een overzichtelijke tabel van. Hopelijk heb je een aantal alternatieven overgehouden die voldoen aan alle must-haves en zoveel mogelijk should-haves en nice-to-haves.
 
-\subsection{Short list en proof-of-concept}
+\subsection{Short list en proof-of-concept}%
 \label{ssec:short-list-poc}
 
- De meest veelbelovende alternatieven weerhoud je voor de volgende fase. De alternatieven in deze \emph{short list} ga je in meer detail bespreken en verder tegenover elkaar afwegen. Zet eventueel een \emph{proof-of-concept} op (zie Sectie \ref{sec:poc-testopstelling}), waarin je één of enkele van de meest veelbelovende alternatieven uitprobeert aan de hand van eenzelfde vastgelegd \emph{scenario} waarin je de requirements die je nog niet hebt kunnen verifiëren aan bod laat komen.
+ De meest veelbelovende alternatieven weerhoud je voor de volgende fase. De alternatieven in deze \emph{short list} ga je in meer detail bespreken en verder tegenover elkaar afwegen. Zet eventueel een \emph{proof-of-concept} op (zie Sectie~\ref{sec:poc-testopstelling}), waarin je één of enkele van de meest veelbelovende alternatieven uitprobeert aan de hand van eenzelfde vastgelegd \emph{scenario} waarin je de requirements die je nog niet hebt kunnen verifiëren aan bod laat komen.
 
-\subsection{Conclusie}
+\subsection{Conclusie}%
 \label{ssec:vgl-studie-conclusie}
 
 Tenslotte geef je je \emph{aanbeveling}, het alternatief dat het beste aansluit bij de requirements, en wat eventueel nog moet gedaan worden om het nog beter geschikt te maken.
 
-\section{Proof-of-concept of testopstelling}
+\section{Proof-of-concept of testopstelling}%
 \label{sec:poc-testopstelling}
 
 Met een proof-of-concept of testopstelling wil je aantonen dat een voorgestelde of veelbelovende oplossing voor de onderzoeksvraag ook realiseerbaar is in de praktijk. Vaak is het nodig verschillende varianten naast elkaar op te zetten, zodat je nog onderling kan vergelijken.
@@ -81,14 +81,14 @@ Met een proof-of-concept of testopstelling wil je aantonen dat een voorgestelde 
 Een goede testopstelling voldoet aan drie eigenschappen \autocite{Liberman2015}:
 
 \begin{description}
-  \item[Reproduceerbaarheid] in staat zijn om de testopstelling opnieuw op te zetten (eventueel door een onafhankelijke partij) en de analyse opnieuw uit te voeren zodat je kan verifiëren dat je gelijkaardige resultaten krijgt.
+  \item[Reproduceerbaarheid] in staat zijn om de testopstelling opnieuw op te zetten (e\-ven\-tu\-eel door een onafhankelijke partij) en de analyse opnieuw uit te voeren zodat je kan verifiëren dat je gelijkaardige resultaten krijgt.
   \item[Repliceerbaarheid] lijkt op het voorgaande, maar is sterker uitgedrukt: bij een repliceerbare testopstelling is het mogelijk dat een onafhankelijke partij deze \textit{exact} opnieuw kan opzetten en dezelfde resultaten zal bekomen.
   \item[Herbruikbaarheid] varianten kunnen opzetten van de testomgeving zodat deze onderling kunnen vergeleken worden.
 \end{description}
 
 De beste manier om dit te bereiken is door het proces te automatiseren.
 
-\subsection{Reproduceerbaarheid}
+\subsection{Reproduceerbaarheid}%
 \label{ssec:reproduceerbaarheid}
 
 Een minimumverwachting van de tekst van een bachelorproef is dat de lezer in staat moet zijn om aan de hand van de beschrijving de testopstelling te reproduceren en je conclusies moet kunnen verifiëren. Dat betekent ook dat je beschrijving voldoende gedetailleerd moet zijn. Geef aan het begin van deze sectie in je tekst een duidelijke afbeelding met een schema van de opgezette testomgeving. Beschrijf vervolgens in detail:
@@ -99,12 +99,12 @@ Een minimumverwachting van de tekst van een bachelorproef is dat de lezer in sta
   \item Hoe is de installatieprocedure precies verlopen? Welke instellingen zijn er aangepast, en hoe zijn alle componenten geconfigureerd?
 \end{itemize}
 
-\subsection{Repliceerbaarheid}
+\subsection{Repliceerbaarheid}%
 \label{ssec:repliceerbaarheid}
 
 Het is zowel voor jezelf als voor de lezer van je bachelorproef belangrijk om het opzetten van de testomgeving zo veel mogelijk te automatiseren, bijvoorbeeld door het schrijven van een installatiescript. Op deze manier bereik je de \textit{repliceerbaarheid} van je testopstelling.
 
-Voor veel situaties kan je een proof-of-concept uitwerken met virtuele machines. Op die manier creëer je een afgeschermde omgeving zonder dat je extra software moet installeren op je fysieke systeem. Vagrant\footnote{\url{https://www.vagrantup.com/}} is een interessante tool om reproduceerbare virtuele testomgevingen volledig geautomatiseerd op te zetten. Het is zelf geen virtualisatiesysteem, maar het spreekt VirtualBox, VMWare of Hyper-V aan vanop de command-line. Je beschrijft in een configuratiebestand (\texttt{Vagrantfile}) welke VMs je nodig hebt, met hoeveel processorkernen/geheugen/schijfruimte, met welk besturingssysteem, enz. Via een script of configuration management system (zoals Ansible) kan je de precieze configuratie van de VMs beschrijven (installatie software, gebruikers, netwerkservices, configuratiebestanden, enz.). De code/configuratie om een Va\-grant-\-omgeving op te zetten is erg compact, volledig tekstgebaseerd en kan dus worden bijgehouden in een versiebeheersysteem.
+Voor veel situaties kan je een proof-of-concept uitwerken met virtuele machines. Op die manier creëer je een afgeschermde omgeving zonder dat je extra software moet installeren op je fysieke systeem. Vagrant\footnote{\url{https://www.vagrantup.com/}} is een interessante tool om reproduceerbare virtuele testomgevingen volledig geautomatiseerd op te zetten. Het is zelf geen virtualisatiesysteem, maar het spreekt VirtualBox, VMWare of Hyper-V aan vanop de command-line. Je beschrijft in een configuratiebestand (\texttt{Vagrantfile}) welke VMs je nodig hebt, met hoeveel processorkernen, geheugen, schijfruimte, met welk besturingssysteem, enz. Via een script of configuration management system (zoals Ansible) kan je de precieze configuratie van de VMs beschrijven (installatie software, gebruikers, netwerkservices, configuratiebestanden, enz.). De code en configuratie om een Va\-grant-\-omgeving op te zetten is erg compact, volledig tekstgebaseerd en kan dus worden bijgehouden in een versiebeheersysteem.
 
 Ook Docker\footnote{\url{https://docker.com/}} is een interessante tool hiervoor. Docker is een vorm van zgn.~containervirtualisatie. Virtuele machines (containers) hebben geen eigen OS, maar bevatten in principe enkel een applicatie. Het OS van het fysieke systeem wordt hergebruikt door de containers. Dat maakt dat containers een stuk efficiënter zijn qua schijf- en geheugengebruik voor het fysieke systeem. Er zijn echter een aantal beperkingen waardoor Docker niet altijd bruikbaar is als platform voor een testopstelling.
 
@@ -112,12 +112,12 @@ Als je merkt dat je een fout gemaakt hebt in de configuratie van je testopstelli
 
 Een uitgebreide handleiding van Vagrant of Docker valt buiten het bereik van deze gids. Een voorbeeld ter illustratie is te vinden op \url{https://github.com/bertvv/lampstack}. Hier wordt een Apache webserver opgezet met een MariaDB databank, PHPMyAdmin, en Wordpress.
 
-\subsection{Herbruikbaarheid}
+\subsection{Herbruikbaarheid}%
 \label{ssec:herbruikbaarheid}
 
 Door het gehele proces te automatiseren creëer je een bijkomend voordeel: het is een stuk makkelijker om gelijkaardige varianten van een testopstelling te creëren. Stel dat je de performantie-impact van een cache op een databasesysteem wil meten. De installatie van beide varianten (met/zonder cache) zijn zeer gelijkaardig. In een Vagant-omgeving kan je 2 VMs creëren, met hetzelfde installatiescript voor de basisopstelling, en een apart script om de verschillende configuratie-varianten te realiseren.
 
-\section{Experimenten uitvoeren en verzamelen van kwantitatieve data}
+\section{Experimenten uitvoeren en verzamelen van kwantitatieve data}%
 \label{sec:experimenten-uitvoeren}
 
 Wanneer je een experiment opzet waarbij je kwantitatieve data gaat verzamelen, bijvoorbeeld voor een performantievergelijking, gelden dezelfde richtlijnen als bij een proof-of-concept: het is belangrijk dat die reproduceerbaar, repliceerbaar en herbruikbaar is. Wellicht start je vanaf een vooraf gedefinieerde testopstelling, en ga je herhaaldelijk eenzelfde handeling uitvoeren en metingen doen.
