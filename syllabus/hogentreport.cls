@@ -520,6 +520,9 @@
         \IfLanguageName{dutch}{%
           \textbf{Academiejaar:}}{\textbf{Academic year:}} \@academicyear\\
     \fi
+    \begingroup
+      \subtitlefont\bfseries\@departmentname\@addpunct{.}
+    \endgroup
     
     %% Insert the HoGent logo
     \begin{tikzpicture}[remember picture, overlay]
@@ -528,12 +531,6 @@
         \includegraphics[height=\the\ht\logopart]{hogent_logo}%
       };%
     \end{tikzpicture}
-    
-    \bigskip
-    \begingroup
-      \subtitlefont\bfseries\@departmentname\@addpunct{.}
-    \endgroup
-    
     \end{titlepage}%
     
     \thispagestyle{empty}
