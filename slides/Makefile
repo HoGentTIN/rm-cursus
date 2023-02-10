@@ -29,7 +29,7 @@ all: $(pdfs) ## Compileer alle LaTeX-bestanden (hieronder opgesomd)
 
 clean: ## Verwijder LaTeX hulpbestanden
 	rm -vf "$(output_dir)"/*.{bak,aux,log,nav,out,snm,ptc,toc,bbl,blg,idx,ilg,ind,tcp,vrb,tps,lof,log,lol,lot,synctex.gz,fls,fdb_latexmk,bcf,run.xml,xdv}
-	rm -vrf "$(output_dir)"/_minted*
+	rm -vrf _minted* "$(output_dir)"/_minted*
 
 mrproper: clean ## Verwijder LaTeX hulpbestanden én PDFs
 	rm -v "$(output_dir)"/*.pdf
