@@ -22,16 +22,10 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \def\@classname{hogentreport}
-\ProvidesClass{hogentreport}[2020/01/16 Hogeschool Gent report/thesis class]
+\ProvidesClass{hogentreport}[2022/06/14 Hogeschool Gent report/thesis class]
 
 \RequirePackage{xkeyval}
 \RequirePackage{iflang}
-
-\RequirePackage[hyphens]{url}
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
-
-\RequirePackage{booktabs}
 
 %% Ensure the variables can be checked with \ifx\@variable\@empty
 \let\@author\@empty
@@ -85,7 +79,7 @@
 %% Check the variables that need to be defined for the title page
 \newcommand{\@checkvariables}{%
 
-    \ifx\@title\@empty{%
+    \ifx\@author\@empty{%
         \ClassError{\@classname}{Author is undefined!}%
         {Use the \author command to define it}
     }\fi
@@ -221,21 +215,42 @@
     \RequirePackage[dvipsnames]{xcolor}
 \fi
 
+% Graphics related packages
 \RequirePackage{tikz}
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{positioning}
+\RequirePackage{standalone}
+\RequirePackage{wrapfig}
+
+% Page layout & document structure
+\RequirePackage{appendix}
+\RequirePackage{booktabs}
+\RequirePackage{enumitem}
+%\setlist{noitemsep}
+%\setlist[enumerate]{itemsep=1pt}
+%\setlist[itemize]{itemsep=1pt}
+%\setlist{parsep=\topskip}
+%\setlist{topsep=\topskip}
+%\setlist{partopsep=\topskip}
+\RequirePackage{fancyhdr}
+\RequirePackage{makeidx}
+\RequirePackage{makecell}
+\RequirePackage{pdfpages}
+\RequirePackage{rotating}
+\RequirePackage{tabularx}
+\RequirePackage{tcolorbox}
 \RequirePackage[noindentafter]{titlesec}
 \RequirePackage{titletoc}
 \RequirePackage[nottoc]{tocbibind}
-\RequirePackage{fancyhdr}
-\RequirePackage{appendix}
 
-%% Define the HoGent style colors
-%% Faculties:
-\definecolor{hogent-fbo}{RGB}{0,147,208} % Business and Information Management
-\definecolor{hogent-fmw}{RGB}{0,168,143} % Education, Health and Social Work
-\definecolor{hogent-fnt}{RGB}{255,0,0}   % Faculty of Science and Technology
-\definecolor{hogent-soa}{RGB}{0,0,0}     % School of Arts
+\captionsetup[figure]{labelformat=parens, labelsep=newline}
+
+% Typography & Symbols
+\RequirePackage{eurosym}
+\RequirePackage{microtype}
+\RequirePackage{textcomp}
+\RequirePackage{xspace}
+\RequirePackage{csquotes}
 
 %% Accent colors:
 \definecolor{hogent-darkgreen}{RGB}{22,176,165}
@@ -250,14 +265,6 @@
 \definecolor{hogent-yellow}{RGB}{244,222,0}
 
 \colorlet{links}{hogent-blue} %% The color to be used for urls and references
-
-%% These are the colors specified in the previous styling guide
-%\definecolor{hogent-darkred}{RGB}{0,111,184}
-%\definecolor{hogent-red}{RGB}{244,52,69}
-%\definecolor{hogent-green}{RGB}{0,156,124}
-%\definecolor{hogent-altpink}{RGB}{239,170,162}
-%\definecolor{hogent-darkgrey}{RGB}{150,150,150}
-%\definecolor{hogent-altyellow}{RGB}{255,218,0}
 
 %% Setting of the department text and title color based on the class option
 \ifx\@department\@empty{%
@@ -274,11 +281,11 @@
 \or
     \colorlet{title}{hogent-pink}% dgz
 \or
-    \colorlet{title}{hogent-ochre}% dit
+    \colorlet{title}{hogent-orange}% dit
 \or
     \colorlet{title}{hogent-blue}% dlo
 \or
-    \colorlet{title}{hogent-fnt}% dog
+    \colorlet{title}{hogent-lightgreen}% dog
 \or
     \colorlet{title}{hogent-grey}% dsa
 \else
@@ -329,13 +336,13 @@
         not running XeLaTeX/LuaLaTeX: using native fonts}
 
     \RequirePackage[defaultfam,tabular,lining]{montserrat}
-    \RequirePackage{inconsolata}
+    \RequirePackage{firamath}
     \RequirePackage{sfmath} % Fallback sans serif math font
 
     \RequirePackage[T1]{fontenc}
     \renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
-    \def\titlefont{\fontseries{k}\selectfont} %% Set the black family for titles
+    \def\titlefont{er} %% Set the black family for titles
     \def\subtitlefont{\fontseries{eb}\selectfont}
     \def\tocfont{\fontseries{m}\selectfont}
     \def\titlestyle{\titlefont\bfseries}
@@ -395,13 +402,13 @@
             BoldItalicFont= *-BoldItalic]
     }
 
-    \IfFontExistsTF{Inconsolata}{%
-            \setmonofont{inconsolata}[StylisticSet={1,3}]
+    \IfFontExistsTF{Fira Code}{%
+            \setmonofont{Fira Code}[StylisticSet={1,3}]
             %% Shapely l, upright quotes, striked zeroes
 
     }{%
-            \setmonofont{Inconsolata}[
-                Path = fonts/Inconsolata/,
+            \setmonofont{Fira Code}[
+                Path = fonts/FiraCode/,
                 Extension = .otf,
                 UprightFont = *-Regular,
                 BoldFont=*-Bold,
@@ -435,7 +442,7 @@
 \geometry{a4paper,hscale=0.75,vscale=0.8,headheight=14pt,asymmetric}
 
 %% Page layout settings
-\setlength{\parindent}{0cm}              %% Don't indent paragraph text
+\setlength{\parindent}{.5cm}              %% Don't indent paragraph text
 \renewcommand{\baselinestretch}{1.2}     %% Increase line height
 \raggedbottom                            %% Don't equalize content on pages
 
@@ -446,6 +453,7 @@
     
     %% Change the geometry so the notes section doesn't bother us
     \newgeometry{top=2cm,bottom=\wd\logopart,left=1.5cm,right=1.5cm}
+    
     %% Add whitespace at the top
     %\addvspace{10\bigskipamount}
     
@@ -484,51 +492,45 @@
     
     \if@thesis
       \begingroup
-        \IfLanguageName{dutch}{%
-        \textbf{Promotor:}}{\textbf{Supervisor:}} \@supervisor\\
-        \ifx\@cosupervisor\@empty\else
-        \IfLanguageName{dutch}{%
-            \textbf{Co-promotor:}}{%
-            \textbf{Co-Supervisor:}} & \@cosupervisor\\
-        \fi
-        \ifx\@institution\@empty\else
-        \IfLanguageName{dutch}{%
-            \textbf{Instelling:}}{\textbf{Institution:}} \@institution\\
-        \fi
-        
-        \bigskip
-      
-        \IfLanguageName{dutch}{%
-        \textbf{Academiejaar:}}{\textbf{Academic year:}} \@academicyear\\
-        \textbf{%
-            \ifcase\@examperiod
-            \or
-            \IfLanguageName{dutch}{Eerste}{First}
-            \or
-            \IfLanguageName{dutch}{Tweede}{Second}
-            \else
-            \IfLanguageName{dutch}{Derde}{Third}
-            \fi
-        \IfLanguageName{dutch}{examenperiode}{exam period} }\\
+          \IfLanguageName{dutch}{%
+            \textbf{Promotor:}}{\textbf{Supervisor:}} \@supervisor\\
+          \ifx\@cosupervisor\@empty\else
+            \IfLanguageName{dutch}{%
+              \textbf{Co-promotor:}}{%
+              \textbf{Co-Supervisor:}} \@cosupervisor\\
+          \fi
+          \ifx\@institution\@empty\else
+            \IfLanguageName{dutch}{%
+              \textbf{Instelling:}}{\textbf{Institution:}} \@institution\\
+          \fi
+          \IfLanguageName{dutch}{%
+            \textbf{Academiejaar:}}{\textbf{Academic year:}} \@academicyear\\
+            \textbf{%
+              \ifcase\@examperiod
+              \or
+                \IfLanguageName{dutch}{Eerste}{First}
+              \or
+                \IfLanguageName{dutch}{Tweede}{Second}
+              \else
+                \IfLanguageName{dutch}{Derde}{Third}
+              \fi
+          \IfLanguageName{dutch}{examenperiode}{exam period} } \\
       \endgroup
     \else
-      \IfLanguageName{dutch}{%
+        \IfLanguageName{dutch}{%
           \textbf{Academiejaar:}}{\textbf{Academic year:}} \@academicyear\\
     \fi
-    
-    % %% Insert the HoGent logo
-    % \begin{tikzpicture}[remember picture, overlay]
-    %   \node [anchor=south east, shift={(-\the\wd\logopart, \the\wd\logopart)}, inner sep=0, outer sep=0] (logo) at (current page.south east)%
-    %   {%
-    %     \includegraphics[height=\the\ht\logopart]{hogent_logo}%
-    %   };%
-    % \end{tikzpicture}
-    
-    \bigskip
     \begingroup
       \subtitlefont\bfseries\@departmentname\@addpunct{.}
     \endgroup
     
+    %% Insert the HoGent logo
+    \begin{tikzpicture}[remember picture, overlay]
+      \node [anchor=south east, shift={(-\the\wd\logopart, \the\wd\logopart)}, inner sep=0, outer sep=0] (logo) at (current page.south east)%
+      {%
+        \includegraphics[height=\the\ht\logopart]{hogent_logo}%
+      };%
+    \end{tikzpicture}
     \end{titlepage}%
     
     \thispagestyle{empty}
