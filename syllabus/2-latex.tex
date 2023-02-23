@@ -20,24 +20,116 @@ Voor het opmaken van een lange tekst met een professionele en strakke vormgeving
 
 Toegegeven, {\LaTeX} heeft wel degelijk enkele nadelen. Er is een niet te onderschatten leercurve, en zolang je vasthoudt aan de gewoonten die je overgehouden hebt aan het werken met een tekstverwerker, doet {\LaTeX} niet altijd wat je verwacht. Maar je moet de meeste inspanning leveren in het begin, wanneer je {\LaTeX} nog onder de knie moet krijgen. Eens je het basissjabloon met succes kan compileren naar PDF, kan je stelselmatig inhoud toevoegen zonder dat je je nog zorgen hoeft te maken over de vormgeving. Die zal altijd strak en consistent blijven. Zaken zoals hoofdstuk- en paginanummering, verwijzen naar andere hoofdstukken, figuren of bronnen worden automatisch bijgehouden en aangepast wanneer nodig.
 
-Bij het schrijven van een bachelorproef met een tekstverwerker heb je het meeste werk op het einde, om alle onvolkomenheden, inconsistenties en fouten in de vormgeving weg te werken. Op dat moment heb je daar meestal niet meer voldoende tijd voor, want de deadline nadert. Het gevolg is vrijwel altijd een document dat onvoldoende afgewerkt is en er heel onprofessioneel uitziet voor de lezer. Dit past niet niet bij een werkstuk dat dient als afsluiter van een \textit{professionele} bacheloropleiding.
+Bij het schrijven van een bachelorproef met een tekstverwerker heb je het mees\-te werk op het einde, om alle onvolkomenheden, inconsistenties en fouten in de vormgeving weg te werken. Op dat moment heb je daar meestal niet meer voldoende tijd voor, want de deadline nadert. Het gevolg is vrijwel altijd een document dat onvoldoende afgewerkt is en er heel onprofessioneel uitziet voor de lezer. Dit past niet niet bij een werkstuk dat dient als afsluiter van een \textit{professionele} bacheloropleiding.
 
 In de rest van deze gids gaan we er van uit dat je {\LaTeX} gebruikt. Het is niet de bedoeling dat dit een {\LaTeX} handleiding wordt, daarvoor zijn er voldoende andere bronnen beschikbaar~\parencite{Oetiker2015}.
 
-Je kan een {\LaTeX}-sjabloon voor het opmaken van de bachelorproef vinden op de Github repository \url{https://github.com/HoGentTIN/bachproef-latex-sjabloon}. Via de groene knop rechtsboven kan je het sjabloon downloaden. De repository klonen of een fork aanmaken is niet aan te raden. Daarmee neem je immers ook de hele historiek van het sjabloon over en die is niet relevant voor jouw werk.
+\section{Installatie}%
+\label{sec:latex-installatie}
 
-\section{Bibliografische databank}%
-\label{sec:bibliografische-databank}
+Om met {\LaTeX} te kunnen werken heb je het volgende nodig:
 
-Een vast onderdeel van een bachelorproef is het voeren van een literatuurstudie om je in te werken in het onderzoeksdomein (zie Hoofdstuk~\ref{ch:literatuuronderzoek}). Het is belangrijk om goed bij te houden wat je allemaal leest, zodat je bij het schrijven van de inleiding kan verwijzen naar je bronnen. Het verwijzen naar bronnen en opmaken van een bibliografie moet op een strakke, strikt vastgelegde manier gebeuren. Dit is iets dat je niet manueel hoeft te doen, er bestaan verschillende softwarepakketten die dit grotendeels automatiseren: bibliografische databanken.
+\begin{itemize}
+  \item Een {\LaTeX} compiler. Afhankelijk van je besturingssysteem zijn de volgende goede keuzes:
+  \begin{itemize}
+    \item Windows: MiKTeX\footnote{\url{https://miktex.org}} of TeX Live\footnote{\url{https://tug.org/texlive/}}.
+    \item macOS: MacTeX\footnote{\url{https://tug.org/mactex/}}.
+    \item Linux: TeX Live.
+  \end{itemize}
+  \item Een {\LaTeX} IDE of editor met goede ondersteuning. Wij raden een van deze aan (omdat ze op alle besturingssystemen goed werken):
+  \begin{itemize}
+    \item TeXstudio\footnote{\url{https://www.texstudio.org}}.
+    \item VS Code met de LaTeX Workshop extensie\footnote{\url{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}}.
+  \end{itemize}
+  \item Een tool voor het bijhouden van bibliografische referenties. Wij raden JabRef\footnote{\url{https://www.jabref.org}} aan (voor alle besturingssystemen).
+  \item Een {\LaTeX}-sjabloon. Vanuit de opleiding bieden we enkele sjablonen aan:
+  \begin{itemize}
+    \item Voor de bachelorproef\footnote{\url{https://github.com/HoGentTIN/latex-hogent-bachproef}}
+    \item Voor een korte tekst of artikel\footnote{\url{https://github.com/HoGentTIN/latex-hogent-article}} (dit sjabloon gebruik je voor het uitwerken van bachelorproefvoorstel voor Research Methods)
+    \item Voor een presentatie\footnote{\url{https://github.com/HoGentTIN/latex-hogent-beamer}}
+  \end{itemize}
+  \item Lettertypes voor de HOGENT-huisstijl. Deze kan je downloaden en installeren via de Github-repos met de {\LaTeX}-sjablonen\footnote{Bv.\ \url{https://github.com/HoGentTIN/latex-hogent-bachproef/tree/main/fonts}}.
+  \begin{itemize}
+    \item Montserrat (officieel hoofdlettertype van de HOGENT huisstijl)
+    \item Fira Code (monogespatieerde tekst)
+    \item Fira Math (wiskundige formules)
+  \end{itemize}
+\end{itemize}
 
-Een bibliografische databank laat je toe metadata over de gelezen werken gestructureerd bij te houden: titel, auteur, jaartal, en dergelijke, maar ook (aanklikbare) URLs, PDFs van artikels, nota's, enz.
+Lettertypes installeren kan je op zowel Windows, macOS als Linux door te dubbelklikken op het .otf-bestand en op de knop "Installeren" te klikken in het preview-venster. Je kan de bestanden ook rechtstreeks kopiëren naar de directory met lettertypes:
 
-Er zijn verschillende mogelijkheden, maar JabRef\footnote{\url{http://www.jabref.org/}} is voor onze doeleinden wellicht de interessantste. JabRef is een open source bibliografische databank geschreven in Java en bij uitstek geschikt voor het werken met {\LaTeX}. Het gebruikt als bestandsformaat hetzelfde als Bib{\LaTeX}, het in {\LaTeX} ingebouwde systeem voor bibliografieën.
+\begin{itemize}
+  \item Windows: \verb+C:\Windows\Fonts+
+  \item macOS: \verb+/Library/Fonts+ of \verb+~/Library/Fonts+
+  \item Linux: \verb+/usr/share/fonts+ of \verb+~/.local/share/fonts+
+\end{itemize}
 
-De manier waarop een literatuurlijst en verwijzingen in de tekst moeten opgemaakt worden ligt vast. Er zijn echter wel verschillende opmaakstijlen. Eén daarvan is de zogenaamde \textbf{APA-stijl} die afkomstig is van de American Psychological Association (APA). Het is de belangrijkste standaard voor publicaties in het domein van de sociale wetenschappen. De officiële handleiding van de APA-stijl is erg uitgebreid en kan daardoor onhandig in het gebruik zijn. In het {\LaTeX}-sjabloon voor de bachelorproef zit de APA-stijl al ingebakken en je hoeft je dus helemaal geen zorgen te maken over de correcte opmaak. Dit gebeurt automatisch, mits je de bibliografische gegevens (bv.\ titel, auteur, jaar van publicatie) correct bijhoudt in Jabref. Meer daarover in Sectie~\ref{sec:publicaties_bijhouden_in_jabref}.
+\subsection{Installatie op Windows}%
+\label{ssec:installatie-op-windows}
 
-\textbf{Let op!!} Het gebruik van de APA-stijl is verplicht over heel HOGENT. Dat geldt zowel voor de opmaak van de literatuurlijst als verwijzingen naar bronnen in de tekst.
+Als je de nodige software wil installeren op Windows, dan raden we aan om gebruik te maken van een package manager, bv.\ Chocolatey\footnote{\url{https://chocolatey.org}}:
+
+\begin{minted}[linenos,breaklines,frame=single]{console}
+choco install miktex
+choco install texstudio
+choco install jabref
+\end{minted}
+
+\subsection{Installatie op macOS}%
+\label{ssec:installatie-op-macos}
+
+Ook op macOS gebruik je best een package manager zoals Homebrew\footnote{\url{https://brew.sh}}:
+
+\begin{minted}[linenos,breaklines,frame=single]{console}
+brew install --cask mactex
+brew install --cask texstudio
+brew install --cask jabref
+\end{minted}
+
+\subsection{Installatie op Linux}%
+\label{ssec:installatie-op-linux}
+
+Linux-gebruikers zijn het meestal gewend om de package manager voor hun specifieke distributie te gebruiken. Op Debian/Ubuntu kan je bijvoorbeeld het volgende commando uitvoeren:
+
+\begin{minted}[linenos,breaklines,frame=single]{console}
+sudo apt install texlive-base texlive-latex-base texlive-latex-recommended texlive-bibtex-extra texlive-pictures texlive-fonts-recommended jabref texstudio
+\end{minted}
+
+
+\section{{\TeX}studio configureren}%
+\label{sec:texstudio-configureren}
+
+Zoals eerder vermeld raden we {\TeX}studio of VS Code aan als {\LaTeX}-editor. In deze sectie gaan we {\TeX}studio configureren. De configuratie van VS Code is iets complexer en zullen we hier niet behandelen. Kies na opstarten in het menu voor \textit{Options} en vervolgens voor \textit{Configure {\TeX}studio}.
+
+De belangrijkste opties zijn:
+
+\begin{itemize}
+  \item Build:
+    \begin{itemize}
+      \item Default compiler: \textit{XeLaTeX}
+      \item Default Bibliography tool: \textit{Biber}
+    \end{itemize}
+  \item Commands:
+    \begin{itemize}
+      \item xelatex:
+      
+        \begin{minted}[autogobble,linenos,breaklines,frame=single]{console}
+          xelatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error %
+        \end{minted}
+
+    \end{itemize}
+  \item Editor:
+    \begin{itemize}
+      \item Indentation mode: Indent and Unindent Automatically
+      \item Replace Indentation Tab by Spaces: Aanvinken
+      \item Replace Tab in Text by spaces: Aanvinken
+      \item Replace Double Quotes: English Quotes: ‘‘’’
+    \end{itemize}
+  \item Language Checking:
+    \begin{itemize}
+      \item Default language: selecteer "nl\_NL-Dutch" of een gelijkaardige optie voor Nederlands zodat je gebruik kan maken van spellingcontrole. Is deze optie niet beschikbaar? Je kan een woordenboekbestand voor OpenOffice of LibreOffice downloaden en installeren. Het dialoogvenster heeft links die je meteen naar de juiste pagina leiden.
+    \end{itemize}
+\end{itemize}
 
 \section{Versiebeheersysteem}%
 \label{sec:versiebeheersysteem}
@@ -51,22 +143,24 @@ Volgende zaken horen zeker thuis in je repository:
   \item in te voegen afbeeldingen.
   \item broncode van zelf geschreven scripts, benchmarks, experimenten, proof-of-concepts, enz. Dit maakt dat je experimenten makkelijker te reproduceren en te valideren zijn door derden.
   \item ruwe resultaten experimenten (in tekstformaat, bv. CSV), transcripties van interviews, enz.
-  \item losse nota's, ideeën, enz. Gebruik hiervoor Markdown en vermijd Word-do\-cu\-men\-ten.
+  \item losse nota's, ideeën, enz. Gebruik hiervoor Markdown\footnote{\url{https://guides.github.com/features/mastering-markdown/}} en vermijd Word-do\-cu\-men\-ten.
 \end{itemize}
 
-Kortom, \emph{alle} artefacten die resulteren uit je onderzoek horen thuis in de repository. Voor werkdocumenten waar je opgemaakte tekst wenst, maar waarvoor \LaTeX{} overkill is gebruik je Markdown\footnote{\url{https://guides.github.com/features/mastering-markdown/}}.
+Kortom, \emph{alle} artefacten die resulteren uit je onderzoek horen thuis in de repository. Voor werkdocumenten waar je opgemaakte tekst wenst, maar waarvoor \LaTeX{} overkill is gebruik je Markdown.
 
 Wat hoort \emph{niet} thuis in je repository:
 
 \begin{itemize}
   \item Hulpbestanden aangemaakt bij het compileren van \LaTeX{}. Je kan ervoor zorgen dat deze niet in een repository opgenomen worden door een \texttt{.gitignore}-bestand aan te maken\footnote{Bijvoorbeeld \url{https://github.com/github/gitignore/blob/master/TeX.gitignore}}. Het \LaTeX{}-sjabloon voor de bachelorproef is al goed ingesteld.
-  \item Grote (binaire) bestanden zoals ISO's, virtuele machines (bv.\ .ova), enz.
+  \item Grote (binaire) bestanden zoals ISO's, virtuele machines (bv.\ OVA), enz.
   \item PDFs van de artikels/ebooks die je gelezen hebt (dit wordt beschouwd als ``herdistribueren'' en mag niet onder de auteurswetgeving).
   \item Binaire bestanden die vaak veranderen, bv. Word-documenten.
   \item Bestanden die automatisch gegenereerd worden uit code in Git, bv.\ gecompileerde code.
 \end{itemize}
 
 Een versiebeheersysteem wordt pas echt nuttig als je het goed gebruikt. Commit dus zo vaak mogelijk, schrijf duidelijke commit-boodschappen en synchroniseer regelmatig met Github!
+
+Als je een van de HOGENT-sjablonen op Github wilt gebruiken, dan kan je deze best downloaden als ZIP via de groene knop rechtsboven. De repository klonen of een fork aanmaken is in dit geval niet aan te raden. Daarmee neem je immers ook de hele historiek van het sjabloon over en die is niet relevant voor jouw werk. Initialiseer vervolgens zelf een repository met \texttt{git init} en voeg de bestanden van het sjabloon toe met \texttt{git add} en \texttt{git commit}. Vervolgens kan je de repository koppelen aan een nieuwe repository op Github met \texttt{git remote add origin URL} en de inhoud van je lokale repository uploaden met \texttt{git push -u origin master}.
 
 \section{Samenvatting}%
 \label{sec:voorbereiding-samenvatting}
