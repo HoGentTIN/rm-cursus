@@ -24,131 +24,6 @@
 
   \tableofcontents
 \end{frame}
-\section{Aan de slag!}
-
-\begin{frame}
-  \frametitle{Opzetten werkomgeving}
-
-  \begin{itemize}
-    \item Maak repo aan voor opdracht paper (via link Chamilo)
-    \item Volg instructies fase 1: Opzetten werkomgeving
-          \begin{itemize}
-            \item Software installeren
-            \item Configuratie Git, LaTeX
-          \end{itemize}
-  \end{itemize}
-\end{frame}
-
-%% TODO: opsplitsen per OS (evt. enkel in de syllabus of leerpad)
-
-\begin{frame}
-  \frametitle{Installatie Software}
-
-  \begin{itemize}
-    \item Gebruik package manager!
-    \item Cfr.\ System Engineering Lab (1TI)!
-    \item Windows: Chocolatey
-    \item MacOS X: Homebrew
-    \item Linux: ingebouwd\ldots
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Configuratie}
-
-  \begin{itemize}
-    \item Git basisconfig!
-    \item {\TeX}studio, Jabref: ``moderne'' compiler
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Onderhoud Mik{\TeX}}
-
-  \begin{itemize}
-    \item Open Mik{\TeX} console als Administrator
-    \item Settings:
-          \begin{itemize}
-            \item Always install missing packages on-the-fly
-            \item Default paper format: A4
-          \end{itemize}
-    \item Updates: Check for updates
-          \begin{itemize}
-            \item In geval van fouten: installeer updates
-          \end{itemize}
-    \item Zorg dat Mik{\TeX} niet geblokkeerd wordt door firewall/antivirus
-  \end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Lettertypes}
-
-  HOGENT huisstijl:
-
-  \begin{itemize}
-    \item Montserrat Regular, ExtraBold: \url{https://fonts.google.com/specimen/Montserrat}
-    \item Code Pro Black: \url{https://www.dafontfree.net/freefonts-code-pro-black-f62435.htm}
-  \end{itemize}
-
-  Code-font met ligaturen (e.g. \({\leftarrow}\) i.p.v. \verb|<-|):
-
-  \begin{itemize}
-    \item Fira Code: \texttt{choco install firacode}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Configuratie TeXstudio}
-
-  \begin{itemize}
-    \item Options > Configure TeXstudio
-    \item Commands:
-          \begin{itemize}
-            \item XeLaTeX\@: \texttt{xelatex -synctex=1 -interaction=nonstopmode -shell-escape \%.tex}
-          \end{itemize}
-    \item Build:
-          \begin{itemize}
-            \item Default Compiler: XeLaTeX
-            \item Default Bibliography tool: Biber
-          \end{itemize}
-    \item Editor, enz.\ naar eigen voorkeur
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Een alternatief: VS Code}
-
-  \begin{itemize}
-    \item VS Code kan {\TeX}studio, Jupyter Notebook en Markdown editor vervangen
-    \item Configuratie is wat complexer
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Installatie}
-
-  \begin{itemize}
-    \item \texttt{choco install -y texlive}  (in plaats van Mik{\TeX})
-    \item \texttt{choco install -y vscode}
-    \item Extensies:
-          \begin{itemize}
-            \item {\LaTeX} Workshop (James Yu)
-            \item GitLens (GitKraken)
-          \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Installatie testen}
-
-  \begin{itemize}
-    \item Nieuw, leeg document aanmaken
-    \item Krijg je een PDF?
-    \item Download sjabloon bachelorproef \url{https://github.com/HoGentTIN/bachproef-latex-sjabloon}
-    \item Compileer
-    \item Bevat de PDF ook een bibliografie?
-  \end{itemize}
-\end{frame}
 
 \section{Inleiding}
 
@@ -225,7 +100,7 @@
   \frametitle{Voordelen}
 
   \begin{itemize}
-    \item<+-> Enkel bezighouden met inhoud, goede en consistente opmaak gegarandeerd.
+    \item<+-> Enkel bekommeren om inhoud, goede en consistente opmaak gegarandeerd.
     \item<+-> Stijl aanpassen zonder inhoud te wijzigen.
     \item<+-> Tekstformaat \(\Rightarrow\) geschikt voor versiebeheersysteem!
     \item<+-> Is de norm in verschillende onderzoeksdomeinen, o.a.\ computerwetenschappen
@@ -238,7 +113,7 @@
 
   \begin{itemize}
     \item<+-> Zware leercurve \(\Rightarrow\) copy paste voorbeelden, gebruik infobronnen, vraag hulp
-    \item<+-> Soms is gewenste opmaak niet makkelijk te bereiken (vb.~tabellen)
+    \item<+-> Soms is gewenste opmaak niet eenvoudig te bereiken (vb.~tabellen)
   \end{itemize}
 
   \uncover<1->{%
@@ -289,7 +164,7 @@
   Bijvoorbeeld:
 
   \begin{itemize}
-    \item<+-> \verb|\documentclass[a4paper,pdftex,12pt]{article}|
+    \item<+-> \verb|\documentclass[a4paper,12pt,twocolumn]{article}|
     \item<+-> \verb|\'{e}l\`{e}ve| \(\Rightarrow\) \'el\`eve
     \item<+-> \verb|\begin{itemize}|\\
     \verb|\item lijst|\\
@@ -427,21 +302,24 @@
  \frametitle{Tekstopmaak}
 
  \begin{itemize}
-   \item<+-> Speciale tekens ({\LaTeX} syntax): \% \$ \& \{ \} \textbackslash{} enz: \\
-   \begin{semiverbatim}
-     \\\% \\\$ \\\& \\\{ \\\} \\textbackslash\{\}
-   \end{semiverbatim}
-   \item<+-> Ligaturen: \textrm{fi fl ffi ffl} (automatisch opgemaakt)
-   \item<+-> Accenten: \'{e} \`{e} \^{e} \"{e} \={e} \c{c} enz.
-   \begin{semiverbatim}
-     \\'\{e\} \\`\{e\} \\^\{e\} \\"\{e\} \\=\{e\} \\c\{c\} enz.
-   \end{semiverbatim}
-   \item<+-> Ellipsis (\ldots): \texttt{\textbackslash{}ldots}
-   \item<+-> Aanhalingstekens: `enkel' ``dubbel''
-   \begin{verbatim}
-   `enkel' ``dubbel''
-   \end{verbatim}
- \end{itemize}
+    \item<+-> Speciale tekens ({\LaTeX} syntax): \% \$ \& \{ \} \textbackslash{} enz: \\
+    \begin{semiverbatim}
+      \\\% \\\$ \\\& \\\{ \\\} \\textbackslash\{\}
+    \end{semiverbatim}
+    \item<+-> Ligaturen: \textrm{fi fl ffi ffl} (automatisch opgemaakt)
+    \begin{itemize}
+      \item HOGENT font (Montserrat) heeft geen ligaturen
+    \end{itemize}
+    \item<+-> Accenten: \'{e} \`{e} \^{e} \"{e} \={e} \c{c} enz.
+    \begin{semiverbatim}
+      \\'\{e\} \\`\{e\} \\^\{e\} \\"\{e\} \\=\{e\} \\c\{c\} enz.
+    \end{semiverbatim}
+    \item<+-> Ellipsis (\ldots): \texttt{\textbackslash{}ldots}
+    \item<+-> Aanhalingstekens: `enkel' ``dubbel''
+    \begin{verbatim}
+    `enkel' ``dubbel''
+    \end{verbatim}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -522,7 +400,7 @@
       \item<+-> ``bibliografische databank'' (in tekstformaat)
       \item<+-> Automatisch correcte opmaak
       \item<+-> Verwijzingen vanuit uit de tekst (\verb|\textcite{}|)
-      \item<+-> Ondersteuning via externe tools (e.g. JabRef, Mendeley Desktop)
+      \item<+-> Ondersteuning via externe tools (bv. JabRef, Mendeley Desktop)
     \end{itemize}
   \end{itemize}
 
@@ -541,6 +419,74 @@
     \item<+-> Honderden packages (RTFM, Google is your friend)
     \item<+-> Presentaties met Beamer (baseer je bv.\ op het sjabloon op \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
 
+  \end{itemize}
+\end{frame}
+
+\section{Aan de slag!}
+
+\begin{frame}
+  \frametitle{Benodigde software}
+
+  \begin{itemize}
+    \item Git client (bv. Git CLI, GitKraken\ldots)
+    \item \LaTeX-distributie (bv. MikTeX, TeX Live)
+    \item {\LaTeX} IDE (bv. {\TeX}studio, VS Code)
+    \item JabRef (= bibliografische databank)
+    \item Editor met ondersteuning voor Markdown (bv. VS Code, MarkText)
+    \item Lettertypes (zie verder)
+  \end{itemize}
+
+  \bigskip
+  \alertbox{Gebruik een \textcolor{hgyellow}{package manager}!}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Lettertypes}
+
+  HOGENT huisstijl:
+
+  \begin{itemize}
+    \item Montserrat Regular, ExtraBold: \url{https://fonts.google.com/specimen/Montserrat}
+    \item Code Pro Black: \url{https://www.dafontfree.net/freefonts-code-pro-black-f62435.htm}
+  \end{itemize}
+
+  Code-font met ligaturen (bv. \({\leftarrow}\) i.p.v. \verb|<-|):
+
+  \begin{itemize}
+    \item Fira Code: \url{https://github.com/tonsky/FiraCode/wiki/Installing}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Opzetten werkomgeving}
+
+  \begin{itemize}
+    \item Maak repo aan voor opdracht onderzoeksvoorstel
+      \begin{itemize}
+        \item Zie link op Chamilo > Studiewijzer > 5. Werkvormen
+      \end{itemize}
+    \item Volg instructies fase 2: Opzetten \LaTeX-werkomgeving
+      \begin{itemize}
+        \item Software installeren
+        \item Configuratie Git, LaTeX
+      \end{itemize}
+    \item Test je installatie (zie volgende slide)
+    \item Schrijf je onderwerp uit in het voorziene template
+      \begin{itemize}
+        \item Vraag feedback aan je begeleider, medestudenten\ldots
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Installatie testen}
+
+  \begin{itemize}
+    \item Nieuw, leeg document aanmaken
+    \item Krijg je een PDF?
+    \item Clone jouw eigen repo
+    \item Compileer het {\LaTeX}-bestand in de map \texttt{voorstel}
+    \item Bevat de PDF ook een bibliografie?
   \end{itemize}
 \end{frame}
 

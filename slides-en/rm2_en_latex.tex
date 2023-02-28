@@ -142,7 +142,7 @@
   \frametitle{Working method}
 
   \begin{itemize}
-    \item<+-> Write text in  {\LaTeX}
+    \item<+-> Write text in {\LaTeX}
     = text file! (markup language like HTML)
     \item<+-> Compile (possibly multiple times)
     \item<+-> Inspect result in PDF
@@ -153,7 +153,7 @@
   \frametitle{{\LaTeX} commands}
 
   \begin{block}{Basic syntax}
-    \verb|\command name[optional,arguments]{arg1}{arg2}|
+    \verb|\commandname[optional,arguments]{arg1}{arg2}|
   \end{block}
 
   \pause
@@ -161,7 +161,7 @@
   e.g. :
 
   \begin{itemize}
-    \item<+-> \verb|\documentclass[a4paper,pdftex,12pt]{article}|
+    \item<+-> \verb|\documentclass[a4paper,12pt,twocolumn]{article}|
     \item<+-> \verb|\'{e}l\`{e}ve| \(\Rightarrow\) \'el\`eve
     \item<+-> \verb|\begin{itemize}|\\
     \verb|\item list|\\
@@ -304,6 +304,9 @@
      \\\% \\\$ \\\& \\\{ \\\} \\textbackslash\{\}
    \end{semiverbatim}
    \item<+-> Ligatures: \textrm{fi fl ffi ffl} (automatic formatting)
+   \begin{itemize}
+    \item HOGENT font (Montserrat) doesn't have ligatures
+  \end{itemize}
    \item<+-> Accents: \'{e} \`{e} \^{e} \"{e} \={e} \c{c} etc.
    \begin{semiverbatim}
      \\'\{e\} \\`\{e\} \\^\{e\} \\"\{e\} \\=\{e\} \\c\{c\} etc.
@@ -324,7 +327,7 @@
      \toprule
      Command & result \\
      \midrule
-     \verb?\emph{xxx}?   & \emph{Emphasis} (\textrm{\emph{italic}} of \textsf{\emph{`slanted'}})\\
+     \verb?\emph{xxx}?   & \emph{Emphasis} (\textrm{\emph{italic}} or \textsf{\emph{`slanted'}})\\
      \verb?\textit{xxx}? & \textit{Italic text} \\
      \verb?\textbf{xxx}? & \textbf{Bold text} \\
      \verb?\texttt{xxx}? & \texttt{Mono spaced letters} \\
@@ -378,186 +381,12 @@
      \item Another part
    \end{enumerate}
  \end{columns}
-
 \end{frame}
 
-\section{Figures, tables, etc.\ insert}
-
-\subsection{Figures}
-
-\begin{frame}[fragile,plain]
- \frametitle{Insert figures}
-
- \begin{columns}[c]
-   \column{.65\textwidth}
-
-\begin{semiverbatim}
-\alert<1>{\\begin\{figure\}}
-\alert<2>{\\includegraphics[width=\\textwidth]
- \{1/donald-knuth\}}
-\alert<3>{\\caption\{\alert<4>{\\label\{fig:don\}}Donald Knuth, author of
- \{\\TeX\}\}}
-\alert<1>{\\end\{figure\}}
-\end{semiverbatim}
-
-   \column{.35\textwidth}
-   \begin{figure}
-     \includegraphics[width=\textwidth]{1/donald-knuth}
-     \caption{\label{fig:don}Donald Knuth, author of {\TeX}}
-   \end{figure}
-
- \end{columns}
-
-\end{frame}
-
-\subsection{Tabellen}
+\subsection{Bibliography}
 
 \begin{frame}[fragile]
- \frametitle{Insert tables}
-
- \begin{columns}[c]
-   \column{.6\textwidth}
-   \small
-\begin{semiverbatim}
-\alert<1>{\\begin\{table\}}
-\alert<3>{\\begin\{tabular\}\{\alert<4>{l||c|r}\}}
-\alert<4>{\\hline}
-cel11 \alert<5>{&}
-\alert<7>{\\multicolumn\{2\}\{c\}\{cell12\}} \alert<6>{\\\\}
-\alert<4>{\\hline \\hline}
-cell21 \alert<5>{&} cell22 \alert<5>{&}
-\alert<7>{\\multirow\{2\}\{*\}\{cell23\}} \alert<6>{\\\\}
-cell31 \alert<5>{&} cell32 \alert<5>{&} \alert<6>{\\\\}
-\alert<3>{\\end\{tabular\}}
-\alert<2>{\\caption\{An example of what you can do with tables\}
- \\label\{tab:example_table\}}
-\alert<1>{\\end\{table\}}
-\end{semiverbatim}
-
-   \column{.4\textwidth}
-   \begin{table}
-     \begin{tabular}{l||c|r}
-       \hline
-       cel11 & \multicolumn{2}{c}{cell12} \\
-       \hline \hline
-       cel21 & cel22 & \multirow{2}{*}{cell23} \\
-       cel31 & cel32 & \\
-     \end{tabular}
-     \caption{An example of what you can do with tables}
-     \label{tab:example_tabel}
-   \end{table}
-
- \end{columns}
-\end{frame}
-
-\subsection{Source code}
-
-\begin{frame}[fragile]
- \frametitle{Insert source code}
- \framesubtitle{Simplest form: \texttt{verbatim}}
-
-\begin{semiverbatim}
-\alert{\\begin\{verbatim\}}
-public class MyApp \{
- public static void main(String args[]) \{
-   System.out.println("Hello World");
- \}
-\}
-\alert{\\end\{verbatim\}}
-\end{semiverbatim}
-
- \(\Rightarrow\)
-
-\begin{verbatim}
-public class MyApp {
- public static void main(String args[]) {
-   System.out.println("Hello World");
- }
-}
-\end{verbatim}
-
-\end{frame}
-
-\begin{frame}[fragile]
- \frametitle{Insert source code}
- \framesubtitle{\texttt{listings} package}
-
-\begin{semiverbatim}
-\\lstset\{\%
-language=java,  breaklines=true,  numbers=left,
-frame=single, caption=\{Mijn eerste Java-programma.\},
-label=code:helloworld\}
-
-\alert{\\begin\{lstlisting\}}
-public class MyApp \{
- public static void main(String args[]) \{
-   System.out.println("Hello World");
- \}
-\}
-\alert{\\end\{lstlisting\}}
-\end{semiverbatim}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Insert source code}
-  \framesubtitle{\texttt{listings} package}
-
-  \lstset{%
-    language=java,    breaklines=true,
-    numbers=left,     frame=single,
-    caption={Mijn eerste Java-programma.},
-    label=code:helloworld,
-    gobble=2
-  }
-
-  \begin{lstlisting}
-  public class MyApp {
-    public static void main(String args[]) {
-      System.out.println("Hello World");
-    }
-  }
-  \end{lstlisting}
-
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Insert source code}
-  \framesubtitle{\texttt{minted} package}
-
-  \begin{semiverbatim}
-  \\setminted\{%
-    bgcolor=gray!20,gobble=2, linenos,
-    numbers=left,frame=single\}
-
-  \\begin\{minted\}\{java\}
-    public class MyApp \{
-      public static void main(String args[]) \{
-        System.out.println("Hello World");
-      \}
-    \}
-  \\end\{minted\}
-  \end{semiverbatim}
-\end{frame}
-
-
-\begin{frame}[fragile]
-  \frametitle{Insert source code}
-  \framesubtitle{\texttt{minted} package}
-  \setminted{bgcolor=gray!20,gobble=4,linenos,numbers=left,frame=single}
-  \begin{minted}{java}
-    public class MyApp {
-      public static void main(String args[]) {
-        System.out.println("Hello World");
-      }
-    }
-  \end{minted}
-\end{frame}
-
-\subsection{Literature}
-
-\begin{frame}[fragile]
-  \frametitle{Literature}
+  \frametitle{Bibliography}
 
   \begin{itemize}
     \item<+-> A literature list is an important part of a thesis
@@ -582,14 +411,78 @@ public class MyApp \{
   Many things haven't been discussed!
 
   \begin{itemize}
-    \item<+-> Mathematical formulas, e.g.
-    \begin{semiverbatim}
-      \$x=-\\frac\{b \\pm \\sqrt\{b\^{}2 - 4ac\}\}\{2a\}\$
-    \end{semiverbatim}
-    \(x=-\frac{b \pm \sqrt{b^2 - 4ac}}{2a}\)
-    \item<+-> Hundreds of packages (RTFM, Google is your friend)
-    \item<+-> Presentations using Beamer (use e.g. \ the template at \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
+    \item<+-> Figures, tables, mathematical formulas (more later in this course)
+    \item<+-> Tons of packages (RTFM, Google is your friend)
+    \item<+-> Presentaties with Beamer (e.g. base on the template on \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
 
+  \end{itemize}
+\end{frame}
+
+\section{Let's do this!}
+
+\begin{frame}
+  \frametitle{Required software}
+
+  \begin{itemize}
+    \item Git client (e.g. Git CLI, GitKraken\ldots)
+    \item \LaTeX-distribution (e.g. MikTeX, TeX Live)
+    \item {\LaTeX} IDE (e.g. {\TeX}studio, VS Code)
+    \item JabRef (= bibliographic database)
+    \item Editor with support for Markdown (e.g. VS Code, MarkText)
+    \item Fonts (see next slide)
+  \end{itemize}
+
+  \bigskip
+  \alertbox{Use a \textcolor{hgyellow}{package manager}!}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Fonts}
+
+  HOGENT style:
+
+  \begin{itemize}
+    \item Montserrat Regular, ExtraBold: \url{https://fonts.google.com/specimen/Montserrat}
+    \item Code Pro Black: \url{https://www.dafontfree.net/freefonts-code-pro-black-f62435.htm}
+  \end{itemize}
+
+  Code fonts with ligatures (e.g. \({\leftarrow}\) instead of \verb|<-|):
+
+  \begin{itemize}
+    \item Fira Code: \url{https://github.com/tonsky/FiraCode/wiki/Installing}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Work environment setup}
+
+  \begin{itemize}
+    \item Create repo for the assignment research proposal
+      \begin{itemize}
+        \item See link on Chamilo > Study guide > 5. Teaching methods
+      \end{itemize}
+    \item Follow instructions phase 2: Work environment setup
+      \begin{itemize}
+        \item Install software
+        \item Configure Git, \LaTeX
+      \end{itemize}
+    \item Test your installation (see next slide)
+    \item Write an introduction for your topic in the provided template
+      \begin{itemize}
+        \item Ask feedback to your supervisor, fellow students\ldots
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Test your installation}
+
+  \begin{itemize}
+    \item Create a new and empty document
+    \item Do you get a PDF?
+    \item Clone your own repo
+    \item Compile the {\LaTeX}-file in the folder \texttt{paper}
+    \item Does the PDF contain a literature list?
   \end{itemize}
 \end{frame}
 
