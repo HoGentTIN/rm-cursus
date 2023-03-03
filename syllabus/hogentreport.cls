@@ -442,9 +442,10 @@
 \geometry{a4paper,hscale=0.75,vscale=0.8,headheight=14pt,asymmetric}
 
 %% Page layout settings
-\setlength{\parindent}{.5cm}              %% Don't indent paragraph text
-\renewcommand{\baselinestretch}{1.2}     %% Increase line height
-\raggedbottom                            %% Don't equalize content on pages
+\setlength{\parindent}{0pt}          %% Don't indent paragraph text
+\setlength{\parskip}{6pt}            %% Put space between paragraphs
+\renewcommand{\baselinestretch}{1.2} %% Increase line height
+\raggedbottom                        %% Don't equalize content on pages
 
 %% Redefine maketitle for our custom title page
 \if@titlepage%
