@@ -24,36 +24,36 @@
   \tableofcontents
 \end{frame}
 
-\section{Literature study in {\LaTeX}.}
+\section{Bibliografic database.}
 
 \begin{frame}
-    \frametitle{Bibliografic database}
-    
-    \begin{itemize}
-        \item = Software to store sources in a structured manner
-        \item Full text + metadata
-        \item Generate correctly styled literature list
-        \item Reference management software
-    \end{itemize}    
+  \frametitle{Bibliografic database}
+
+  \begin{itemize}
+    \item = Software to store sources in a structured manner
+    \item Full text + metadata
+    \item Generate correctly styled literature list
+    \item Reference management software
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Examples}
-    
-    \begin{itemize}
-        \item Endnote: commercial
-        \item Mendeley: commercial, free
-        \item JabRef: open source
-    \end{itemize}
-    
+  \frametitle{Examples}
+
+  \begin{itemize}
+    \item Endnote: commercial
+    \item Mendeley: commercial, free
+    \item JabRef: open source
+  \end{itemize}
+
 \end{frame}
 
 \begin{frame}[plain]
-    \frametitle{JabRef}
-    
-    \centering
-    \includegraphics[height=.8\textheight]{4/jabref-screenshot}
-    
+  \frametitle{JabRef}
+
+  \centering
+  \includegraphics[height=.8\textheight]{4/jabref-screenshot}
+
 \end{frame}
 
 \begin{frame}
@@ -75,7 +75,6 @@
             \item Entry Preview: American Psychological Association 7th edition
         \end{itemize}
     \end{itemize}
-
     
 \end{frame}
 \begin{frame}[fragile]
@@ -98,11 +97,11 @@
   \addbibresource{article.bib}
   \end{verbatim}
 
-    \textbf{Remark:}\ Already in template!
-    
+    \textbf{Remark:}\ Already in template!   
+
 \end{frame}
 
-\subsection{Creating a bibliographic database.}
+\section{Creating a bibliographic database.}
 
 \begin{frame}
   \frametitle{Bibliografic data in Jabref.}
@@ -115,20 +114,20 @@
     \item[Year] or publication date
     \item[Bibtexkey] id of this source, used when referencing, (tip: click on the key icoon)
   \end{description}
-    \bigskip
-Impossible to fill in one of these fields? Then the source is probably unsuitable!
+  \bigskip
+  Impossible to fill in one of these fields? Then the source is probably unsuitable!
 \end{frame}
 
 \begin{frame}
-    \frametitle{The author field}
-    
-    Always use this format:
-    
-    \begin{itemize}
-        \item Persons: ``Surname, Firstname and Surname, Firstname and Surname, Firstname\ldots''
-        \item Organisation: between curly brackets e.g.\ ``\{The Linux Foundation\}''
-    \end{itemize}
-    
+  \frametitle{The author field}
+
+  Always use this format:
+
+  \begin{itemize}
+    \item Persons: ``Surname, Firstname and Surname, Firstname and Surname, Firstname\ldots''
+    \item Organisation: between curly brackets e.g.\ ``\{The Linux Foundation\}''
+  \end{itemize}
+
 \end{frame}
 
 \begin{frame}[fragile]
@@ -144,48 +143,48 @@ Impossible to fill in one of these fields? Then the source is probably unsuitabl
 
   \bigskip
 
-  \textbf{Example:} 
+  \textbf{Example:}
 
   \fullcitebib{Anscombe1973}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tip: fill in fields automatically}
-    
-    \begin{itemize}
-        \item Elsevier, Springer, \ldots\ have Bib\LaTeX{} export function
-        \item Paste in tab page ``BibTeX source''
-    \end{itemize}
-    
-    \bigskip
-    
-    \centering
-    \includegraphics[height=.6\textheight]{4/elsevier-cite-doi}
-    
+  \frametitle{Tip: fill in fields automatically}
+
+  \begin{itemize}
+    \item Elsevier, Springer, \ldots\ have Bib\LaTeX{} export function
+    \item Paste in tab page ``BibTeX source''
+  \end{itemize}
+
+  \bigskip
+
+  \centering
+  \includegraphics[height=.6\textheight]{4/elsevier-cite-doi}
+
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tip: fill in fields automatically}
-    
-    \begin{itemize}
-        \item DOI = Digital Object Identifier
-        \item Unique code for a publication
-        \item Jabref: General > DOI > Get Bibtex data from DOI
-    \end{itemize}
-    
-    \bigskip
-    
-    \centering
-    \includegraphics[height=.3\textheight]{4/jabref-doi}
-    
+  \frametitle{Tip: fill in fields automatically}
+
+  \begin{itemize}
+    \item DOI = Digital Object Identifier
+    \item Unique code for a publication
+    \item Jabref: General > DOI > Get Bibtex data from DOI
+  \end{itemize}
+
+  \bigskip
+
+  \centering
+  \includegraphics[height=.3\textheight]{4/jabref-doi}
+
 \end{frame}
 
 \begin{frame}[plain]
-    \frametitle{Tip: fill in fields automatically}
-    
-    \centering
-    \includegraphics[height=.8\textheight]{4/jabref-new-entry-doi}
-    
+  \frametitle{Tip: fill in fields automatically}
+
+  \centering
+  \includegraphics[height=.8\textheight]{4/jabref-new-entry-doi}
+
 \end{frame}
 
 \begin{frame}[plain]
@@ -243,41 +242,41 @@ Impossible to fill in one of these fields? Then the source is probably unsuitabl
 \section{Referencing literature.}
 
 \begin{frame}[fragile]
-    \frametitle{Referencing in the text}
-    
-    \begin{itemize}
-      \item \verb|\textcite{Knuth1998}| \(\Rightarrow\) Knuth (1998)
-      \item \verb|\autocite{Knuth1998}| \(\Rightarrow\) (Knuth, 1998)
-    \end{itemize}
+  \frametitle{Referencing in the text}
+
+  \begin{itemize}
+    \item \verb|\textcite{Knuth1998}| \(\Rightarrow\) Knuth (1998)
+    \item \verb|\autocite{Knuth1998}| \(\Rightarrow\) (Knuth, 1998)
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Use \texttt{\textbackslash{}textcite}}
+  \frametitle{Use \texttt{\textbackslash{}textcite}}
 
-\ldots\ if the name of the author is part of the sentence:
+  \ldots\ if the name of the author is part of the sentence:
 
-\bigskip
+  \bigskip
 
-\begin{quotation}
+  \begin{quotation}
     An overview is provided in the survey by Ribas et al (2010). For a real-life case-study of applying genetic algorithm ``on top'' of a Mixed Integer Linear Programming model, we refer to Borodin et al (2011).
-\end{quotation}
+  \end{quotation}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Use \texttt{\textbackslash{}autocite}}
+  \frametitle{Use \texttt{\textbackslash{}autocite}}
 
-\ldots\ if the name of the author is NOT part of the sentence 
+  \ldots\ if the name of the author is NOT part of the sentence
 
-\bigskip
+  \bigskip
 
-\begin{quotation}
+  \begin{quotation}
     Reinforcement Learning (RL) is a technique that allows an agent to learn how to maximize a numerical reward signal (Sutton and Barto, 1998).
-\end{quotation}
+  \end{quotation}
 
-\bigskip
+  \bigskip
 
-Also: exact citation, source of image 
+  Also: exact citation, source of image
 
 \end{frame}
 
@@ -285,31 +284,31 @@ Also: exact citation, source of image
 %% TODO: uitgewerkte voorbeelden! \textcite, \autocite, citaat, bijschrift afbeelding?
 
 \begin{frame}[fragile]
-\frametitle{Insert reference list.}
+  \frametitle{Insert reference list.}
 
-\begin{itemize}
+  \begin{itemize}
     \item Insert reference list: \verb|\printbibliography|
 
     \item Compile (in TexStudio):
 
-    \begin{enumerate}
-      \item Build/Compile (F5): sources are not added yet, ``keys'' of sources are marked in bold
-      \item Bibliography (F8): selects the referenced sources and prepares them 
-      \item Build/Compile (F5): inserts references in the text and generates the reference list
-    \end{enumerate}
+          \begin{enumerate}
+            \item Build/Compile (F5): sources are not added yet, ``keys'' of sources are marked in bold
+            \item Bibliography (F8): selects the referenced sources and prepares them
+            \item Build/Compile (F5): inserts references in the text and generates the reference list
+          \end{enumerate}
   \end{itemize}
 \end{frame}
 
 \begin{frame}
- \frametitle{Check the result!}
+  \frametitle{Check the result!}
   \begin{itemize}
-     \item Authors correctly displayed?
-     \item Language errors or typos? E.g.\ accents, special characters
-     \item All info needed to find source is present?
-     \item Mentioning of ``Visited DATE, of URL'' with Online sources?
-     \item \ldots
- \end{itemize}
- \end{frame}
+    \item Authors correctly displayed?
+    \item Language errors or typos? E.g.\ accents, special characters
+    \item All info needed to find source is present?
+    \item Mentioning of ``Visited DATE, of URL'' with Online sources?
+    \item \ldots
+  \end{itemize}
+\end{frame}
 
 \begin{frame}
   \frametitle{Common mistakes}
@@ -336,27 +335,27 @@ Also: exact citation, source of image
         \item \url{https://martinfowler.com/articles/microservices.html}
         \item \url{https://www.youtube.com/watch?v=wW9CAH9nSLs&t=13s}
         \item \url{https://link.springer.com/book/10.1007/978-1-4842-6399-0}
-        %\item \url{http://www.schedulingconference.org/proceedings/2013/mista2013.pdf} (pp.\ 402--409)
+        \item \url{https://link.springer.com/chapter/10.1007/978-3-031-27199-1_1}
         \item \url{https://docs.ansible.com/ansible-core/devel/index.html}
     \end{itemize}
     
 \end{frame}
 
 \begin{frame}
-    \frametitle{Assignment}
-    
-    \begin{itemize}
-        \item Save all found sources in .bib-file
-        \item Structure, e.g.\ using Mind Map
-        \begin{itemize}
+  \frametitle{Assignment}
+
+  \begin{itemize}
+    \item Save all found sources in .bib-file
+    \item Structure, e.g.\ using Mind Map
+          \begin{itemize}
             \item Freemind, Gitmind, Xmind, Minder, Vym, \ldots
-        \end{itemize}
-        \item Process what you read to a continuous text
-    \end{itemize}
-    
-    \bigskip
-    
-    \alertbox{This is the most important phase of the assignment!}
+          \end{itemize}
+    \item Process what you read to a continuous text
+  \end{itemize}
+
+  \bigskip
+
+  \alertbox{This is the most important phase of the assignment!}
 \end{frame}
 
 \end{document}
