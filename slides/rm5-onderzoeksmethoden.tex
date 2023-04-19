@@ -30,8 +30,8 @@
   \begin{itemize}
     \item Uitschrijven plan van aanpak/methodologie
     \item Hoe een vergelijkende studie aanpakken
-    %\item Risico-analyse (cybersecurity)  % TODO (eventueel)
-    \item Proof-of-concept
+          %\item Risico-analyse (cybersecurity)  % TODO (eventueel)
+    \item Proof of concept
     \item Verzamelen kwantitatieve data
     \item Valkuil: enquête
   \end{itemize}
@@ -46,13 +46,13 @@
   \begin{itemize}
     \item = onderdeel van je bachelorproefvoorstel
     \item Uitschrijven plan van aanpak:
-    \begin{itemize}
-      \item Opsplitsen in fasen
-      \item Gebruikte onderzoekstechnieken
-      \item Doelstelling/resultaat van elke fase
-      \item Volgorde/afhankelijkheden
-      \item Timing
-    \end{itemize}
+          \begin{itemize}
+            \item Opsplitsen in fasen
+            \item Gebruikte onderzoekstechnieken
+            \item Doelstelling/resultaat van elke fase
+            \item Volgorde/afhankelijkheden
+            \item Timing
+          \end{itemize}
   \end{itemize}
 
   \alertbox{Hoe concreter je plan van aanpak, hoe makkelijker je er aan kan beginnen!}
@@ -94,7 +94,7 @@
     \item Requirements verzamelen
     \item Long list
     \item Short list
-    \item Proof-of-Concept
+    \item Proof of concept
     \item Conclusies
   \end{itemize}
 
@@ -106,15 +106,15 @@
   \begin{itemize}
     \item \textbf{Doelstelling:} criteria oplijsten waaraan een goede oplossing moet voldoen
     \item \textbf{Technieken:}
-      \begin{itemize}
-        \item Interviews met belanghebbenden (bv.\ copromotor?)
-        \item MoSCoW-methode (must have, should have, enz.)
-      \end{itemize}
+          \begin{itemize}
+            \item Interviews met belanghebbenden (bv.\ copromotor?)
+            \item MoSCoW-methode (must have, should have, enz.)
+          \end{itemize}
     \item \textbf{Resultaat:} lijst met requirements
-      \begin{itemize}
-        \item Geordend volgens belang
-        \item Functionele/niet-functionele
-      \end{itemize}
+          \begin{itemize}
+            \item Geordend volgens belang
+            \item Functionele/niet-functionele
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -125,10 +125,10 @@
   \begin{itemize}
     \item \textbf{Doelstelling:} alternatieven oplijsten die in aanmerking kunnen komen
     \item \textbf{Techniek:} literatuuronderzoek
-      \begin{itemize}
-        \item Verzamel zoveel mogelijk alternatieven, sluit niets a-priori uit!
-        \item Toets af aan reqs, a.d.h.v.\ beschikbare info
-      \end{itemize}
+          \begin{itemize}
+            \item Verzamel zoveel mogelijk alternatieven, sluit niets a priori uit!
+            \item Toets af aan requirements, a.d.h.v.\ beschikbare info
+          \end{itemize}
     \item \textbf{Resultaat:} lijst met alle gevonden alternatieven (met bronvermelding)
   \end{itemize}
 
@@ -138,9 +138,9 @@
   \frametitle{Short list}
 
   \begin{itemize}
-    \item \textbf{Doelstelling:} Selectie van interessantste alternatieven
-    \item \textbf{Techniek:} Samenvattende tabel requirements/alternatieven
-    \item \textbf{Resultaat:} Keuze van 1/enkele alternatieven om verder uit te werken
+    \item \textbf{Doelstelling:} selectie van interessantste alternatieven
+    \item \textbf{Techniek:} samenvattende tabel requirements/alternatieven
+    \item \textbf{Resultaat:} keuze van één/enkele alternatieven om verder uit te werken
   \end{itemize}
 
 \end{frame}
@@ -152,25 +152,28 @@
   \centering
   \begin{tabular}{cccc|cc|cccc}
     \toprule
-    Alternatief & \multicolumn{3}{c}{M}       & \multicolumn{2}{c}{S} & \multicolumn{4}{c}{C}                 \\ \midrule
-    A           & \CIRCLE & \CIRCLE & ?       & \CIRCLE   & ?         & \CIRCLE & \CIRCLE & ? & \CIRCLE \\
-    B           & \CIRCLE & ---      & \CIRCLE & ---        & \CIRCLE   & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE \\
-    C           & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE   & ---        & \CIRCLE & \CIRCLE & \CIRCLE & --- \\ \bottomrule
-    \end{tabular}
+    Alternatief & \multicolumn{3}{c}{M} & \multicolumn{2}{c}{S} & \multicolumn{4}{c}{C}                                                             \\ \midrule
+    A           & \CIRCLE               & \CIRCLE               & ?                     & \CIRCLE & ?       & \CIRCLE & \CIRCLE & ?       & \CIRCLE \\
+    B           & \CIRCLE               & ---                   & \CIRCLE               & ---     & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE \\
+    C           & \CIRCLE               & \CIRCLE               & \CIRCLE               & \CIRCLE & ---     & \CIRCLE & \CIRCLE & \CIRCLE & ---     \\ \bottomrule
+  \end{tabular}
 
-    \bigskip
+  \bigskip
 
-    (\CIRCLE = req aanwezig; --- = req niet aanwezig; ? = geen info beschikbaar)
+  (\CIRCLE = req aanwezig; --- = req niet aanwezig; ? = geen info beschikbaar)
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Proof-of-concept}
+  \frametitle{Proof of concept}
 
   \begin{itemize}
-    \item \textbf{Doelstelling:} Valideren of beste alternatief het probleem kan oplossen.
-    \item \textbf{Techniek:} Proefopstelling/proof-of-concept
-    \item \textbf{Resultaat:} Prototype van ict-oplossing voor het probleem uit de onderzoeksvraag
+    \item \textbf{Doelstelling:} valideren of beste alternatief het probleem kan oplossen.
+    \item \textbf{Techniek:} proefopstelling/proof of concept
+          \begin{itemize}
+            \item Zorg dat je een voldoende uitgebreid prototype hebt om de werking van het alternatief degelijk te kunnen testen
+          \end{itemize}
+    \item \textbf{Resultaat:} prototype van ict-oplossing voor het probleem uit de onderzoeksvraag
   \end{itemize}
 
 \end{frame}
@@ -201,7 +204,7 @@
 
   \bigskip
 
-  \alertbox{Een BP rond cybersecurity begint best bij een concrete casus!}
+  \alertbox{Een BP rond cybersecurity begint, zoals elk onderwerp, bij een concrete casus!}
 
 \end{frame}
 
@@ -210,21 +213,21 @@
 
   \begin{itemize}
     \item Niet systematisch
-    \begin{itemize}
-      \item $\Rightarrow$ focus op minder belangrijke aspecten
-    \end{itemize}
+          \begin{itemize}
+            \item $\Rightarrow$ focus op minder belangrijke aspecten
+          \end{itemize}
     \item Niet grondig
-    \begin{itemize}
-      \item Firewall op de router is onvoldoende!
-    \end{itemize}
+          \begin{itemize}
+            \item Firewall op de router is onvoldoende!
+          \end{itemize}
     \item Budgettair
-    \begin{itemize}
-      \item Kosten zonder ROI
-    \end{itemize}
+          \begin{itemize}
+            \item Kosten zonder ROI
+          \end{itemize}
     \item Onproductief beleid
-    \begin{itemize}
-      \item bv.\ password policy
-    \end{itemize}
+          \begin{itemize}
+            \item bv.\ password policy
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -234,15 +237,15 @@
 
   \begin{itemize}
     \item Eén specifiek bedrijf
-    \item Een specifiek type server/apparaat
-      \begin{itemize}
-        \item bv.\ ActiveDirectory, webapplicatieserver, \ldots
-        \item bv.\ (edge) router, firewall, \ldots
-      \end{itemize}
-    \item Een specifieke (web)applicatie
-      \begin{itemize}
-        \item bv.\ webapps uit IT-cursussen?
-      \end{itemize}
+    \item Eén specifiek type server/apparaat
+          \begin{itemize}
+            \item bv.\ ActiveDirectory, webapplicatieserver, \ldots
+            \item bv.\ (edge) router, firewall, \ldots
+          \end{itemize}
+    \item Eén specifieke (web)applicatie
+          \begin{itemize}
+            \item bv.\ webapps uit IT-cursussen?
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -270,7 +273,7 @@
 
   \begin{itemize}
     \item Hoe? Interview met belanghebbenden
-    \item Hardware, software, apparatuur, services, \ldots oplijsten
+    \item Hardware, software, apparatuur, services\ldots~oplijsten
     \item Schema/overzicht opstellen
     \item Welke data?
   \end{itemize}
@@ -281,11 +284,11 @@
   \frametitle{Bedreigingen identificeren}
 
   \begin{itemize}
-    \item Hoe? 
-      \begin{itemize}
-        \item Interview met belanghebbenden
-        \item Literatuurstudie
-      \end{itemize}
+    \item Hoe?
+          \begin{itemize}
+            \item Interview met belanghebbenden
+            \item Literatuurstudie
+          \end{itemize}
     \item Mogelijke scenario's aanvallen beschrijven
   \end{itemize}
 
@@ -296,15 +299,15 @@
 
   \begin{itemize}
     \item Hoe? Experiment
-    \begin{itemize}
-      \item Zet testomgeving op!
-      \item Vermijd productiesystemen.
-    \end{itemize}
+          \begin{itemize}
+            \item Zet testomgeving op!
+            \item Vermijd productiesystemen.
+          \end{itemize}
     \item Pen-testing technieken
     \item Vulnerability scanning
-      \begin{itemize}
-        \item bv. OWASP ZAP, Wapiti, OpenVAS, Lynis, \ldots
-      \end{itemize}
+          \begin{itemize}
+            \item bv. OWASP ZAP, Wapiti, OpenVAS, Lynis, \ldots
+          \end{itemize}
     \item Fuzzing
     \item \ldots
   \end{itemize}
@@ -326,7 +329,7 @@
   \frametitle{Risico bepalen}
 
   \centering
-  
+
   Risico = waarschijnlijkheid $\times$ impact
 
   \includegraphics[height=.7\textheight]{5/risk-severity-matrix}
@@ -353,23 +356,23 @@
 
 \end{frame}
 
-\section{Proof-of-concept of testopstelling}
+\section{Proof of concept of testopstelling}
 
 \begin{frame}
-  \frametitle{Proof-of-concept/testopstelling}
+  \frametitle{Proof of concept/testopstelling}
 
   \begin{itemize}
     \item Doel:
-      \begin{itemize}
-        \item Aantonen dat voorgestelde oplossing realiseerbaar is
-        \item Opstelling voor uitvoeren experimenten
-      \end{itemize}
+          \begin{itemize}
+            \item Aantonen dat voorgestelde oplossing realiseerbaar is
+            \item Opstelling voor uitvoeren experimenten
+          \end{itemize}
     \item Belangrijke eigenschappen:
-      \begin{itemize}
-        \item Reproduceerbaarheid
-        \item Repliceerbaarheid
-        \item Herbruikbaarheid
-      \end{itemize} 
+          \begin{itemize}
+            \item Reproduceerbaarheid
+            \item Repliceerbaarheid
+            \item Herbruikbaarheid
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -383,9 +386,9 @@
 
   \begin{itemize}
     \item Welke hardware? Specs?
-      \begin{itemize}
-        \item Computers, netwerkapparatuur, \ldots
-      \end{itemize}
+          \begin{itemize}
+            \item Computers, netwerkapparatuur, \ldots
+          \end{itemize}
     \item Welke software?
     \item Installatie- en configuratie?
     \item Voeg afbeelding toe met schema testopstelling!
@@ -396,14 +399,14 @@
 \begin{frame}
   \frametitle{Repliceerbaarheid}
 
-  \alertbox{Je moet je opstelling snel opnieuw kunnen opzetten}
+  \alertbox{De lezer moet jouw opstelling snel opnieuw kunnen opzetten}
 
   \bigskip
 
   \begin{itemize}
     \item Gedetailleerde procedurehandleiding
-    \item Automatiseren! Bv.\ Vagrant, Docker
-    \item Installatiescript, configbestanden, docs, enz.\ in Github-repo!
+    \item Automatiseren! Bv.\ Vagrant, Docker\ldots
+    \item Installatiescript, configbestanden, docs\ldots\ in GitHub-repo!
   \end{itemize}
 
 \end{frame}
@@ -433,11 +436,11 @@
     \item Reproduceerbaar, repliceerbaar, herbruikbaar
     \item Automatiseer experimenten (bv.\ shellscript)
     \item Sla resultaten op in bruikbaar formaat
-      \begin{itemize}
-        \item Tekstgebaseerd
-        \item Computer readable
-        \item bv.\ CSV, JSON, YAML
-      \end{itemize}
+          \begin{itemize}
+            \item Tekstgebaseerd
+            \item Computer readable
+            \item bv.\ CSV, JSON, YAML
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -448,15 +451,15 @@
   \begin{itemize}
     \item Gebruik statistische software (Python, R)
     \item Geschikte visualisatie- en analysetechnieken
-      \begin{itemize}
-        \item Zie Data Science \& AI!
-        \item Toon spreiding in de data
-        \item Pas statistische toetsen toe
-      \end{itemize}
+          \begin{itemize}
+            \item Zie Data Science \& AI!
+            \item Toon spreiding in de data
+            \item Pas statistische toetsen toe
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
-  
+
 \begin{frame}
   \frametitle{Bivariate analysis: overview}
   \centering
@@ -504,13 +507,13 @@
   \begin{itemize}
     \item Ruwe data (CSV) NOOIT wijzigen
     \item Automatiseer zoveel mogelijk de workflow
-      \begin{itemize}
-        \item Python script of Jupyter Notebook
-        \item Import CSV
-        \item Data cleaning
-        \item Visualisatie
-        \item Analyse
-      \end{itemize}
+          \begin{itemize}
+            \item Python script of Jupyter Notebook
+            \item Import CSV
+            \item Data cleaning
+            \item Visualisatie
+            \item Analyse
+          \end{itemize}
     \item Hou je code bij in Git!
   \end{itemize}
 
@@ -523,7 +526,7 @@
 \begin{frame}
   \frametitle{De enquête}
 
-  \alertbox{Voor een BP toegepaste informatica is een enquête meestal af te raden!}
+  \alertbox{Voor een BP Toegepaste Informatica is een enquête meestal af te raden!}
 
   \bigskip
 
@@ -555,16 +558,16 @@
   \begin{itemize}
     \item Populatie is niet/slecht gedefinieerd
     \item Steekproef is niet aselect
-      \begin{itemize}
-        \item online enquête
-        \item convenience sampling
-      \end{itemize}
+          \begin{itemize}
+            \item online enquête
+            \item convenience sampling
+          \end{itemize}
     \item Zeer laag responspercentage
     \item Ondoordachte vragen $\Rightarrow$ onbruikbare antwoorden
-      \begin{itemize}
-        \item Open vragen
-        \item Peilen naar opinie, geen feiten
-      \end{itemize}
+          \begin{itemize}
+            \item Open vragen
+            \item Peilen naar opinie, geen feiten
+          \end{itemize}
     \item Geen controle op representativiteit
   \end{itemize}
 
@@ -578,18 +581,18 @@
   \begin{itemize}
     \item Schrijf plan van aanpak uit (= methodologie)
     \item Verdeel onderzoek in verschillende fasen
-      \begin{itemize}
-        \item Wat ga je concreet doen?
-        \item Waarom? Wat is de doelstelling?
-        \item Wat is het concrete resultaat?
-        \item Hoe ga je het aanpakken (onderzoeksmethode)?
-      \end{itemize}
+          \begin{itemize}
+            \item Wat ga je concreet doen?
+            \item Waarom? Wat is de doelstelling?
+            \item Wat is het concrete resultaat?
+            \item Hoe ga je het aanpakken (onderzoeksmethode)?
+          \end{itemize}
     \item Schatting tijdverloop (normale BP):
-      \begin{itemize}
-        \item Begin: start semester 2
-        \item Per week 4d stage, 1d BP (géén paasvakantie!)
-        \item Deadline: vrijdag eerste examenweek
-      \end{itemize}
+          \begin{itemize}
+            \item Begin: start semester 2
+            \item Per week 4d stage, 1d BP (géén paasvakantie!)
+            \item Deadline: vrijdag eerste examenweek
+          \end{itemize}
   \end{itemize}
 
 \end{frame}
