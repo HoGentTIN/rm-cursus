@@ -1,41 +1,108 @@
 \chapter{Een bibliografische databank bijhouden}%
 \label{ch:bibliografie}
 
-\section{Publicaties bijhouden in JabRef}%
-\label{sec:publicaties_bijhouden_in_jabref}
+%% TODO: welke LaTeX-code is nodig om de bibliografie te genereren? Hoe compileren in TeXstudio?
 
-Voordat je op zoek gaat naar informatie is het belangrijk om je eerst voor te bereiden om alle bronnen gestructureerd bij te houden zodat je ze later kan terugvinden en een bibliografie kan opstellen. Bibliografieën moeten in een strak en vastgelegd formaat worden opgesteld. Er zijn veel verschillende bibliografiestijlen, maar op HOGENT is er gekozen voor één, het APA-systeem (van de American Psychological Association)\footnote{\url{https://bib.hogent.be/how-to/bronnen-vermelden/refereren-volgens-apa6th/}}.
+In het vorige hoofdstuk (zie Hoofdstuk~\ref{ch:literatuuronderzoek}) hebben we besproken hoe je gericht op zoek kan gaan naar ict-gerelateerde vakliteratuur. Het is belangrijk om alle informatie die je op die manier gevonden hebt op een gestructureerde manier bij te houden, zodat je bij het schrijven van je scriptie of paper kan verwijzen naar je bronnen en zodat je de referentielijst of bibliografie kan opmaken. Hoe je dat aanpakt kom je te weten in dit hoofdstuk.
 
-Het is ondoenbaar om manueel een bibliografie en vermeldingen in de tekst bij te houden.  Gelukkig bestaan er verschillende applicaties die gespecialiseerd zijn in het bijhouden van een bibliografische databank, zgn. \emph{reference managers}.
+Het verwijzen naar bronnen en opmaken van een bibliografie moet op een strakke, strikt vastgelegde manier gebeuren. Hiervoor bestaan verschillende stijlen, bv.\ de Chicago Manual of Style, IEEE, American Psychological Association (APA), enz. Op HOGENT is gekozen voor de APA-stijl\footnote{Zie cursus \emph{Kritisch Denken en Onderzoekscompetenties voor de Bachelorstudent} op Chamilo}, wellicht de belangrijkste standaard voor publicaties in het domein van de sociale wetenschappen. Het gebruik ervan is dus verplicht voor alle scripties en papers in alle opleidingen van de hogeschool. Dat geldt zowel voor de opmaak van de literatuurlijst als refereren naar bronnen in de tekst.
 
-HOGENT stelt zelf Endnote voor, maar het nadeel is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt. In deze sectie wordt JabRef voorgesteld, een open source applicatie voor het bijhouden van bibliografische gegevens, die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt het bestandsformaat van Bib{\LaTeX}, het ingebouwde systeem voor bibliografieën.
+De opmaakregels voor referenties en bibliografieën in de APA-stijl zijn uitgebreid en vrij complex. Gelukkig hoeven we dit niet volledig manueel te doen. Er bestaan softwarepakketten die dit grotendeels automatiseren: bibliografische databanken of (in het Engels) \emph{reference management software}.
+
+\section{Bibliografische databank}%
+\label{sec:bibliografische-databank}
+
+Een bibliografische databank laat je toe metadata over de gelezen werken gestructureerd bij te houden: titel, auteur, jaartal, en dergelijke, maar ook (aanklikbare) URLs, PDFs van artikels, nota's, enz.
+
+In de cursus \emph{Kritisch Denken en Onderzoekscompetenties voor de Bachelorstudent} wordt gesuggereerd om Endnote te gebruiken als bibliografische databank. Het nadeel hiervan is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt.
+
+In deze sectie stellen we JabRef\footnote{\url{http://www.jabref.org/}} voor, een open source applicatie die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt het bestandsformaat van Bib{\LaTeX}, het ingebouwde systeem voor bibliografieën.
+
+In de {\LaTeX}-sjablonen voor het onderzoeksvoorstel en voor de bachelorproef zit de APA-stijl al ingebakken en je hoeft je dus helemaal geen zorgen te maken over de correcte opmaak. Dit gebeurt automatisch, mits je de bibliografische gegevens (bv.\ titel, auteur, jaar van publicatie) correct bijhoudt in Jabref.
+
+\subsection{JabRef}%
+\label{ssec:jabref}
+
+Je kan JabRef installeren op Windows, macOS of Linux volgens de instructies op de website, of in onze online {\LaTeX} gebruikersgids\footnote{Zie \url{https://hogenttin.github.io/latex-hogent-gids/}}.
 
 Als je meer gedetailleerde informatie over Bib{\LaTeX} nodig hebt, die niet in deze gids te vinden is, raadpleeg dan de handleiding~\autocite{LehmanEtAl2016}.
 
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{jabref-screenshot}
-  \caption[JabRef]{\label{fig:jabref}\textbf{JabRef.} Centraal in de gebruikersinterface vind je een \emph{overzicht} van de verschillende bronnen in deze bibliografische databank, in dit geval vier. De \emph{pdf-icoontjes} links bij de eerste en vierde bron geven aan dat de bron lokaal opgeslagen is als pdf. Als je hierop klikt, wordt de pdf geopend. De \emph{wereldbol-icoontjes} bij de tweede en vierde bron duiden op een url die je in de webbrowser kan openen als je hierop klikt. Onderaan bevindt zich een \emph{detailvenster} met de bijgehouden gegevens voor de vierde bron. Deze worden opgedeeld in verschillende tabbladen, o.a.~verplichte gegevens (``Required fields''), optionele (``Optional'') en andere (``Other fields''), enz. In dit geval zijn de namen van de auteurs ingevuld (zie Sectie~\ref{sub:algemene_bibliografische_gegevens}). Er zijn in dit geval geen redacteurs (``Editors''), en dat veld is dan ook leeg gebleven. Het veld ``Bibtexkey'' onderaan is automatisch gegenereerd (zie Sectie~\ref{sub:jabref_instellingen}) door te klikken op het \emph{sleutelsymbool} in de knoppenbalk links.}
+  \caption[JabRef]{\label{fig:jabref}\textbf{JabRef.} Centraal in de gebruikersinterface vind je een lijst van de verschillende bronnen in deze bibliografische databank. De pdf-icoontjes links bij de tweede en vierde bron geven aan dat de bron lokaal opgeslagen is als pdf. Als je hierop klikt, wordt de pdf geopend. De ketting-icoontjes die bij verschillende bronnen voorkomen duiden op een url die je in de webbrowser kan openen als je hierop klikt. Als je een bron selecteert, dan krijg je onderaan links invulvakken te zien met de bijgehouden metadata voor die bron. Deze worden opgedeeld in verschillende tabbladen, o.a.~verplichte gegevens (``Required fields''), optionele (``Optional'') en andere (``Other fields''), enz. In dit geval zijn de namen van de auteurs ingevuld (zie Sectie~\ref{sec:algemene_bibliografische_gegevens}). Er zijn in dit geval geen redacteurs (``Editors''), en dat veld is dan ook leeg gebleven. Het veld ``Citationkey'' onderaan is automatisch gegenereerd (zie Sectie~\ref{sub:jabref_instellingen}) door te klikken op de knop met het sleutelsymbool en label ``Generate'' rechts van het invulvak. Rechtsonder zie je een ``Preview,'' wat een idee zou moeten geven van hoe de referentie er uit zal zien in de bibliografie.}
 
 \end{figure}
 
 \subsection{JabRef instellingen}%
 \label{sub:jabref_instellingen}
 
-Je kan JabRef downloaden van \url{http://www.jabref.org/} en installeren op zowel Windows, MacOS als Linux. Wanneer je JabRef voor het eerst opent, is het nuttig om volgende instellingen aan te passen:
+Wanneer je JabRef voor het eerst opent, is het nuttig om volgende instellingen aan te passen via Options > Preferences:
 
 \begin{itemize}
-  \item Kies in het menu voor Library > Switch to BibLaTeX Library Properties. Wijzig hier Library mode naar biblatex. Dit maakt de bestandsindeling van de bibliografische databank compatibel met het aangeboden {\LaTeX}-sjabloon voor de bachelorproef. Om deze instelling aan te passen, moet je een bib-bestand openen.
-  \item Kies in het menu voor Options > Preferences en dan voor de categorie ``Citation key generator''. Elke bron in de databank wordt geïdentificeerd door een unieke sleutel die je kan automatisch laten genereren. Je kan de vorm ervan zelf instellen. Het standaardformaat is de familienaam van de eerste auteur gevolgd door het publicatiejaar, bv.\ ``Knuth1998''. Je kan dit naar eigen smaak aanpassen, maar kies dit vooraf en hou je er aan. Je zal deze sleutel gebruiken om vanuit de tekst te verwijzen naar je bronnen, bv.\ met het commando \verb|\parencite{Knuth1998}|.
-  \item Kies in het Preferences-venster voor de categorie Linked Files en geef een directory op voor het bijhouden van PDFs van de gevonden bronnen onder ``Main file directory''. Het is heel interessant om de gevonden artikels te downloaden en onder die directory bij te houden. Nog beter is om als naam van het bestand de BibTeX key te nemen (bv.\ Knuth1998.pdf). Je kan het bestand dan makkelijk openen vanuit JabRef.
+  \item \textbf{General:} Default bibliography mode: wijzig dit naar biblatex. In de standaardinstelling (BibTeX) is er geen ondersteuning voor Unicode of voor de APA-stijl.
+  \item \textbf{Entry preview:} Selecteer in de beschikbare stijlen de APA-stijl. Je krijgt dan rechtsonder in het venster een voorbeeld van de opmaak van de referentie in de APA-stijl. Dit is niet perfect, maar geeft wel een idee van hoe de bronvermelding er uit zal zien in de bibliografie.
+  \item \textbf{Linked Files:} en geef een directory op voor het bijhouden van PDFs van de gevonden bronnen onder ``Main file directory''. Het is heel interessant om de gevonden artikels te downloaden en onder die directory bij te houden. Nog beter is om als naam van het bestand de BibTeX citation key te nemen (bv.\ Knuth1998.pdf). Je kan het bestand dan makkelijk openen vanuit JabRef.
 \end{itemize}
 
 Je kan de andere instellingen nakijken en eventueel naar wens aanpassen, maar de hierboven opgesomde zijn de belangrijkste.
 
-\subsection{Algemene bibliografische gegevens}%
-\label{sub:algemene_bibliografische_gegevens}
+\section{Soorten bronnen}%
+\label{sec:soorten_bronnen}
 
-De bedoeling van een bibliografie is de lezer toelaten jouw bronnen zelf op te zoeken en te beoordelen op betrouwbaarheid. Dat betekent dat je voldoende informatie moet opgeven zodat de bron terug te vinden is. Afhankelijk van het soort bron (artikel in een journal, boek, website, enz.) moet je andere informatie opgeven. Dit wordt verderop uitgediept. Drie elementen zijn sowieso \emph{altijd} essentieel: de \textbf{auteur}, de \textbf{titel} van de bron en het \textbf{jaar} (of datum) van publicatie. Als één van deze drie ontbreekt, wordt het bijzonder moeilijk om de oorsprong en de kwaliteit van de bron te evalueren. Dit soort bronnen kan je bijhouden ter info, maar zijn meestal niet geschikt om op te nemen in een bibliografie. Als de auteur onbekend is, is het immers niet mogelijk om te beoordelen of die wel de autoriteit heeft om op een objectieve en diepgaande manier over het onderwerp te schrijven. Als het jaartal niet opgegeven is, is het erg moeilijk om na te gaan in hoeverre deze bron nog niet achterhaald is door recentere ontwikkelingen in het vakgebied.
+De bedoeling van een bibliografie is de lezer toelaten jouw bronnen zelf op te zoeken en te beoordelen op betrouwbaarheid. Dat betekent dat je voldoende informatie moet opgeven zodat de bron terug te vinden is. Afhankelijk van het soort bron moet je andere, specifieke informatie opgeven. Dit wordt verderop uitgediept.
+
+Bij het toevoegen van een nieuwe bron aan een bibliografische databank moet je eerst het type selecteren (zie Afbeelding~\ref{fig:jabref-entrytypes}).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{img/jabref-entrytypes}
+  \caption[Soorten bronnen in JabRef]{\label{fig:jabref-entrytypes}\textbf{Soorten bronnen in JabRef.} Bij het toevoegen van een nieuwe bron in JabRef (Ctrl+N) moet je eerst het soort publicatie kiezen. Afhankelijk van het soort moet in de literatuurlijst immers andere informatie gegeven worden.}
+\end{figure}
+
+Bib{\LaTeX} onderscheidt onder andere de volgende soorten bronnen:
+
+\begin{description}
+  \item[Article] Een artikel in een wetenschappelijke journal;
+  \item[Online] Een online gevonden bron zoals blog-artikel van een vakexpert, video van een presentatie op een vakconferentie, artikel in een online publicatie zoals Dzone of InfoQ, enz. (synoniemen: WWW, Electronic);
+  \item[Book, InBook] Een boek of hoofdstuk in een boek;
+  \item[Thesis] Een scriptie of eindwerk van een student (bachelorproef, masterthesis, doctoraatsproefschrift);
+  \item[Report] Een (onderzoeks-)rapport, typisch uitgegeven door een hoger onderwijsinstelling, onderzoeksgroep, overheidsinstelling, bedrijf, enz.
+  \item[InProceedings] Een artikel in de ``proceedings'' van een conferentie, een boek waar\-in alle artikels gebundeld zijn die op de conferentie werden gepresenteerd;
+  \item[enz.] Er zijn nog andere soorten bronnen, maar deze komen minder vaak voor of zijn niet relevant voor een bachelorproef informatica.
+\end{description}
+
+\section{Automatisch invullen van bibliografische gegevens}%
+\label{sec:automatisch_invullen_van_bibliografische_gegevens}
+
+Sommige tertiaire bronnen zoals ScienceDirect, Springer, Google Scholar, enz.\ bieden de mogelijkheid om de nodige informatie automatisch in te vullen. Dat kan op verschillende manieren.
+
+Op de webpagina voor het gevonden artikel kan je de bibliografische gegevens in Bib{\LaTeX}-formaat kopiëren of downloaden. Zoek naar een link of knop met de vermelding ``Cite'', klik er op door en selecteer Bib{\LaTeX}. Kopieer de tekst en plak die in JabRef via het tabblad ``biblatex source''.
+
+Een andere manier is via een unieke code die de bron identificeert. Voor boeken is dat het ISBN-nummer. Als je een nieuwe bron toevoegt (zie Figuur~\ref{fig:jabref-entrytypes}), kan je in het drop-down veld ``ID type'' ISBN kiezen en het nummer erin plakken. Klik vervolgens op ``Generate'' en de belangrijkste velden worden (in principe) meteen ingevuld.
+
+Voor artikels die in journals gepubliceerd zijn, is er een gelijkaardig systeem: Ditigal Object Identifier of DOI. Dit is een unieke code die je kan vinden op de webpagina van het artikel. De vorm is meestal:
+
+\begin{center}
+  \texttt{https://doi.org/UITGEVER/ARTIKEL}
+
+  bv. \texttt{https://doi.org/10.1016/j.ijinfomgt.2015.11.010}
+\end{center}
+
+Elke uitgever heeft een eigen code (bv. 10.1016 voor Elsevier, 10.1007 voor Springer, enz.) en binnen hun publicaties geven zij ook elk individueel artikel een ID. Bij het toevoegen van een nieuwe bron kies je als ``ID type'' voor DOI en kopieer en plak je het \texttt{UITGEVER/ARTIKEL}-gedeelte van de DOI-url (dus zonder \texttt{https://doi.org/}) in het invulveld.
+
+Ook de documentatie over de TCP/IP-protocolstack kan je op deze manier toevoegen. Deze zijn online gepubliceerd\footnote{Zie \url{https://www.rfc-editor.org}} in de vorm van zgn.~RFC's (Request for Comment). Je kan als ``ID Type'' voor RFC kiezen en dan het nummer van de RFC invullen.
+
+Merk op dat deze systemen niet altijd perfect werken, dus controleer altijd het resultaat! En misschien wil je nog informatie toevoegen die niet werd ingevuld via de ID, bv.\ de abstract, sleutelwoorden, enz.
+
+
+\section{Algemene bibliografische gegevens}%
+\label{sec:algemene_bibliografische_gegevens}
+
+ Drie elementen zijn sowieso \emph{altijd} essentieel: de \textbf{auteur}, de \textbf{titel} van de bron en het \textbf{datum} (of tenminste het jaar) van publicatie. Als één van deze drie ontbreekt, wordt het bijzonder moeilijk om de oorsprong en de kwaliteit van de bron te evalueren. Dit soort bronnen kan je bijhouden ter info, maar zijn meestal niet geschikt om op te nemen in een bibliografie. Als de auteur onbekend is, is het immers niet mogelijk om te beoordelen of die wel de autoriteit heeft om op een objectieve en diepgaande manier over het onderwerp te schrijven. Als het jaartal niet opgegeven is, is het erg moeilijk om na te gaan in hoeverre deze bron nog niet achterhaald is door recentere ontwikkelingen in het vakgebied.
+
+\subsection{Het Author-veld}%
+\label{ssec:het_author_veld}
 
 Enkele tips bij het invullen van auteursnamen:
 
@@ -47,43 +114,53 @@ Enkele tips bij het invullen van auteursnamen:
   \item Naast een auteurveld is er ook een veld voor eventuele redacteur(s) (\emph{editor}) voorzien. Minstens één van beide moet ingevuld zijn, soms allebei. Dit gebeurt bijvoorbeeld in een boek dat samengesteld is uit hoofdstukken die telkens door andere auteurs geschreven zijn en waar je naar één bepaald hoofdstuk wil verwijzen. Verderop vind je daar een voorbeeld van.
 \end{itemize}
 
-Merk trouwens op dat in een bibliografie \textbf{enkel werken mogen opgenomen zijn waarnaar verwezen wordt vanuit de tekst}. {\LaTeX} doet dit standaard automatisch, dus als je bronnen in de lijst mist, dan betekent dit dat je die niet in de tekst gebruikt hebt.
+\subsection{Het Date-veld}%
+\label{ssec:het_date_veld}
 
-Probeer telkens zoveel mogelijk informatie bij te houden over je bronnen, zodat het later makkelijker wordt die terug te vinden. Dit is een tijdrovend proces, en niet al deze informatie wordt ook in de bibliografie opgenomen. Het raadplegen van de databank wordt wel een stuk makkelijker. Heb hier voldoende aandacht voor en controleer ook goed het resultaat in de bibliografie zelf. Zijn de auteurs correct weergegeven? Heb je een jaartal? Is er voor een online bron (zie verder) een URL en datum van raadplegen opgegeven? Enz.
+Data worden in Bib{\LaTeX} altijd in het formaat \texttt{jjjj-mm-dd} ingegeven (volgens de ISO-8601 standaard), dus eerst het jaar, dan de maand en tenslotte de dag, gescheiden met koppeltekens (-).
 
-Enkele velden die zinvol zijn om altijd trachten in te vullen:
+Als je de maand of de dag niet kent, vernoem je enkel het jaar.
+
+Bij het importeren van bibliografische gegevens wordt soms niet het Date-veld ingevuld, maar Year. Dit is een overblijfsel van de Bib{\TeX} standaard, waar er aparte velden voorzien waren voor het jaartal (Year) en maand (Month, weergegeven door de eerste drie letters van de maand in het Engels: Jan, Feb, Mar, enz.).
+
+Je kan de inhoud van het Year-veld (en desgevallend Month) het best naar Date kopiëren.
+
+\subsection{Extra informatie bijhouden}%
+\label{ssec:extra_informatie_bijhouden}
+
+Probeer telkens zoveel mogelijk informatie bij te houden over je bronnen, zodat het later makkelijker wordt die terug te vinden. Dit is een tijdrovend proces, en niet al deze informatie wordt ook in de bibliografie opgenomen. Het raadplegen van de databank wordt wel een stuk makkelijker.
+
+Enkele velden die zinvol zijn om altijd trachten in te vullen, ook al zijn ze niet verplicht en worden ze ook niet altijd in de bibliografie getoond:
 
 \begin{description}
   \item[Abstract] Samenvatting van het artikel. Dit is meestal de eerste paragraaf van een artikel en wordt altijd duidelijk aangegeven.
   \item[DOI] of ``Digital Object Identifier''. Dit is een unieke code voor artikels in wetenschappelijke publicaties die het opzoeken makkelijker maakt (op voorwaarde dat de DOI gegeven is).
   \item[File] Naam van het bestand met het gedownloade artikel. Je kan vanuit JabRef het artikel openen in een PDF-viewer of desgevallend tekstverwerker.
-  \item[Keywords] Kernwoorden die het onderwerp weergeven, gescheiden door komma's.
+  \item[Keywords] Kernwoorden i.v.m~het onderwerp, gescheiden door komma's.
   \item[Review] Je eigen opmerkingen over deze bron. Waarom heb je deze bijgehouden? Wat is het interessantste dat je er uit geleerd hebt?
   \item[URL] De URL waar je het artikel gevonden hebt. Deze URL wordt niet altijd in de bibliografie opgenomen, maar is altijd nuttig om bij te houden. Je kan vanuit JabRef de website openen in een webbrowser.
   \item[Urldate] de datum waarop je deze bron het laatst hebt geraadpleegd.
 \end{description}
 
-\subsection{Specifieke bibliografische gegevens}%
-\label{sub:specifieke_bibliografische_gegevens}
+Let er tenslotte ook op dat je in Jabref \textbf{nooit speciale lettertekens gebruikt} die voor {\LaTeX} een specifieke betekenis hebben. Het gaat hier dan onder andere over het percentteken (\%), het hekje (\#), het dollarteken (\$), het ampersand-teken (\&) en de accolades (\{ en \}). Als je deze toch nodig hebt, moet je er meestal een backslash voor zetten, bv. ``\textbackslash\%'' of het geschikte commando voor dat specifieke teken gebruiken. Als je dit over het hoofd ziet, zal je compilatie mislukken en jammer genoeg is de foutboodschap vaak niet erg duidelijk.
+
+\section{Specifieke bibliografische gegevens}%
+\label{sec:specifieke_bibliografische_gegevens}
 
 In deze sectie wordt voor de meest relevante soorten bronnen uitgelegd hoe deze correct bij te houden en in de bibliografie op te nemen. JabRef geeft zelf al enige aanwijzingen over welke informatie minstens nodig is: in het detailvenster (zie Afbeelding~\ref{fig:jabref}) moet je minstens het tabblad ``Required fields'' invullen. Voor elk soort publicatie (zie Sectie~\ref{sub:publicatievormen}) vind je verderop een overzicht van de in te vullen velden en wat die precies betekenen, en hoe de referentie in de literatuurlijst er uit zal zien.
 
-Bij het toevoegen van een nieuwe bron aan een bibliografische databank moet je eerst het type selecteren (zie Afbeelding~\ref{fig:jabref-entrytypes}). Hieronder bespreken we enkel de belangrijkste die relevant zijn voor een bachelorproef.
+\subsection{Article}%
+\label{ssec:article}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\linewidth]{img/jabref-entrytypes}
-  \caption[Soorten bronnen in JabRef]{\label{fig:jabref-entrytypes}\textbf{Soorten bronnen in JabRef.} Bij het toevoegen van een nieuwe bron in JabRef (Ctrl+N) moet je eerst het soort publicatie kiezen. Afhankelijk van het soort moet in de literatuurlijst immers andere informatie gegeven worden.}
-\end{figure}
+Dit soort bron wordt enkel gebruikt voor artikels die verschenen zijn in een wetenschappelijke journal. Artikels in (vak)tijdschriften of kranten vallen hier \emph{niet} onder, maar daarvoor gebruik je het type Periodical.
 
-\paragraph{Article}
-
-Dit soort bron wordt enkel gebruikt voor artikels die verschenen zijn in een wetenschappelijke journal. Artikels in (vak)tijdschriften of kranten vallen hier \emph{niet} onder. Verplichte velden:
+Verplichte velden voor Article:
 
 \begin{description}
   \item[Author] De naam van de auteur;
   \item[Title] De titel van het artikel;
-  \item[Year] Jaar waarin het artikel verschenen is;
+  \item[Journaltitle] De naam van het tijdschrift;
+  \item[Date] Verschijningsdatum (of -jaar) van het artikel;
   \item[Volume] De jaargang van het tijdschrift waarin het artikel verschenen is;
   \item[Number] Het nummer (binnen de jaargang) waarin het artikel verschenen is (soms niet gegeven);
   \item[Pages] Paginanummers
@@ -97,7 +174,7 @@ Voorbeeld:
   title        = {Conceptualizing a model for adoption of cloud
                   computing in education},
   journaltitle = {International Journal of Information Management},
-  year         = {2016},
+  date         = {2016},
   volume       = {36},
   number       = {2},
   pages        = {183--191},
@@ -112,99 +189,8 @@ Voorbeeld:
 
 In de bibliografie ziet dit er zo uit: \fullcitebib{SabiEtAl2016}
 
-\paragraph{InProceedings}
-
-Dit soort bron wordt gebruikt voor artikels die gepubliceerd zijn in het verslag (proceedings) van een \emph{wetenschappelijke} conferentie. Verplichte velden:
-
-\begin{description}
-  \item[Author] Naam van de auteur(s),
-  \item[Title] Titel van het artikel,
-  \item[Booktitle] De naam van de conferentie,
-  \item[Year] Het jaar waarin de conferentie doorging.
-\end{description}
-
-Daarnaast kan je optioneel ook volgende velden invullen:
-
-\begin{description}
-  \item[URL] naar de website van de conferentie waar het artikel kan gevonden (eventueel rechtstreeks naar de pdf);
-  \item[Urldate] datum waarop je deze bron het laatst geraadpleegd hebt.
-  \item[DOI] op voorwaarde dat er één toegewezen is aan dit artikel.
-\end{description}
-
-Voorbeeld:
-\begin{verbatim}
-@InProceedings{VanVreckemEtAl2013,
-  author    = {Van Vreckem, Bert and Borodin, Dmitriy and De Bruyn,
-               Wim and Now\'{e}, Ann},
-  title     = {A Reinforcement Learning Approach to Solving Hybrid
-               Flexible Flowline Scheduling Problems},
-  booktitle = {Multidisciplinary International Scheduling Conference
-               (MISTA) 2013},
-  year      = {2013},
-  url       = {https://expertise.hogent.be/files/.../hffsp_la.pdf},
-  urldate   = {2016-09-01},
-  abstract  = {In this paper, we present a method based on Learning
-               Automata to solve Hybrid Flexible Flowline Scheduling 
-               Problems [...].},
-  owner     = {bert},
-  timestamp = {2016-09-01},
-}
-\end{verbatim}
-
-In de bibliografie ziet dit er zo uit: \fullcitebib{VanVreckemEtAl2013}
-
-\paragraph{InBook}
-
-Dit type gebruik je als je wil verwijzen naar een specifiek hoofdstuk in een boek. Minstens volgende velden moeten dan ingevuld zijn:
-
-\begin{description}
-  \item[Author] De auteur(s) van het hoofdstuk,
-  \item[Editor] De redacteur(s) van het boek (indien van toepassing),
-  \item[Year] Jaartal waarin het boek werd uitgegeven,
-  \item[Title] Titel van het \emph{hoofdstuk},
-  \item[Pages] Begin- en eindpagina van het hoofdstuk,
-  \item[Booktitle] Titel van het \emph{boek},
-  \item[Publisher] Naam van de uitgeverij.
-\end{description}
-
-Optioneel kan je ook volgende informatie aanvullen:
-
-\begin{description}
-  \item[Subtitle of Booksubtitle] ondertitel van het hoofdstuk of boek, resp.,
-  \item[Edition] Nummer van de uitgave,
-  \item[Location] Stad waar de uitgeverij gevestigd is,
-  \item[ISBN] Het ISBN-nummer van het boek (ter info, wordt nooit getoond in de bibliografie).
-\end{description}
-
-Bij een boek is het ongebruikelijk om een URL op te geven. Als je bijvoorbeeld ter info voor jezelf de URL van het boek op de website van de uitgever wil bijhouden, doe je dit best in een ander veld, bv. Comment of Review.
-
-Voorbeeld
-\begin{verbatim}
-@InBook{Meyr2008,
-  author       = {Meyr, Herbert},
-  title        = {Forecast Methods},
-  booktitle    = {Supply Chain Management and Advanced Planning},
-  year         = {2008},
-  editor       = {Stadtler, Hartmut and Kilger, Christoph},
-  booksubtitle = {Concepts, Models, Software, and Case Studies},
-  edition      = {4e editie},
-  publisher    = {Springer},
-  location     = {Heidelberg},
-  isbn         = {978-3-540-24814-9},
-  pages        = {461--472},
-  comment      = {https://www.springer.com/us/book/9783540248149},
-  owner        = {bert},
-  timestamp    = {2016-09-02},
-}
-\end{verbatim}
-
-
-In de bibliografie ziet dit er zo uit:
-\fullcitebib{Meyr2008}
-
-%% TODO: boek, thesis, manual, \ldots
-
-\paragraph{Electronic of Online}
+\subsection{Online}%
+\label{ssec:online}
 
 Onder dit type publicatie vallen vrijwel alle online bronnen die niet onder een andere categorie te plaatsen zijn: blogartikels, artikels in online vaktijdschriften of portaalsites, Youtube-video's van presentaties op vakconferenties, online documentatie, enz.
 
@@ -215,12 +201,15 @@ Deze velden moet je verplicht invullen:
 \begin{description}
   \item[Author] Auteur(s) van de bron, spreker (in het geval van een video van een lezing op een conferentie), \ldots
   \item[Title] Titel van de bron, lezing, \ldots
-  \item[Year] Jaartal van publicatie (of eventueel \textbf{Date}, de dag van publicatie, als die bekend is),
+  \item[Date] Datum (of jaar) van publicatie,
   \item[URL] naar de website waar de bron kan teruggevonden worden,
   \item[Urldate] Datum van laatste raadplegen,
 \end{description}
 
 Bij dit soort bronnen worden veel fouten gemaakt bij het refereren. Het is essentieel dat de URL wordt meegegeven en ook de datum van raadplegen. Het web is voortdurend in beweging, en het is mogelijk dat de inhoud van een webpagina in de loop van de tijd verandert (bv.\ fouten die verbeterd worden) of zelfs dat een website herstructureert en de URL dus op een gegeven manier niet meer geldig is. Door de datum van raadplegen op te geven, bied je de lezer nog de kans om terug te vinden hoe die website er op dat moment in de tijd uitzag, via bijvoorbeeld de Wayback Machine van het Internet Archive\footnote{\url{https://archive.org/web/}}.
+
+% TODO: fouten in URLs, tracking info, highlighting, enz.
+%  vb.  #:~:text=Highlighted%20text
 
 Voorbeeld van een blogartikel:
 
@@ -259,52 +248,280 @@ Een ander voorbeeld, deze keer van een presentatie op een vakconferentie die op 
 
 In de bibliografie: \fullcitebib{Hykes2013}
 
-\section{Op zoek naar relevante informatie}%
-\label{sec:op_zoek_naar_relevante_informatie}
+\subsection{Book}%
+\label{ssec:book}
 
-Via de HOGENT bib krijg je toegang tot een grote hoeveelheid wetenschappelijke en vakliteratuur die niet publiek beschikbaar zijn. Dit gaat veel verder dan de boeken die in de bib beschikbaar zijn. Daarnaast zijn immers nog elektronische bronnen (ebooks, tijdschriften, enz.) te raadplegen. Ook (goede) bachelorproeven van vorige jaren kan je op deze manier vinden. De catalogus is te raadplegen via \url{https://www.hogent.be/student/bibliotheken/}.
+Dit type gebruik je voor (e-)boeken die ``officieel'' uitgegeven zijn en dus een ISBN-nummer hebben.
 
-Databanken die niet publiek beschikbaar zijn kan je raadplegen als je op de campus bent, of thuis via de HOGENT VPN. Voor ons vakgebied zijn in het bijzonder volgende databanken interessant:
+Minstens volgende velden moeten dan ingevuld zijn:
+
+\begin{description}
+  \item[Author] De auteur(s) van het boek,
+  \item[Date] Jaartal waarin het boek werd uitgegeven,
+  \item[Title] Titel van het boek,
+  \item[Publisher] Naam van de uitgeverij.
+\end{description}
+
+Optioneel kan je ook volgende informatie aanvullen:
+
+\begin{description}
+  \item[Subtitle] ondertitel van het boek,
+  \item[Edition] Nummer van de uitgave of druk,
+  \item[Location] Stad waar de uitgeverij gevestigd is,
+  \item[ISBN] Het ISBN-nummer van het boek (ter info, wordt nooit getoond in de bibliografie),
+  \item[URL] Naar de pagina over het boek op de website van de uitgeverij. \textbf{Let op!} Dit is \emph{niet} de URL van een webshop waar je het boek kan kopen, noch een link naar Google Books en zeker niet naar een illegale downloadsite!
+\end{description}
+
+Voorbeeld:
+\begin{verbatim}
+@Book{Aitchison2011,
+  author    = {Aitchison, Ron},
+  date      = {2011},
+  title     = {Pro DNS and BIND 10},
+  isbn      = {9781430230489},
+  publisher = {Apress},
+}
+\end{verbatim}
+
+In de bibliografie:
+\fullcitebib{Aitchison2011}
+
+\subsection{InBook}%
+\label{ssec:inbook}
+
+Dit type gebruik je als je wil verwijzen naar een specifiek hoofdstuk in een boek. Minstens volgende velden moeten dan ingevuld zijn:
+
+\begin{description}
+  \item[Author] De auteur(s) van het hoofdstuk,
+  \item[Editor] De redacteur(s) van het boek (indien van toepassing),
+  \item[Date] Jaartal waarin het boek werd uitgegeven,
+  \item[Title] Titel van het \emph{hoofdstuk},
+  \item[Pages] Begin- en eindpagina van het hoofdstuk,
+  \item[Booktitle] Titel van het \emph{boek},
+  \item[Publisher] Naam van de uitgeverij.
+\end{description}
+
+Optioneel kan je ook volgende informatie aanvullen:
+
+\begin{description}
+  \item[Subtitle of Booksubtitle] ondertitel van het hoofdstuk of boek, resp.,
+  \item[Edition] Nummer van de uitgave of druk,
+  \item[Location] Stad waar de uitgeverij gevestigd is,
+  \item[ISBN] Het ISBN-nummer van het boek (ter info, wordt nooit getoond in de bibliografie).
+\end{description}
+
+Bij een boek is het ongebruikelijk om een URL op te geven. Als je bijvoorbeeld ter info voor jezelf de URL van het boek op de website van de uitgever wil bijhouden, doe je dit best in een ander veld, bv. Comment of Review.
+
+Voorbeeld
+\begin{verbatim}
+@InBook{Meyr2008,
+  author       = {Meyr, Herbert},
+  title        = {Forecast Methods},
+  booktitle    = {Supply Chain Management and Advanced Planning},
+  date         = {2008},
+  editor       = {Stadtler, Hartmut and Kilger, Christoph},
+  booksubtitle = {Concepts, Models, Software, and Case Studies},
+  edition      = {4e editie},
+  publisher    = {Springer},
+  location     = {Heidelberg},
+  isbn         = {978-3-540-24814-9},
+  pages        = {461--472},
+  comment      = {https://www.springer.com/us/book/9783540248149},
+  owner        = {bert},
+  timestamp    = {2016-09-02},
+}
+\end{verbatim}
+
+In de bibliografie ziet dit er zo uit:
+\fullcitebib{Meyr2008}
+
+\subsection{Thesis}%
+\label{ssec:thesis}
+
+Onder dit type publicatie vallen doctoraatsproefschriften, masterthesissen en bachelorproeven. Dit zijn de in te vullen velden:
+
+\begin{description}
+  \item[Author] De auteur van de thesis (student of doctorandus),
+  \item[Title] Titel van de scriptie
+  \item[Date] Jaar of datum van indienen
+  \item[Type] Soort scriptie: Bachelorproef, masterthesis, doctoraatsthesis, \ldots
+  \item[Institution] Naam van de hogeschool of universiteit waar de thesis werd ingediend
+\end{description}
+
+Voorbeeld:
+\begin{verbatim}
+  @Thesis{VanDerPlaetsen2013,
+  author      = {Van Der Plaetsen, Thomas},
+  date        = {2013},
+  institution = {Hogeschool Gent},
+  title       = {Het inzetten van sensoren in de smartphone voor het
+                 verbeteren van de fanbeleving},
+  type        = {Bachelorproef},
+}
+\end{verbatim}
+
+Resultaat in de bibliografie:
+\fullcitebib{VanDerPlaetsen2013}
+
+\subsection{Report}%
+\label{ssec:report}
+
+Onder Report vallen onderzoeksrapporten uitgegeven door onderzoeksgroepen van universiteiten of hogescholen, overheidsinstellingen of bedrijven.
+
+Verplichte velden:
+
+\begin{description}
+  \item[Author] De auteur(s)
+  \item[Date] Datum of jaar van publicatie
+  \item[Title] Titel van het onderzoeksrapport
+  \item[Type] Het soort rapport. In JabRef is er een dropdown-menu met de meest voorkomende types. Meestal vul je hier \texttt{resreport} in, de afkorting van ``research report''.
+  \item[Institution] Instelling die het rapport uitgegeven heeft
+\end{description}
+
+Optionele velden:
+
+\begin{description}
+  \item[Subtitle] Ondertitel van het rapport
+  \item[URL] URL waar de instelling het rapport gepubliceerd heeft
+  \item[Urldate] Datum waarop je het rapport geraadpleegd hebt
+\end{description}
+
+Voorbeeld:
+\begin{verbatim}
+@Report{DeMarez2022,
+  author      = {De Marez, Lieven and Sevenhant, Robbe and ...},
+  date        = {2022},
+  institution = {imec},
+  title       = {imec.digimeter 2022},
+  type        = {resreport},
+  subtitle    = {Digitale trends in Vlaanderen},
+  url         = {https://www.imec.be/nl/...},
+  urldate     = {2023-05-01},
+}
+\end{verbatim}
+
+Resultaat in de bibliografie:
+\fullcitebib{DeMarez2022}
+
+\subsection{InProceedings}%
+\label{ssec:inproceedings}
+
+Dit soort bron wordt gebruikt voor artikels die gepubliceerd zijn in het verslag (proceedings) van een \emph{wetenschappelijke} conferentie. Verplichte velden:
+
+\begin{description}
+  \item[Author] Naam van de auteur(s),
+  \item[Title] Titel van het artikel,
+  \item[Booktitle] De naam van de conferentie,
+  \item[Date] Datum (of jaar) waarin de conferentie doorging.
+\end{description}
+
+Daarnaast kan je optioneel ook volgende velden invullen:
+
+\begin{description}
+  \item[URL] naar de website van de conferentie waar het artikel kan gevonden (eventueel rechtstreeks naar de pdf);
+  \item[Urldate] datum waarop je deze bron het laatst geraadpleegd hebt.
+  \item[DOI] op voorwaarde dat er één toegewezen is aan dit artikel.
+\end{description}
+
+Voorbeeld:
+\begin{verbatim}
+@InProceedings{VanVreckemEtAl2013,
+  author    = {Van Vreckem, Bert and Borodin, Dmitriy and De Bruyn,
+               Wim and Now\'{e}, Ann},
+  title     = {A Reinforcement Learning Approach to Solving Hybrid
+               Flexible Flowline Scheduling Problems},
+  booktitle = {Multidisciplinary International Scheduling Conference
+               (MISTA) 2013},
+  date      = {2013},
+  url       = {https://expertise.hogent.be/files/.../hffsp_la.pdf},
+  urldate   = {2016-09-01},
+  abstract  = {In this paper, we present a method based on Learning
+               Automata to solve Hybrid Flexible Flowline Scheduling 
+               Problems [...].},
+  owner     = {bert},
+  timestamp = {2016-09-01},
+}
+\end{verbatim}
+
+In de bibliografie ziet dit er zo uit: \fullcitebib{VanVreckemEtAl2013}
+
+\subsection{Andere}%
+\label{ssec:andere}
+
+In JabRef zijn nog andere soorten bronnen gedefinieerd, maar deze zijn minder relevant voor een eindwerk of paper (bv. Legislation, Patent, \ldots) of komen overeen met een van de hierboven opgesomde types.
+
+Electronic en WWW zijn bijvoorbeeld synoniemen voor Online.
+
+Handleidingen vallen onder het type Manual, dat je kan invullen volgens de regels van een Book (als deze in boekvorm uitgegeven is), of als een Online bron (als deze online beschikbaar is).
+
+\section{Refereren in de tekst}%
+\label{sec:bibliografie-refereren}
+
+Als je na het opvullen van je bibliografische databank met bronnen het {\LaTeX}-do\-cu\-ment zou compileren, zal je waarschijnlijk merken dat al deze nieuwe bronnen niet zichtbaar zijn in de bibliografie. Dit komt omdat in een bibliografie \textbf{enkel werken mogen opgenomen zijn waarnaar verwezen wordt vanuit de tekst}. {\LaTeX} doet dit standaard automatisch, dus als je bronnen in de lijst mist, dan betekent dit dat je die niet in de tekst gebruikt hebt.
+
+Voor het refereren naar bronnen in de tekst zijn er twee commando's gangbaar: \texttt{{\textbackslash}textcite} en \texttt{{\textbackslash}autocite}. Het eerste commando geeft een narratieve referentie, het tweede commando geeft een referentie tussen haakjes. Het is gebruikelijk om het eerste commando te gebruiken als je de naam van de auteur(s) in de tekst vermeldt, en het tweede commando als je de naam van de auteur(s) niet in de tekst vermeldt.
+
+\subsection{Narratieve referenties}%
+\label{ssec:narratieve_referenties}
+
+Een voorbeeld van een narratieve referentie:
+
+\begin{verbatim}
+An overview is provided in the survey by~\textcite{RibasEtAl2010}.
+For a real-life case-study of applying genetic algorithm ``on top''
+of a Mixed Integer Linear Programming model, we refer
+to~\textcite{BorodinEtAl2011}.
+\end{verbatim}
+
+wat resulteert in:
+
+\begin{quotation}
+  An overview is provided in the survey by Ribas, et al. (2010). For a real-life case-study of applying genetic algorithm ``on top'' of a Mixed Integer Linear Programming model, we refer to Borodin, et al. (2011).
+\end{quotation}
+
+\subsection{Referenties tussen haakjes}%
+\label{ssec:referenties_tussen_haakjes}
+
+Referenties tussen haakjes gebruik je als je de naam van de auteur(s) niet in de tekst vermeldt, bijvoorbeeld als je vakterm definieert, bij een letterlijk citaat of parafrasering of in het bijschrift van een figuur die je overgenomen hebt uit een bron.
+
+\begin{verbatim}
+Reinforcement Learning (RL) is a technique that allows an agent
+to learn how to maximize a numerical reward
+signal~\autocite{SuttonBarto1998}.
+\end{verbatim}
+
+wat resulteert in:
+
+\begin{quotation}
+  Reinforcement Learning (RL) is a technique that allows an agent to learn how to maximize a numerical reward signal (Sutton \& Barto, 1998).
+\end{quotation}
+
+\section{Controle}%
+\label{sec:bibliografie-controle}
+
+Het is belangrijk om na het genereren van de PDF met je finale paper of eindwerk nog eens goed te controleren of de referenties en bibliografie correct opgemaakt zijn.
 
 \begin{itemize}
-  \item Elsevier ScienceDirect
-  \item Springer Online Journals
-  \item Web of Science
-  \item Google Scholar
-\end{itemize}
+  \item Zijn de namen van de auteurs correct weergegeven? Indien de auteur een bedrijf of organisatie is, is de naam volledig weergegeven of geïnterpreteerd als een persoonsnaam?
+  \item Controleer dat er geen titels VOLLEDIG IN HOOFDLETTERS staan en zet deze zo nodig om.
+  \item Is er een minstens een jaartal opgegeven? Controleer ook dat nergens nog het Year- of Mont-veld ingevuld is en dat de inhoud naar Date verhuisd is.
+  \item Zijn de URLs correct weergegeven? Zijn er geen parameters of tracking codes in de URL geslopen?
+  \item Hebben Online-bronnen ook een datum van raadplegen?
+  \end{itemize}
 
-Google Scholar is een zoekmachine voor wetenschappelijke literatuur die zowel in publiek toegankelijke (``open access'') als betalende publicaties zoekt. Als je Scholar gebruikt vanop de campus of via de VPN, krijg je automatisch toegang tot de publicaties waarop de HOGENT bib een abonnement heeft.
+% TODO: is de bibliografie aanwezig? Zijn alle bronnen aanwezig (kijk naar waarschuwingen in de log-file of Citationkey vetgedrukt in de pdf).
 
-Andere, publiek toegankelijke startpunten voor het zoeken:
 
-\begin{itemize}
-  \item Arxiv.org is een database van Open Acces artikels in een hele reeks onderzoeksdomeinen, o.a.\ de Computing Research Repository\footnote{\url{http://arxiv.org/corr/home}}.
-
-  \item Ook Wikipedia is een goed startpunt voor je onderzoek, maar vergeet niet dat Wikipedia-artikels op zich niet kunnen als referenties. Lees dus de oorspronkelijke bronnen van het artikel na en gebruik die als ze relevant zijn voor je bachelorproef.
-
-  \item Er bestaan verschillende portaalsites voor actuele ict-gerelateerde onderwerpen waar technische artikels, presentaties, interviews, enz.\ op verschijnen, bv.\ dzone.com\footnote{\url{https://dzone.com/}}, infoq.com\footnote{\url{https://www.infoq.com/}}, enz.
-
-  \item Ga op zoek naar voor je vakgebied relevante conferenties, workshops, symposia, enz. Je hoeft je daarbij niet te beperken tot conferenties in eigen land! Voorbeelden zijn Devoxx\footnote{\url{https://devoxx.be/}} (Java), Google IO\footnote{\url{https://events.google.com/io2016/}} (Android), WWDC\footnote{\url{https://developer.apple.com/wwdc/}} (iOS), Configuration Management Camp\footnote{\url{http://cfgmgmtcamp.eu/}} (Linux Systeembeheer), enz.
-
-        Meer en meer worden de lezingen van conferenties gefilmd en gepubliceerd op Youtube of Vimeo\footnote{Voor Devoxx bijvoorbeeld op \url{https://www.youtube.com/channel/UCCBVCTuk6uJrN3iFV\_3vurg}}. Je kan ook de sprekers opzoeken en nagaan of ze hun slides gepubliceerd hebben op Slideshare\footnote{\url{https://slideshare.net/}} of Speakerdeck\footnote{\url{https://speakerdeck.com/}}.
-
-  \item Zijn er lokaal verenigingen die geïnteresseerd zijn in je vakgebied? Bijvoorbeeld OWASP Belgium\footnote{\url{https://www.owasp.org/index.php/Belgium}} (beveiliging van mobiele en webapplicaties). Je kan naar zulke groepen zoeken via Meetup\footnote{\url{https://meetup.com/}} of ook via LinkedIn\footnote{\url{https://www.linkedin.com/}} (zoek specifiek naar groepen zoals het Belgian IT Infrastructure Network\footnote{\url{https://www.linkedin.com/groups/2092569}}). Kijk eens na of er binnenkort evenementen in de buurt zijn en ga er naartoe.
-
-  \item Wie zijn de belangrijkste namen in de ``community''? Keynote-speakers op conferenties, auteurs van de belangrijkste boeken over het onderwerp, enz. Volg deze personen op Twitter, zoek uit of ze een blog hebben, actief zijn op LinkedIn, enz. Lees al wat je kan vinden dat ze geschreven hebben de laatste jaren.
-
-  \item Zoek uit of er nieuwsbrieven bestaan over je onderwerp, die periodiek updates uit sturen over de actualiteit binnen dat vakgebied. Voorbeelden zijn Cron.Weekly\footnote{\url{https://www.cronweekly.com/}} (Linux systeembeheer), DevOps Weekly\footnote{\url{http://www.devopsweekly.com/}} of JS Weekly (en aanverwanten)\footnote{\url{https://javascriptweekly.com/}}.
-\end{itemize}
-
-Het bijhouden van al je bronnen is tijdrovend, maar essentieel voor een goed onderbouwde bachelorproef! Besteed hier dus de nodige aandacht aan en controleer of de informatie over je bronnen correct is ingevuld in JabRef.
-
-Alle relevante informatie die je in de loop van je onderzoek hebt verzameld en gelezen wordt dan gesynthetiseerd in een doorlopende tekst waarin je in je eigen woorden de situatie in het onderzoeksdomein schetst, met op gepaste plaatsen verwijzingen naar de literatuur. Hierop gaan we dieper in in Hoofdstuk~\ref{ch:resultaten-rapporteren}.
+% Alle relevante informatie die je in de loop van je onderzoek hebt verzameld en gelezen wordt dan gesynthetiseerd in een doorlopende tekst waarin je in je eigen woorden de situatie in het onderzoeksdomein schetst, met op gepaste plaatsen verwijzingen naar de literatuur. Hierop gaan we dieper in in Hoofdstuk~\ref{ch:resultaten-rapporteren}.
 
 \section{Samenvatting}%
 \label{sec:bibliografie-samenvatting}
 
+Het bijhouden van al je bronnen is tijdrovend, maar essentieel voor een goed onderbouwde bachelorproef! Besteed hier dus de nodige aandacht aan.
+
 \begin{itemize}
   \item Zet je bibliografische databank op (bv.\ met JabRef) voordat je op zoek gaat naar informatie over je onderwerp en hou van wat je vindt nauwgezet zoveel mogelijk informatie bij.
   \item Zorg dat je altijd minstens de auteur, titel en jaartal hebt en daarnaast minstens alle andere verplichte informatie voor dat type publicatie correct noteert.
-  \item Naast het raadplegen van publiek toegankelijke bronnen is het ook interessant om via de HOGENT bib informatie over je onderwerp op te zoeken.
-  \item Gebruik de APA stijl.
+  \item Selecteer het correcte type publicatie en zorg dat in elk geval de verplichte gegevens telkens ingevuld zijn.
+  \item Vergeet niet het resultaat te controleren en zo nodig aan te passen.
 \end{itemize}
