@@ -16,9 +16,7 @@ Een bibliografische databank laat je toe metadata over de gelezen werken gestruc
 
 In de cursus \emph{Kritisch Denken en Onderzoekscompetenties voor de Bachelorstudent} wordt gesuggereerd om Endnote te gebruiken als bibliografische databank. Het nadeel hiervan is dat dit een commerciële applicatie is, waar je na je afstuderen geen toegang meer toe hebt.
 
-In deze sectie stellen we JabRef\footnote{\url{http://www.jabref.org/}} voor, een open source applicatie die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt het bestandsformaat van Bib{\LaTeX}, het ingebouwde systeem voor bibliografieën.
-
-In de {\LaTeX}-sjablonen voor het onderzoeksvoorstel en voor de bachelorproef zit de APA-stijl al ingebakken en je hoeft je dus helemaal geen zorgen te maken over de correcte opmaak. Dit gebeurt automatisch, mits je de bibliografische gegevens (bv.\ titel, auteur, jaar van publicatie) correct bijhoudt in Jabref.
+In deze sectie stellen we JabRef\footnote{\url{http://www.jabref.org/}} voor, een open source applicatie die bovendien ontwikkeld is specifiek voor {\LaTeX}. JabRef gebruikt als bestandsformaat het ingebouwde systeem voor bibliografieën, Bib{\LaTeX}. Dit is een tekstformaat met aangepaste syntax voor bibliografische gegevens. Je kan het dus in principe bewerken met een teksteditor, maar JabRef biedt een gebruiksvriendelijke interface om dit te doen en helpt bij het invullen van de correcte velden.
 
 \subsection{JabRef}%
 \label{ssec:jabref}
@@ -46,6 +44,44 @@ Wanneer je JabRef voor het eerst opent, is het nuttig om volgende instellingen a
 \end{itemize}
 
 Je kan de andere instellingen nakijken en eventueel naar wens aanpassen, maar de hierboven opgesomde zijn de belangrijkste.
+
+\section{Een bibliografie invoegen in een {\LaTeX}-document}%
+\label{sec:een_bibliografie_invoegen_in_een_latex_document}
+
+Eens je enkele bronnen in een Bib{\LaTeX}-bestand hebt opgeslagen, kan je die gebruiken in je {\LaTeX}-document. In de {\LaTeX}-sjablonen voor het onderzoeksvoorstel en voor de bachelorproef zit de APA-stijl al ingebakken en je hoeft je dus helemaal geen zorgen te maken over de correcte opmaak. Dit gebeurt automatisch, mits je de bibliografische gegevens (bv.\ titel, auteur, jaar van publicatie) correct bijhoudt in Jabref.
+
+Voor de volledigheid geven we hier de nodige instructies om dit ook in andere {\LaTeX}-documenten te kunnen toepassen.
+
+Je hebt minstens een {\LaTeX}-bestand nodig en een Bib{\LaTeX}-bestand. In het {\LaTeX}-bestand moet je de in de ``preamble'' (d.w.z.\ vóór het \texttt{{\textbackslash}begin\{document\}} comman\-do) volgende instructies toevoegen:
+
+\begin{minted}[frame=lines,linenos]{latex}
+  \usepackage[backend=biber,style=apa]{biblatex}
+  \DeclareLanguageMapping{dutch}{dutch-apa}
+  \addbibresource{<naam van je BibLaTeX-bestand>.bib}
+\end{minted}
+
+De eerste regel zorgt er voor dat de APA-stijl wordt toegepast. De tweede regel zorgt er voor dat eventueel door {\LaTeX} gegenereerde tekst in het Nederlands wordt weergegeven. De derde regel zorgt er voor dat het opgegeven bibliografische databankbestand als bron kan gebruikt worden om referenties op te zoeken.
+
+Achteraan het {\LaTeX}-bestand moet je dan de volgende instructie toevoegen:
+
+\begin{minted}[frame=lines,linenos]{latex}
+  \printbibliography
+\end{minted}
+
+Als je dit doet in een nieuw document en je compileert op dit punt, zal je wellicht merken dat er nog geen bibliografie wordt weergegeven. Dat komt omdat je nog geen referenties hebt toegevoegd. In een bibliografie mogen immers enkel werken vermeld worden waar ook effectief naar gerefereerd wordt in de tekst.
+
+Over refereren kan je meer lezen in sectie~\ref{sec:bibliografie-refereren}.
+
+\subsection{Wat als de bibliografie niet verschijnt?}%
+\label{ssec:wat_als_de_bibliografie_niet_verschijnt}
+
+Als je toch refereert in de tekst, maar je ziet na compileren nog steeds geen bibliografie, dan kan je volgende zaken controleren. Kijk ook naar de uitvoer van de compilatie voor foutboodschappen die je kunnen helpen bij het oplossen van het probleem.
+
+\begin{itemize}
+  \item Zijn er referenties in de tekst? \verb|\textcite| of \verb|\autocite| moet minstens één keer gebruikt worden.
+  \item Misschien is bij het genereren van het PDF-document de bibliografie niet gecompileerd. In {\TeX}studio kan je dit forceren door in de menubalk te kiezen voor ``Tools > Bibliography'' (of sneltoets F8). Dan wordt \texttt{biber} uitgevoerd die alle referenties in de tekst opzoekt en het nodige doet om de bibliografie te genereren. Daarna moet je nog eens compileren (``Tools > Build \& View'' of F5) en nu zou de bibliografie moeten verschijnen.
+  \item Als je in de PDF op de plaats van een referentie de ``citation key'' in het vet ziet staan, dan betekent het dat deze niet gevonden is in de bibliografische databank. Controleer of je de juiste citation key hebt gebruikt en of deze inderdaad voorkomt in het Bib{\LaTeX}-bestand.
+\end{itemize} 
 
 \section{Soorten bronnen}%
 \label{sec:soorten_bronnen}
@@ -166,13 +202,11 @@ Verplichte velden voor Article:
   \item[Pages] Paginanummers
 \end{description}
 
-Voorbeeld:
-\begin{verbatim}
+Voorbeeld broncode:
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
 @Article{SabiEtAl2016,
-  author       = {Sabi, Humphrey M. and Uzoka, Faith-Michael E. and
-                  Langmia, Kehbuma and Njeh, Felix M.},
-  title        = {Conceptualizing a model for adoption of cloud
-                  computing in education},
+  author       = {Sabi, Humphrey M. and Uzoka, Faith-Michael E. and Langmia, Kehbuma and Njeh, Felix M.},
+  title        = {Conceptualizing a model for adoption of cloud computing in education},
   journaltitle = {International Journal of Information Management},
   date         = {2016},
   volume       = {36},
@@ -182,10 +216,8 @@ Voorbeeld:
   url          = {http://www.sciencedirect.com/[...]8401215001115},
   abstract     = {Cloud computing is a pervasive computing [...]},
   keywords     = {Cloud computing, Educational technologies, [...]},
-  owner        = {bert},
-  timestamp    = {2016-09-01},
 }
-\end{verbatim}
+\end{minted}
 
 In de bibliografie ziet dit er zo uit: \fullcitebib{SabiEtAl2016}
 
@@ -208,43 +240,41 @@ Deze velden moet je verplicht invullen:
 
 Bij dit soort bronnen worden veel fouten gemaakt bij het refereren. Het is essentieel dat de URL wordt meegegeven en ook de datum van raadplegen. Het web is voortdurend in beweging, en het is mogelijk dat de inhoud van een webpagina in de loop van de tijd verandert (bv.\ fouten die verbeterd worden) of zelfs dat een website herstructureert en de URL dus op een gegeven manier niet meer geldig is. Door de datum van raadplegen op te geven, bied je de lezer nog de kans om terug te vinden hoe die website er op dat moment in de tijd uitzag, via bijvoorbeeld de Wayback Machine van het Internet Archive\footnote{\url{https://archive.org/web/}}.
 
-% TODO: fouten in URLs, tracking info, highlighting, enz.
-%  vb.  #:~:text=Highlighted%20text
+Vergeet niet om de URL goed na te kijken en overbodige informatie te verwijderen, zoals:
+
+\begin{itemize}
+  \item \texttt{\&utm\_source=\ldots}, parameters in de URL die gebruikt worden om de herkomst van de bezoeker te traceren. Deze zijn niet nodig om de pagina terug te vinden.
+  \item \texttt{\#:\textasciitilde:text=Highlighted\%20text}, code die bepaalde tekst op de pagina markeert.
+\end{itemize}
 
 Voorbeeld van een blogartikel:
 
-\begin{verbatim}
-@Electronic{LewisFowler2014,
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
+@Online{LewisFowler2014,
   author    = {Lewis, James and Fowler, Martin},
-  title     = {Microservices: a definition of this new architectural
-               term},
+  title     = {Microservices: a definition of this new architectural term},
   date      = {2014-03-25},
   url       = {http://martinfowler.com/articles/microservices.html},
   urldate   = {2016-09-01},
   abstract  = {The term "Microservice Architecture" has [...]},
   keywords  = {application architecture, web services, microservices},
-  owner     = {bert},
-  timestamp = {2016-09-01},
 }
-\end{verbatim}
+\end{minted}
 
 In de bibliografie wordt dit: \fullcitebib{LewisFowler2014}
 
 Een ander voorbeeld, deze keer van een presentatie op een vakconferentie die op Youtube is gepubliceerd. Omdat er niet meteen een apart veld voorzien is voor het vermelden van de naam van de conferentie, is die hier in het titelveld verwerkt.
 
-\begin{verbatim}
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
 @Online{Hykes2013,
   author       = {Solomon Hykes},
   title        = {The future of Linux Containers (PyCon 2013)},
   date         = {2013-03-21},
   url          = {https://www.youtube.com/watch?v=wW9CAH9nSLs},
   urldate      = {2016-09-01},
-  abstract     = {At PyCon Solomon Hykes shows docker to the
-                  public for the first time.},
-  owner        = {bert},
-  timestamp    = {2016-09-01},
+  abstract     = {At PyCon Solomon Hykes shows docker to the public for the first time.},
 }
-\end{verbatim}
+\end{minted}
 
 In de bibliografie: \fullcitebib{Hykes2013}
 
@@ -273,7 +303,7 @@ Optioneel kan je ook volgende informatie aanvullen:
 \end{description}
 
 Voorbeeld:
-\begin{verbatim}
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
 @Book{Aitchison2011,
   author    = {Aitchison, Ron},
   date      = {2011},
@@ -281,7 +311,7 @@ Voorbeeld:
   isbn      = {9781430230489},
   publisher = {Apress},
 }
-\end{verbatim}
+\end{minted}
 
 In de bibliografie:
 \fullcitebib{Aitchison2011}
@@ -313,7 +343,7 @@ Optioneel kan je ook volgende informatie aanvullen:
 Bij een boek is het ongebruikelijk om een URL op te geven. Als je bijvoorbeeld ter info voor jezelf de URL van het boek op de website van de uitgever wil bijhouden, doe je dit best in een ander veld, bv. Comment of Review.
 
 Voorbeeld
-\begin{verbatim}
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
 @InBook{Meyr2008,
   author       = {Meyr, Herbert},
   title        = {Forecast Methods},
@@ -327,10 +357,8 @@ Voorbeeld
   isbn         = {978-3-540-24814-9},
   pages        = {461--472},
   comment      = {https://www.springer.com/us/book/9783540248149},
-  owner        = {bert},
-  timestamp    = {2016-09-02},
 }
-\end{verbatim}
+\end{minted}
 
 In de bibliografie ziet dit er zo uit:
 \fullcitebib{Meyr2008}
@@ -349,7 +377,7 @@ Onder dit type publicatie vallen doctoraatsproefschriften, masterthesissen en ba
 \end{description}
 
 Voorbeeld:
-\begin{verbatim}
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
   @Thesis{VanDerPlaetsen2013,
   author      = {Van Der Plaetsen, Thomas},
   date        = {2013},
@@ -358,7 +386,7 @@ Voorbeeld:
                  verbeteren van de fanbeleving},
   type        = {Bachelorproef},
 }
-\end{verbatim}
+\end{minted}
 
 Resultaat in de bibliografie:
 \fullcitebib{VanDerPlaetsen2013}
@@ -387,7 +415,7 @@ Optionele velden:
 \end{description}
 
 Voorbeeld:
-\begin{verbatim}
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
 @Report{DeMarez2022,
   author      = {De Marez, Lieven and Sevenhant, Robbe and ...},
   date        = {2022},
@@ -398,7 +426,7 @@ Voorbeeld:
   url         = {https://www.imec.be/nl/...},
   urldate     = {2023-05-01},
 }
-\end{verbatim}
+\end{minted}
 
 Resultaat in de bibliografie:
 \fullcitebib{DeMarez2022}
@@ -424,24 +452,17 @@ Daarnaast kan je optioneel ook volgende velden invullen:
 \end{description}
 
 Voorbeeld:
-\begin{verbatim}
+\begin{minted}[frame=lines,linenos,breaklines]{bibtex}
 @InProceedings{VanVreckemEtAl2013,
-  author    = {Van Vreckem, Bert and Borodin, Dmitriy and De Bruyn,
-               Wim and Now\'{e}, Ann},
-  title     = {A Reinforcement Learning Approach to Solving Hybrid
-               Flexible Flowline Scheduling Problems},
-  booktitle = {Multidisciplinary International Scheduling Conference
-               (MISTA) 2013},
+  author    = {Van Vreckem, Bert and Borodin, Dmitriy and De Bruyn, Wim and Now\'{e}, Ann},
+  title     = {A Reinforcement Learning Approach to Solving Hybrid Flexible Flowline Scheduling Problems},
+  booktitle = {Multidisciplinary International Scheduling Conference (MISTA) 2013},
   date      = {2013},
   url       = {https://expertise.hogent.be/files/.../hffsp_la.pdf},
   urldate   = {2016-09-01},
-  abstract  = {In this paper, we present a method based on Learning
-               Automata to solve Hybrid Flexible Flowline Scheduling 
-               Problems [...].},
-  owner     = {bert},
-  timestamp = {2016-09-01},
+  abstract  = {In this paper, we present a method based on Learning Automata to solve Hybrid Flexible Flowline Scheduling  Problems [...].},
 }
-\end{verbatim}
+\end{minted}
 
 In de bibliografie ziet dit er zo uit: \fullcitebib{VanVreckemEtAl2013}
 
