@@ -2,7 +2,7 @@
 \usetheme{hogent}
 \usecolortheme{hgwhite} % witte achtergrond, zwarte tekst
 
-\include{common}
+\input{common}
 
 \addbibresource{rm4-bibliografie.bib}
 
@@ -418,7 +418,7 @@
   \begin{itemize}
     \item<+-> Figuren, tabellen, wiskundige formules (zie later)
     \item<+-> Honderden packages (RTFM, Google is your friend)
-    \item<+-> Presentaties met Beamer (baseer je bv.\ op het sjabloon op \url{https://github.com/HoGentTIN/presentatie-latex-sjabloon})
+    \item<+-> Presentaties met Beamer (baseer je bv.\ op het sjabloon op \url{https://github.com/HoGentTIN/latex-hogent-beamer})
 
   \end{itemize}
 \end{frame}
@@ -427,6 +427,8 @@
 
 \begin{frame}
   \frametitle{Benodigde software}
+
+  \alertbox{Zie \url{https://hogenttin.github.io/latex-hogent-gids/}}
 
   \begin{itemize}
     \item Git client (bv. Git CLI, GitKraken\ldots)
@@ -437,25 +439,30 @@
     \item Lettertypes (zie verder)
   \end{itemize}
 
-  \bigskip
-  \alertbox{Gebruik een \textcolor{hgyellow}{package manager}!}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Lettertypes}
 
+  Download via \url{https://github.com/HoGentTIN/latex-hogent-beamer/tree/main/fonts}
+
+  \bigskip
+
   HOGENT huisstijl:
 
   \begin{itemize}
-    \item Montserrat Regular, ExtraBold: \url{https://fonts.google.com/specimen/Montserrat}
-    \item Code Pro Black: \url{https://www.dafontfree.net/freefonts-code-pro-black-f62435.htm}
+    \item Montserrat Regular, ExtraBold
+    \item Code Pro Black
   \end{itemize}
 
-  Code-font met ligaturen (bv. \({\leftarrow}\) i.p.v. \verb|<-|):
+  Andere:
 
   \begin{itemize}
-    \item Fira Code: \url{https://github.com/tonsky/FiraCode/wiki/Installing}
+    \item Fira Code: Code-font met ligaturen (bv. \({\leftarrow}\) i.p.v. \verb|<-|)
+    \item Fira Math: voor wiskundige formules
   \end{itemize}
+
+  Installeer voor alle gebruikers!
 \end{frame}
 
 \begin{frame}
