@@ -239,7 +239,7 @@
   \fullcitebib{vanderLaanEtAl2015}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[plain]
   \frametitle{Bibliografische gegevens in Jabref.}
   \framesubtitle{Extra info voor Book}
 
@@ -259,8 +259,36 @@
   \fullcitebib{Knuth1998}
 \end{frame}
 
+%% TODO: report, thesis
+
 \begin{frame}
-  \frametitle{Bibliografische gegevens in Jabref.}
+  \frametitle{Bibliografische gegevens in JabRef.}
+  \framesubtitle{Extra info voor Report/Thesis}
+
+  \begin{description}
+    \item[Institution] Instelling
+    \item[Type] Soort rapport (dropdown in JabRef)
+    \item[URL]  en Urldate (indien online gepubliceerd)
+  \end{description}
+
+\end{frame}
+
+\begin{frame}[plain]
+
+  \textbf{Voorbeeld bachelorproef:}
+
+  \fullcitebib{VanDerPlaetsen2013}
+
+  \medskip
+
+  \textbf{Voorbeeld onderzoekssrapport:}
+
+  \fullcitebib{DeMarez2022}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Bibliografische gegevens in JabRef.}
 
   Vul zoveel mogelijk info in (maakt zoeken gemakkelijker):
 
@@ -381,6 +409,8 @@ signal~\autocite{SuttonBarto1998}.
             \item Bibliography (F8): selecteert de gerefereerde bronnen en maakt ze klaar
             \item Build/Compile (F5): effectief invoegen verwijzingen en literatuurlijst
           \end{enumerate}
+
+    \item In VSCode: gebruik recept ``XeLaTex $\rightarrow$ biber $\rightarrow$ XeLaTeX $\times$ 2''
   \end{itemize}
 \end{frame}
 
@@ -392,22 +422,42 @@ signal~\autocite{SuttonBarto1998}.
     \item Taal- of zetfouten? Bv.\ accentletters, speciale tekens
     \item Alle info om bron terug te vinden aanwezig?
     \item Vermelding ``Verkregen DATUM, van URL'' bij Online bronnen?
-    \item \textbf{LET OP!} Speciale tekens (\%, \&, \$, \ldots) zijn ook in .bib verboden!
+    \item \textbf{LET OP!} Speciale tekens (\%, \&, \$, \ldots) zijn ook in .bib verboden, en ook in velden die niet gebruikt worden in de PDF!
     \item \ldots
   \end{itemize}
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[plain]
   \frametitle{Vaak voorkomende problemen}
+  \framesubtitle{Literatuurlijst}
 
   \begin{itemize}
-    \item Niet-wetenschappelijke bronnen gebruikt (bv.\ StackOverflow, Wikipedia, blogs niet van een vakexpert, \ldots)
-    \item Niet opgeruimde URLs weergegeven
+    \item Onbruikbaare bronnen (bv.\ StackOverflow, Wikipedia, blogs niet van een vakexpert, websites, \ldots)
+    \item Foutief type bron (bv. \texttt{Online} in plaats van \texttt{Book} of \texttt{Article}, \ldots)
     \item Incorrecte of ontbrekende info (bv.\ ontbrekende paginanummers, verkeerde volgorde van auteurs, verkeerde auteur \ldots)
-    \item Foutief type bron (bv. \texttt{Online} in plaats van \texttt{Book} indien het een boek betreft, typisch bij boeken gevonden via Google Books)
+    \item COPY/PASTE VAN TITELS IN ALL CAPS. Herschrijf deze!
+    \item Niet opgeruimde URLs weergegeven
+    \item URL van illegale downloadsite opgegeven
+    \item Door ChatGPT gegenereerde bronnen die niet bestaan
     \item \ldots
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Vaak voorkomende problemen}
+  \framesubtitle{Verwijzingen}
+
+  \begin{itemize}
+    \item Afbeelding zonder bronvermelding (= \textcolor{hgorange}{\textbf{Plagiaat!!}})
+    \item Beweringen, vaktermen zonder bronvermelding
+    \item Verwijzen naar bronnen die bewering in de tekst niet ondersteunen
+    \item Verwijzingen buiten de zin
+    \item Verwijzingen op einde paragraaf ipv in eerste zin waar bron gebruikt wordt
+    \item Te veel tekst gebaseerd op dezelfde bron (max.\ enkele zinnen!)
+    \item \ldots
+  \end{itemize}
+
 \end{frame}
 
 \begin{frame}[plain]
@@ -433,7 +483,7 @@ signal~\autocite{SuttonBarto1998}.
   \frametitle{Opdracht}
 
   \begin{itemize}
-    \item Sla alle gevonden bronnen op in .bib-bestand
+    \item Sla alle tijdens literatuurstudie gevonden bronnen op in .bib-bestand
     \item Structureren, bv.\ ahv Mind Map
           \begin{itemize}
             \item Freemind, Gitmind, Xmind, Minder, Vym, \ldots
