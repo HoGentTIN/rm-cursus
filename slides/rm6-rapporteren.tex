@@ -30,7 +30,7 @@
 
   \begin{itemize}
     \item Compileert paper tot PDF?
-    \item Is bibliografie zichtbaar? (F5-F8-F5)
+    \item Is bibliografie zichtbaar? (TeXstudio: F5-F8-F5)
     \item Correcte referenties in de tekst?
     \item Errors tijdens compilatie?
     \item Fouten in de PDF?
@@ -65,8 +65,15 @@
   \begin{itemize}
     \item Is de bibliografie niet aanwezig?
           \begin{itemize}
-            \item F5 --- F8 --- F5
-            \item of: Tools > Build --- Bibliography --- Build
+            \item TeXstudio:
+            \begin{itemize}
+              \item F5 - F8 - F5
+              \item of: Tools > Build - Bibliography - Build
+            \end{itemize}
+            \item VS Code:
+            \begin{itemize}
+              \item Recept ``xelatex $\rightarrow$ biber $\rightarrow$ xelatex $\times$ 2''
+            \end{itemize}
           \end{itemize}
     \item Zie je dit soort referenties in de tekst? (\textbf{Doe2021})
           \begin{itemize}
@@ -261,7 +268,7 @@
   \frametitle{Afbeeldingen in {\LaTeX}}
 
   \begin{itemize}
-    \item Gebruik Figure-omgeving
+    \item Gebruik figure-omgeving
     \item Geef elke afbeelding een label
     \item Verwijs in de tekst naar de afbeelding
     \item Voorzie uitgebreid bijschrift (caption)
