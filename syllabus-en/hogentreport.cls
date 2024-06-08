@@ -22,7 +22,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \def\@classname{hogentreport}
-\ProvidesClass{hogentreport}[2022/06/14 Hogeschool Gent report/thesis class]
+\ProvidesClass{hogentreport}[2022/06/20 Hogeschool Gent report/thesis class]
 
 \RequirePackage{xkeyval}
 \RequirePackage{iflang}
@@ -166,7 +166,6 @@
     \RequirePackage[backend=biber,style=apa]{biblatex}
     \DeclareLanguageMapping{english}{british-apa}
 \fi
-\RequirePackage{csquotes}
 
 \RequirePackage[small,bf,nooneline,footnotesize]{caption}
 \RequirePackage[flushmargin,hang]{footmisc}
@@ -242,8 +241,7 @@
 \RequirePackage[noindentafter]{titlesec}
 \RequirePackage{titletoc}
 \RequirePackage[nottoc]{tocbibind}
-
-\captionsetup[figure]{labelformat=parens, labelsep=newline}
+\RequirePackage{url}
 
 % Typography & Symbols
 \RequirePackage{eurosym}
@@ -342,7 +340,7 @@
     \RequirePackage[T1]{fontenc}
     \renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
-    \def\titlefont{er} %% Set the black family for titles
+    \def\titlefont{\fontseries{k}\selectfont} %% Set the black family for titles
     \def\subtitlefont{\fontseries{eb}\selectfont}
     \def\tocfont{\fontseries{m}\selectfont}
     \def\titlestyle{\titlefont\bfseries}
@@ -362,7 +360,7 @@
         \setsansfont{Montserrat}
     }{%
         \newfontfamily\titlefont{Montserrat}[
-            Path = fonts/Montserrat/,
+            Path = ../fonts/Montserrat/,
             Extension = .otf,
             UprightFont = *-Black, %% Force black
             BoldFont=*-Black,
@@ -370,7 +368,7 @@
             BoldItalicFont= *-BlackItalic]
 
         \newfontfamily\subtitlefont{Montserrat}[
-            Path = fonts/Montserrat/,
+            Path = ../fonts/Montserrat/,
             Extension = .otf,
             UprightFont = *-ExtraBold, %% Force extra bold
             BoldFont=*-ExtraBold,
@@ -378,7 +376,7 @@
             BoldItalicFont= *-ExtraBoldItalic]
 
         \newfontfamily\tocfont{Montserrat}[
-            Path = fonts/Montserrat/,
+            Path = ../fonts/Montserrat/,
             Extension = .otf,
             UprightFont = *-Regular,
             BoldFont=*-Bold,
@@ -386,7 +384,7 @@
             BoldItalicFont= *-BoldItalic]
 
         \setmainfont{Montserrat}[
-            Path = fonts/Montserrat/,
+            Path = ../fonts/Montserrat/,
             Extension = .otf,
             UprightFont = *-Regular,
             BoldFont=*-Bold,
@@ -442,9 +440,11 @@
 \geometry{a4paper,hscale=0.75,vscale=0.8,headheight=14pt,asymmetric}
 
 %% Page layout settings
-\setlength{\parindent}{.5cm}              %% Don't indent paragraph text
-\renewcommand{\baselinestretch}{1.2}     %% Increase line height
-\raggedbottom                            %% Don't equalize content on pages
+\setlength{\parindent}{0pt}           %% Don't indent paragraph text
+\setlength{\parskip}{6pt}             %% Put space between paragraphs
+\renewcommand{\baselinestretch}{1.2}  %% Increase line height
+\raggedbottom                         %% Don't equalize content on pages
+
 
 %% Redefine maketitle for our custom title page
 \if@titlepage%
@@ -516,6 +516,7 @@
               \fi
           \IfLanguageName{dutch}{examenperiode}{exam period} } \\
       \endgroup
+      
     \else
         \IfLanguageName{dutch}{%
           \textbf{Academiejaar:}}{\textbf{Academic year:}} \@academicyear\\
@@ -531,6 +532,7 @@
         \includegraphics[height=\the\ht\logopart]{hogent_logo}%
       };%
     \end{tikzpicture}
+
     \end{titlepage}%
     
     \thispagestyle{empty}
