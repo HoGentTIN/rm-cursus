@@ -107,7 +107,6 @@
   \end{itemize}
 \end{frame}
 
-
 \begin{frame}
   \frametitle{Nadelen}
 
@@ -122,17 +121,70 @@
   \end{center}}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Tijd vs inspanning}
+  \framesubtitle{~}
+
+  \begin{center}
+    \includegraphics[height=.7\textheight]{2/time_effort_empty.png}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tijd vs inspanning}
+  \framesubtitle{Inhoud schrijven}
+
+  \begin{center}
+    \includegraphics[height=.7\textheight]{2/time_effort_content.png}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tijd vs inspanning}
+  \framesubtitle{Meteen {\LaTeX} gebruiken}
+
+  \begin{center}
+    \includegraphics[height=.7\textheight]{2/time_effort_latex_first.png}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tijd vs inspanning}
+  \framesubtitle{{\LaTeX} uitstellen (bv.\ eerst alles in Word)}
+
+  \begin{center}
+    \includegraphics[height=.7\textheight]{2/time_effort_postpone_latex.png}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Aanbevelingen}
+
+  \begin{itemize}
+    \item Stel het leren van {\LaTeX} niet uit!
+    \item Begin met het sjabloon
+    \item Iteratieve aanpak
+    \item \alert{Gebruik Word niet als kladversie!}
+    \item Evt.\ Markdown $\rightarrow$ Pandoc $\rightarrow$ {\LaTeX}
+  \end{itemize}
+
+\end{frame}
+
 \subsection{Hulp zoeken}
 
 \begin{frame}
   \frametitle{Hulp zoeken}
 
   \begin{itemize}
-    \item Tobias Oetiker, et al., \emph{The Not So Short Introduction to {\LaTeXe}}, (a.k.a. ``lshort''):
+    \item Tobias Oetiker, et al., \emph{The Not So Short Introduction to {\LaTeXe}}, (a.k.a.\ ``lshort''):
     \url{https://tobi.oetiker.ch/lshort/lshort.pdf}
     \item {\TeX} --- {\LaTeX} StackExchange (Q \& A site): \url{http://tex.stackexchange.com/}
     \item \emph{{\LaTeX} Wikibook}, \url{http://en.wikibooks.org/wiki/LaTeX}
-    \item Handleidingen van packages (pdf) via bv. \url{https://ctan.org/pkg/}
+    \item Handleidingen van packages (pdf) via bv.\ \url{https://ctan.org/pkg/}
   \end{itemize}
 
 \end{frame}
@@ -159,7 +211,7 @@
     \verb|\commandonaam[optionele,argumenten]{arg1}{arg2}|
   \end{block}
 
-  \pause
+  \pause{}
 
   Bijvoorbeeld:
 
@@ -272,14 +324,14 @@
     \item[\texttt{\textbackslash{}usepackage\{amsfonts\}}] AMS math packages: extra wiskundige
     \item[\texttt{\textbackslash{}usepackage\{amsmath\}}] symbolen (o.a.\ getallenverzamelingen
     \item[\texttt{\textbackslash{}usepackage\{amssymb\}}] \(\mathbb{N}, \mathbb{R}, \mathbb{Z}, \mathbb{Q}\), etc.)
-    \pause
+    \pause{}
     \item[\texttt{\textbackslash{}usepackage[dutch]\{babel\}}] Taalinstellingen: woordsplitsingen, commando's voor speciale karakters (``dutch'' voor NL)
-    \pause
+    \pause{}
     \item[\texttt{\textbackslash{}usepackage\{eurosym\}}] Euro-symbool (\euro)
-    \pause
+    \pause{}
     \item[\texttt{\textbackslash{}usepackage\{fancyhdr\}}] Pagina-opmaak met hoofd- en voettekst
-    \pause
-    \item[\texttt{\textbackslash{}usepackage\{graphicx\}}] Invoegen van figuren \pause
+    \pause{}
+    \item[\texttt{\textbackslash{}usepackage\{graphicx\}}] Invoegen van figuren \pause{}
     \item[\texttt{\textbackslash{}usepackage\{lipsum\}}] Vultekst (lorem ipsum dolor sit amet\ldots)
   \end{description}
 \end{frame}
@@ -288,11 +340,11 @@
   \frametitle{Preamble---Nuttige packages}
 
   \begin{description}
-    \item[\texttt{\textbackslash{}usepackage[pdftex,bookmarks=true]\{hyperref\}}] PDF krijgt klikbare links \& verwijzingen, inhoudstafel \pause
-    \item[\texttt{\textbackslash{}usepackage[utf8]\{inputenc\}}] Accenten gebruiken in tekst (vb. é ipv \verb|\'e|) \pause
-    \item[\texttt{\textbackslash{}usepackage\{listings\}}] Broncode mooi opmaken \pause
-    \item[\texttt{\textbackslash{}usepackage\{minted\}}] Idem maar vereist Python en Pygments \pause
-    \item[\texttt{\textbackslash{}usepackage\{multirow\}}] Tekst over verschillende cellen in tabellen \pause
+    \item[\texttt{\textbackslash{}usepackage[pdftex,bookmarks=true]\{hyperref\}}] PDF krijgt klikbare links \& verwijzingen, inhoudstafel \pause{}
+    \item[\texttt{\textbackslash{}usepackage[utf8]\{inputenc\}}] Accenten gebruiken in tekst (vb. é ipv \verb|\'e|) \pause{}
+    \item[\texttt{\textbackslash{}usepackage\{listings\}}] Broncode mooi opmaken \pause{}
+    \item[\texttt{\textbackslash{}usepackage\{minted\}}] Idem maar vereist Python en Pygments \pause{}
+    \item[\texttt{\textbackslash{}usepackage\{multirow\}}] Tekst over verschillende cellen in tabellen \pause{}
     \item[\texttt{\textbackslash{}usepackage\{rotating\}}] Tabellen en figuren roteren
   \end{description}
 \end{frame}
@@ -362,7 +414,7 @@
    \end{itemize}
  \end{columns}
 
- \pause
+ \pause{}
 
  \begin{columns}[c]
    \column{.49\textwidth}
@@ -405,7 +457,7 @@
     \end{itemize}
   \end{itemize}
 
-  \pause Zie vervolg cursus!
+  \pause{} Zie vervolg cursus!
 \end{frame}
 
 \section{Tot slot}
@@ -458,7 +510,7 @@
   Andere:
 
   \begin{itemize}
-    \item Fira Code: Code-font met ligaturen (bv. \({\leftarrow}\) i.p.v. \verb|<-|)
+    \item Fira Code: Code-font met ligaturen (bv.\ \({\leftarrow}\) i.p.v.\ \verb|<-|)
     \item Fira Math: voor wiskundige formules
   \end{itemize}
 
