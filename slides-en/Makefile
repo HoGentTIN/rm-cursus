@@ -9,7 +9,7 @@
 
 sources := $(wildcard rm*.tex)           # Files to be compiled
 pdfs := $(patsubst %.tex,%.pdf,$(sources)) # Names of all resulting PDFs
-output_dir := out
+output_dir := ../output
 
 # LaTeX command for compiling the .tex files:
 latex_cmd := latexmk -output-directory="$(output_dir)" -xelatex -synctex=1 -interaction=nonstopmode -file-line-error -shell-escape

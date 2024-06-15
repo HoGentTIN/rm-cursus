@@ -434,7 +434,7 @@
 
 %% Use the length of the 'HO' part of the logo to set the padding of the logo
 \newsavebox{\logopart}
-\savebox{\logopart}{\includegraphics[height=2cm]{img/logopart}}
+\savebox{\logopart}{\includegraphics[height=2cm]{../images/logopart}}
 
 %% We use A4 paper with slightly smaller margins than the default (scale = 0.7)
 \geometry{a4paper,hscale=0.75,vscale=0.8,headheight=14pt,asymmetric}
