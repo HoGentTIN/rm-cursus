@@ -24,7 +24,7 @@ help: ## Toon deze hulpboodschap
 
 all: $(pdfs) ## Compileer alle LaTeX-bestanden (hieronder opgesomd)
 
-%.pdf: %.tex
+%.pdf: %.tex common.tex
 	$(latex_cmd) $<
 
 clean: ## Verwijder LaTeX hulpbestanden
