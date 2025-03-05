@@ -3,18 +3,22 @@
 
 In dit hoofdstuk behandelen we het opstarten van het werk aan een bachelorproef. Je vindt er enkele aanbevelingen over te gebruiken tools en het onderzoeksproces.
 
+Het is niet de bedoeling dat dit hoofdstuk een {\LaTeX} handleiding wordt, daarvoor zijn er voldoende andere bronnen beschikbaar~\parencite{Oetiker2015}.
+
+We hebben ook een online gids\footnote{\url{https://hogenttin.github.io/latex-hogent-gids/}} samengesteld met de nodige info om met {\LaTeX} aan de slag te gaan, de beschikbare sjablonen conform de HOGENT huisstijl te gebruiken, vaak voorkomende problemen op te lossen, enz. Deze kan je bookmarken en raadplegen wanneer je bijvoorbeeld volgend jaar aan je bachelorproef werkt.
+
 \section{Gebruik van {\LaTeX}}%
 \label{sec:gebruik-van-latex}
 
 De meeste studenten zijn gewend om opgemaakte tekst met een klassieke tekstverwerker (typisch MS Word) te schrijven. Voor je bachelorproef is het aangewezen om hier van af te stappen.
 
-Word, zeker met het standaardsjabloon, geeft een layout die niet geschikt is voor publicatie. Eens de lengte en complexiteit van een Word-document toenemen (en bij een eindwerk is dat zeker het geval), krijg je te maken met inconsistenties in de layout van je tekst, paginanummering en slecht gepositioneerde afbeeldingen.
+Word, zeker met het standaardsjabloon, geeft een layout die niet geschikt is voor publicatie. Functionaliteiten die helpen bij het bewaren van een consistente opmaak (zoals stijlen) zitten verborgen en worden vaak niet gebruikt. Eens de lengte en complexiteit van een Word-document toenemen (en bij een eindwerk is dat zeker het geval), krijg je te maken met inconsistenties in de layout van je tekst, paginanummering, slecht gepositioneerde afbeeldingen, verkeerd opgemaakte bronnenlijst, enz.
 
-Wanneer je tekst kopieert vanuit een ander (voorbereidend) document of vanuit een website, wordt de oorspronkelijke layout overgenomen. Als die niet consistent is met deze van je hoofddocument, moet je alles gaan aanpassen. Dit is een bijzonder tijdrovend werk met een grote kans op fouten.
+Wanneer je niet zorgvuldig te werk gaat bij het kopiëren van tekst vanuit een ander (voorbereidend) document of vanuit een website, wordt de oorspronkelijke layout overgenomen. Als die niet consistent is met deze van je hoofddocument, moet je alles gaan aanpassen. Dit is een bijzonder tijdrovend werk met een grote kans op fouten.
 
-Een klassieke tekstverwerker die gebaseerd is op het WYSIWYG-principe\footnote{\emph{What You See Is What You Get}, zoals je wellicht weet}, laat je toe om tot in de puntjes te bepalen waar tekst op het papier terecht komt, maar eigenlijk is deze grote vrijheid in dit geval een nadeel. Een strakke en professionele vormgeving is een specialiteit die een grote aandacht voor vaak pietluttige  details vraagt. Als informaticus hebben wij niet de nodige kennis om dit te realiseren. Wanneer je een significant deel van de tijd bezig bent met het vormgeven van je document, word je bovendien afgeleid van de kern van de zaak: de inhoud van de tekst!
+Een klassieke tekstverwerker die gebaseerd is op het WYSIWYG-principe\footnote{\emph{What You See Is What You Get}, d.w.z.\ wat je op het scherm ziet is hoe het er op papier zal uitzien wanneer je het document afdrukt.}, laat je toe om tot in de puntjes te bepalen waar tekst op het papier terecht komt, maar eigenlijk is deze grote vrijheid in dit geval een nadeel. Een strakke en professionele vormgeving is een specialiteit die een grote aandacht voor vaak pietluttige  details vraagt. Dit valt echter buiten onze expertise als informaticus. Wanneer je een significant deel van de tijd bezig bent met het vormgeven van je document, word je bovendien afgeleid van de kern van de zaak: de inhoud van de tekst!
 
-Een ander nadeel van de klassieke tekstverwerker is het binaire bestandsformaat. Dit maakt het onmogelijk om een document in een versiebeheersysteem te steken (zie Sectie~\ref{sec:versiebeheersysteem}). Al gauw gaan er verschillende versies van het document naast elkaar leven: `bachproef 3.docx', `bachproef 5 30 maart.docx', `final draft.docx', `final draft na feedback.docx', `final final draft.docx' \dots. Je hebt versies op je laptop, op dropbox, op je vaste pc en in je mailbox. Op de duur is het overzicht zoek, vergeet je stukken tekst over te nemen of maak je andere fouten.
+Een ander nadeel van de klassieke tekstverwerker is het binaire bestandsformaat. Dit maakt het onmogelijk om een document in een versiebeheersysteem te steken (zie Sectie~\ref{sec:versiebeheersysteem}). Al gauw gaan er verschillende versies van het document naast elkaar leven: `bachproef 3.docx', `bachproef 5 30 maart.docx', `final draft.docx', `final draft na feedback.docx', `final final draft.docx', `ultimate final draft - this time I mean it.docx', \dots. Je hebt versies op je laptop, op dropbox, op je vaste pc en in je mailbox. Op de duur is het overzicht zoek, vergeet je stukken tekst over te nemen of maak je andere fouten.
 
 Voor het opmaken van een lange tekst met een professionele en strakke vormgeving is {\LaTeX} een aanrader. Dit is \emph{tekstzetsysteem} met een markuptaal (zoals HTML) die ontworpen is voor het op papier zetten van tekst met een opmaak volgens de regels van de kunst. Je schrijft je tekst in de {\LaTeX} markuptaal, en een `compiler' zet deze om in een PDF. Een bijkomend voordel van {\LaTeX} is dat het tekstgebaseerd is, en je het dus kan opslaan in een versiebeheersysteem.
 
@@ -22,7 +26,9 @@ Toegegeven, {\LaTeX} heeft wel degelijk enkele nadelen. Er is een niet te onders
 
 Bij het schrijven van een bachelorproef met een tekstverwerker heb je het mees\-te werk op het einde, om alle onvolkomenheden, inconsistenties en fouten in de vormgeving weg te werken. Op dat moment heb je daar meestal niet meer voldoende tijd voor, want de deadline nadert. Het gevolg is vrijwel altijd een document dat onvoldoende afgewerkt is en er heel onprofessioneel uitziet voor de lezer. Dit past niet niet bij een werkstuk dat dient als afsluiter van een \textit{professionele} bacheloropleiding.
 
-In de rest van deze gids gaan we er van uit dat je {\LaTeX} gebruikt. Het is niet de bedoeling dat dit een {\LaTeX} handleiding wordt, daarvoor zijn er voldoende andere bronnen beschikbaar~\parencite{Oetiker2015}.
+Investeer vanaf het begin in het leren van {\LaTeX}, gebruik nooit Word als voorbereiding. Eens je een goed gestructureerd document hebt, en je de basiscommando's onder de knie hebt, kan je je concentreren op inhoud. Als je eerst alles voorbereid in Word om dat pas op het einde, vlak voor de deadline, om te zetten naar {\LaTeX}, zal je veel tijd verliezen met het herstructureren van je document en het leren omgaan met de specifieke eigenschappen van {\LaTeX}.
+
+Wat eventueel wél een nuttige tool kan zijn om nota's en voorbereidende teksten bij te houden is Markdown. Dit is een eenvoudige opmaaktaal die je toelaat om snel geformatteerde tekst te schrijven. Markdown kan je omzetten naar onder andere HTML, PDF, en ook {\LaTeX}, met behulp van Pandoc\footnote{\url{https://pandoc.org}}. Bovendien is Markdown het standaardformaat voor opgemaakte tekst op Github: een document in Markdown dat je op Github bekijkt wordt getoond in een opgemaakte vorm (via een vertaling naar HTML).
 
 \section{Installatie}%
 \label{sec:latex-installatie}
@@ -48,9 +54,10 @@ Om met {\LaTeX} te kunnen werken heb je het volgende nodig:
     \item Voor een korte tekst of artikel\footnote{\url{https://github.com/HoGentTIN/latex-hogent-article}} (dit sjabloon gebruik je voor het uitwerken van bachelorproefvoorstel voor Research Methods)
     \item Voor een presentatie\footnote{\url{https://github.com/HoGentTIN/latex-hogent-beamer}}
   \end{itemize}
-  \item Lettertypes voor de HOGENT-huisstijl. Deze kan je downloaden en installeren via de Github-repos met de {\LaTeX}-sjablonen\footnote{Bv.\ \url{https://github.com/HoGentTIN/latex-hogent-bachproef/tree/main/fonts}}.
+  \item Lettertypes voor de HOGENT-huisstijl. Deze kan je downloaden en installeren via de Github-repos met de {\LaTeX}-sjablonen\footnote{Bv.\ \url{https://github.com/HoGentTIN/latex-hogent-beamer/tree/main/fonts}}.
   \begin{itemize}
     \item Montserrat (officieel hoofdlettertype van de HOGENT huisstijl)
+    \item Code Pro Black (enkel nodig voor de presentatiestijl)
     \item Fira Code (monogespatieerde tekst)
     \item Fira Math (wiskundige formules)
   \end{itemize}
@@ -59,7 +66,7 @@ Om met {\LaTeX} te kunnen werken heb je het volgende nodig:
 Lettertypes installeren kan je op zowel Windows, macOS als Linux door te dubbelklikken op het OTF-bestand en op de knop ``Installeren'' te klikken in het preview-venster. Je kan de bestanden ook rechtstreeks kopiëren naar de directory met lettertypes:
 
 \begin{itemize}
-  \item Windows: \verb+C:\Windows\Fonts+
+  \item Windows: \verb+C:\Windows\Fonts+ (let er op dat je de lettertypes installeert voor het hele systeem, niet enkel voor de actieve gebruiker!)
   \item macOS: \verb+/Library/Fonts+ of \verb+~/Library/Fonts+
   \item Linux: \verb+/usr/share/fonts+ of \verb+~/.local/share/fonts+
 \end{itemize}
@@ -67,12 +74,12 @@ Lettertypes installeren kan je op zowel Windows, macOS als Linux door te dubbelk
 \subsection{Installatie op Windows}%
 \label{ssec:installatie-op-windows}
 
-Als je de nodige software wil installeren op Windows, dan raden we aan om gebruik te maken van een package manager, bv.\ Chocolatey\footnote{\url{https://chocolatey.org}}:
+Als je de nodige software wil installeren op Windows, dan kan dat makkelijk in een Administrator-console met de package manager Winget:
 
 \begin{minted}[linenos,breaklines,frame=single]{console}
-choco install miktex
-choco install texstudio
-choco install jabref
+winget install MikTeX.MikTeX
+winget install TeXstudio.TeXstudio
+winget install Jabref.Jabref
 \end{minted}
 
 \subsection{Installatie op macOS}%
@@ -94,7 +101,6 @@ Linux-gebruikers zijn het meestal gewend om de package manager voor hun specifie
 \begin{minted}[linenos,breaklines,frame=single]{console}
 sudo apt install texlive-base texlive-latex-base texlive-latex-recommended texlive-bibtex-extra texlive-pictures texlive-fonts-recommended jabref texstudio
 \end{minted}
-
 
 \section{{\TeX}studio configureren}%
 \label{sec:texstudio-configureren}
@@ -139,7 +145,7 @@ Aan een informaticus hoeven hopelijk de voordelen van een versiebeheersysteem ni
 Volgende zaken horen zeker thuis in je repository:
 
 \begin{itemize}
-  \item \LaTeX{}-broncode van de bachelorproef.
+  \item \LaTeX{}-broncode van je onderzoeksvoorstel of de bachelorproef.
   \item in te voegen afbeeldingen.
   \item broncode van zelf geschreven scripts, benchmarks, experimenten, proof-of-concepts, enz. Dit maakt dat je experimenten makkelijker te reproduceren en te valideren zijn door derden.
   \item ruwe resultaten experimenten (in tekstformaat, bv. CSV), transcripties van interviews, enz.
@@ -151,7 +157,7 @@ Kortom, \emph{alle} artefacten die resulteren uit je onderzoek horen thuis in de
 Wat hoort \emph{niet} thuis in je repository:
 
 \begin{itemize}
-  \item Hulpbestanden aangemaakt bij het compileren van \LaTeX{}. Je kan ervoor zorgen dat deze niet in een repository opgenomen worden door een \texttt{.gitignore}-bestand aan te maken\footnote{Bijvoorbeeld \url{https://github.com/github/gitignore/blob/master/TeX.gitignore}}. Het \LaTeX{}-sjabloon voor de bachelorproef is al goed ingesteld.
+  \item Hulpbestanden aangemaakt bij het compileren van \LaTeX{}. Je kan ervoor zorgen dat deze niet in een repository opgenomen worden door een \texttt{.gitignore}-bestand aan te maken\footnote{Bijvoorbeeld \url{https://github.com/github/gitignore/blob/main/TeX.gitignore}}. Het \LaTeX{}-sjabloon voor de bachelorproef is al goed ingesteld.
   \item Grote (binaire) bestanden zoals ISO's, virtuele machines (bv.\ OVA), enz.
   \item PDFs van de artikels/ebooks die je gelezen hebt (dit wordt beschouwd als ``herdistribueren'' en mag niet onder de auteurswetgeving).
   \item Binaire bestanden die vaak veranderen, bv. Word-documenten.
@@ -160,7 +166,7 @@ Wat hoort \emph{niet} thuis in je repository:
 
 Een versiebeheersysteem wordt pas echt nuttig als je het goed gebruikt. Commit dus zo vaak mogelijk, schrijf duidelijke commit-boodschappen en synchroniseer regelmatig met Github!
 
-Als je een van de HOGENT-sjablonen op Github wilt gebruiken, dan kan je deze best downloaden als ZIP via de groene knop rechtsboven. De repository klonen of een fork aanmaken is in dit geval niet aan te raden. Daarmee neem je immers ook de hele historiek van het sjabloon over en die is niet relevant voor jouw werk. Initialiseer vervolgens zelf een repository met \texttt{git init} en voeg de bestanden van het sjabloon toe met \texttt{git add} en \texttt{git commit}. Vervolgens kan je de repository koppelen aan een nieuwe repository op Github met \texttt{git remote add origin URL} en de inhoud van je lokale repository uploaden met \texttt{git push -u origin master}.
+Als je een van de HOGENT-sjablonen op Github wilt gebruiken, dan kan je deze best downloaden als ZIP via de groene knop rechtsboven. De repository klonen of een fork aanmaken is in dit geval niet aan te raden. Daarmee neem je immers ook de hele historiek van het sjabloon over en die is niet relevant voor jouw werk. Initialiseer vervolgens zelf een repository met \texttt{git init} en voeg de bestanden van het sjabloon toe met \texttt{git add} en \texttt{git commit}. Vervolgens kan je de repository koppelen aan een nieuwe repository op Github met \texttt{git remote add origin URL} en de inhoud van je lokale repository uploaden met \texttt{git push -u origin main}.
 
 \section{Samenvatting}%
 \label{sec:voorbereiding-samenvatting}
@@ -168,7 +174,8 @@ Als je een van de HOGENT-sjablonen op Github wilt gebruiken, dan kan je deze bes
 De kernpunten van dit hoofdstuk zijn:
 
 \begin{itemize}
-  \item Om een strakke, professionele opmaak te bekomen, schrijf je je scriptie beter in {\LaTeX} dan met een klassieke tekstverwerker;
-  \item Gebruik een \emph{reference manager} voor het bijhouden van een bibliografische databank (JabRef is aanbevolen).
+  \item Om een strakke, professionele opmaak te bekomen, schrijf je je scriptie beter in {\LaTeX} dan met een klassieke tekstverwerker.
+  \item Werk meteen in {\LaTeX}! Ga niet eerst alles voorbereiden in Word en dan pas overzetten.
+  \item Gebruik een \emph{reference manager} voor het bijhouden van een bibliografische databank (JabRef is aanbevolen). Zie ook Hoofdstuk~\ref{ch:bibliografie}.
   \item Gebruik een versiebeheersysteem om al je werk in op te slaan (Git is aanbevolen);
 \end{itemize}
