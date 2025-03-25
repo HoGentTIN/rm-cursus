@@ -250,7 +250,9 @@
 
   \medskip
 
-  URL opgeven is ongebruikelijk! Webpagina bij uitgever kan, Google books of illegale downloadsite niet!
+  URL opgeven is ongebruikelijk, tenzij online gepubliceerd!
+  
+  Webpagina bij uitgever kan, Google books of illegale downloadsite niet!
 
   \medskip
 
@@ -327,7 +329,7 @@
 
   \begin{itemize}
     \item In de eerste zin waarin je de bron gebruikt
-    \item \textbf{Binnen} de zin
+    \item \textcolor{hgorange}{\textbf{Binnen}} de zin
   \end{itemize}
 
   \bigskip
@@ -414,10 +416,17 @@ signal~\autocite{SuttonBarto1998}.
   \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{Controleer het resultaat!}
 
   \begin{itemize}
+    \item Ontbreken er een/meerdere bronnen?
+      \begin{itemize}
+        \item Enkel bronnen die in de tekst gebruikt worden, verschijnen in de literatuurlijst
+        \item Verwijs er naar met \verb|\textcite{}| of \verb|\autocite{}|
+        \item \verb|\nocite{*}| toevoegen is niet toegelaten
+      \end{itemize}
+       
     \item Auteurs correct weergegeven?
     \item Taal- of zetfouten? Bv.\ accentletters, speciale tekens
     \item Alle info om bron terug te vinden aanwezig?
@@ -425,6 +434,23 @@ signal~\autocite{SuttonBarto1998}.
     \item \textbf{LET OP!} Speciale tekens (\%, \&, \$, \ldots) zijn ook in .bib verboden, en ook in velden die niet gebruikt worden in de PDF!
     \item \ldots
   \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Tip: bibla}
+
+  \begin{itemize}
+    \item \url{https://pypi.org/project/bibla/}
+    \item Linter/style checker voor BibLaTeX-bestanden
+    \item Controleert op veelgemaakte fouten
+    \item Door oud-student HOGENT Tristan Cuvelier
+  \end{itemize}
+
+  \begin{verbatim}
+    pip install bibla
+    bibla lint bibliografie.bib
+  \end{verbatim}
 
 \end{frame}
 
@@ -450,7 +476,7 @@ signal~\autocite{SuttonBarto1998}.
 
   \begin{itemize}
     \item Afbeelding zonder bronvermelding (= \textcolor{hgorange}{\textbf{Plagiaat!!}})
-    \item Beweringen, vaktermen zonder bronvermelding
+    \item Beweringen, definities vaktermen zonder bronvermelding
     \item Verwijzen naar bronnen die bewering in de tekst niet ondersteunen
     \item Verwijzingen buiten de zin
     \item Verwijzingen op einde paragraaf ipv in eerste zin waar bron gebruikt wordt
