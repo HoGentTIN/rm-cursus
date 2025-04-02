@@ -24,13 +24,54 @@
   \tableofcontents
 \end{frame}
 
-\section{Bibliografic database.}
+\section{Source citations and reference list in {\LaTeX} .}
+
+\begin{frame}[plain]
+	\frametitle{Reference list.}
+	
+	
+	\begin{columns}[c]
+		
+		\column{.5\textwidth}
+		Goal of a reference list is to allow readers to:
+		
+		
+		\begin{itemize}
+			\item Look up the cited sources
+			\item Judge their quality
+		\end{itemize}
+		
+		{\pause}
+		
+		Strict, fixed format:
+		
+		\begin{itemize}
+			\item Formatting rules (eg. APA, Chicago Manual of Style, IEEE \ldots)
+			\item Fixed order (by appearance or alphabetically)
+			\item List of URLs does not suffice!
+		\end{itemize}
+		
+		{\pause}
+		
+		\column{.5\textwidth}
+		\begin{center}
+			\includegraphics[width=\columnwidth]{4/bibliography.png}
+		\end{center}
+		
+	\end{columns}
+	
+	
+	{\pause}
+	
+	\alertbox{Use \textcolor{hgyellow}{reference management software} to generate your reference list!}
+	
+\end{frame}
 
 \begin{frame}
   \frametitle{Bibliografic database}
 
+$\rightarrow$ Software to store sources in a structured manner
   \begin{itemize}
-    \item = Software to store sources in a structured manner
     \item Full text + metadata
     \item Generate correctly styled literature list
     \item Reference management software
@@ -66,7 +107,7 @@
         \begin{itemize}
             \item Default library mode: \textbf{biblatex}
         \end{itemize}
-        \item Linked Files
+        \item Linked Files \textit{(optional)}
         \begin{itemize}
             \item Main file directory: (path to folder where you keep the PDF files)
         \end{itemize}
@@ -75,6 +116,8 @@
             \item Entry Preview: American Psychological Association 7th edition
         \end{itemize}
     \end{itemize}
+    \bigskip
+    In Dutch: \url{https://hogenttin.github.io/latex-hogent-gids/installatie-jabref/}
     
 \end{frame}
 \begin{frame}[fragile]
@@ -223,6 +266,54 @@
   \fullcitebib{vanderLaanEtAl2015}
 \end{frame}
 
+\begin{frame}[plain]
+	\frametitle{Bibliografic data in Jabref.}
+	\framesubtitle{Extra fields for Book}
+	
+	\begin{description}
+		\item[Publisher] Name of the publishing company
+		\item[Address] of the publisher
+	\end{description}
+	
+	\medskip
+	
+	Adding an URL is not customary for books, unless published online.
+	
+	Web page of the publisher is OK, Google Books or illegal mirrors are not.
+	
+	\medskip
+	
+	\textbf{Example:}
+	
+	\fullcitebib{Knuth1998}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bibliografic data in Jabref.}
+\framesubtitle{Extra fields for Report/Thesis}
+	
+	\begin{description}
+		\item[Institution] or organisation
+		\item[Type] Report type (dropdown in JabRef)
+		\item[URL]  and Urldate (if published online)
+	\end{description}
+	
+\end{frame}
+
+\begin{frame}[plain]
+	
+	\textbf{Bachelor thesis example:}
+	
+	\fullcitebib{VanDerPlaetsen2013}
+	
+	\medskip
+	
+	\textbf{Research report example:}
+	
+	\fullcitebib{DeMarez2022}
+	
+\end{frame}
+
 \begin{frame}
   \frametitle{Bibliografic data in Jabref.}
 
@@ -239,10 +330,34 @@
 
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{URL cleanup}
+	
+	\begin{itemize}
+		\item Trim optional URL parameters  
+		\begin{itemize}
+			\item Referral/tracking info
+			\item Highlighting (\verb+https://URL#:~:text=HIGHLIGHT+)
+		\end{itemize}
+		\item Refer to the \textit{original} source
+		\begin{itemize}
+			\item Do \emph{NOT} use tertiairy sources (Google Books, Arxiv.org, CiteseerX \ldots)
+		\end{itemize}
+	\end{itemize}
+	
+\end{frame}
+
 \section{Referencing literature.}
 
 \begin{frame}[fragile]
   \frametitle{Referencing in the text}
+  
+  \begin{itemize}
+  	\item When? $\rightarrow$ the first time you use the source
+  	\item Where? $\rightarrow$ \textcolor{hgorange}{\textbf{within}} this first sentence
+  \end{itemize}
+  \bigskip
+  Two different citations methods:
 
   \begin{itemize}
     \item \verb|\textcite{Knuth1998}| \(\Rightarrow\) Knuth (1998)
@@ -250,12 +365,26 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Use \texttt{\textbackslash{}textcite}}
+\begin{frame}[fragile,plain]
+	\frametitle{Narrative reference}
+	\framesubtitle{Use \texttt{\textbackslash{}textcite}}
 
   \ldots\ if the name of the author is part of the sentence:
+  
+\bigskip
 
-  \bigskip
+\small
+\begin{verbatim}
+An overview is provided in the survey by~\textcite{RibasEtAl2010}.
+For a real-life case-study of applying genetic algorithm ``on top''
+of a Mixed Integer Linear Programming model, we refer
+to~\textcite{BorodinEtAl2011}.
+\end{verbatim}
+\normalsize
+
+\begin{center}
+	$\Downarrow$
+\end{center}
 
   \begin{quotation}
     An overview is provided in the survey by Ribas et al (2010). For a real-life case-study of applying genetic algorithm ``on top'' of a Mixed Integer Linear Programming model, we refer to Borodin et al (2011).
@@ -263,25 +392,35 @@
 
 \end{frame}
 
-\begin{frame}
-  \frametitle{Use \texttt{\textbackslash{}autocite}}
-
-  \ldots\ if the name of the author is NOT part of the sentence
-
-  \bigskip
-
-  \begin{quotation}
-    Reinforcement Learning (RL) is a technique that allows an agent to learn how to maximize a numerical reward signal (Sutton and Barto, 1998).
-  \end{quotation}
-
-  \bigskip
-
-  Also: exact citation, source of image
-
+\begin{frame}[fragile]
+	\frametitle{Reference between brackets}
+	\framesubtitle{Use \texttt{\textbackslash{}autocite}}
+	
+	\ldots\ if the name of the author is NOT part of the sentence:
+	
+	\medskip
+	
+	\small
+	\begin{verbatim}
+Reinforcement Learning (RL) is a technique that allows an agent
+to learn how to maximize a numerical reward
+signal~\autocite{SuttonBarto1998}.
+\end{verbatim}
+	\normalsize
+	
+	\begin{center}
+		$\Downarrow$
+	\end{center}
+	
+	\begin{quotation}
+		Reinforcement Learning (RL) is a technique that allows an agent to learn how to maximize a numerical reward signal (Sutton and Barto, 1998).
+	\end{quotation}
+	
+	\bigskip
+	
+	Also for exact citations and image sources.
+	
 \end{frame}
-
-
-%% TODO: uitgewerkte voorbeelden! \textcite, \autocite, citaat, bijschrift afbeelding?
 
 \begin{frame}[fragile]
   \frametitle{Insert reference list.}
@@ -296,36 +435,90 @@
             \item Bibliography (F8): selects the referenced sources and prepares them
             \item Build/Compile (F5): inserts references in the text and generates the reference list
           \end{enumerate}
+	\item  In VSCode: use recipe \texttt{XeLaTeX $\rightarrow$ biber $\rightarrow$ XeLaTeX $\times$ 2}
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Check the result!}
   \begin{itemize}
-    \item Authors correctly displayed?
-    \item Language errors or typos? E.g.\ accents, special characters
+  	\item Missing bibliography entries?
+  	\begin{itemize}
+  		\item Only cited sources get added
+  		\item So use \texttt{{\textbackslash}textcite\{\}} or \texttt{{\textbackslash}autocite\{\}}
+  		\item \texttt{Do \emph{not} use \texttt{{\textbackslash}nocite\{*\}}}
+  	\end{itemize}
+    \item Authors displayed correctly?
+    \item No language errors or typos? E.g.\ accents or special characters
     \item All info needed to find source is present?
-    \item Mentioning of ``Visited DATE, of URL'' with Online sources?
+    \item Mentioning of ``Visited DATE, of URL'' for \textit{Online} sources?
+    \item \textbf{Attention!} Special characters (\%,\$,\& \ldots) are prohibited in .bib files. Double-check this when importing sources with an abstract.
+    \item \ldots
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Tip: bibla}
+	
+	\begin{itemize}
+		\item \url{https://pypi.org/project/bibla/}
+		\item Linter/style checker for BibLaTeX files
+		\item Checks for common errors
+		\item By HOGENT alumnus Tristan Cuvelier
+	\end{itemize}
+	\bigskip
+	\begin{verbatim}
+     pip install bibla
+     bibla lint bibliografie.bib
+\end{verbatim}
+	
+\end{frame}
+
+\begin{frame}
+  \frametitle{Common mistakes}
+  \framesubtitle{Reference list}
+
+  \begin{itemize}
+    \item Non-scientific sources used (e.g.\ StackOverflow, Wikipedia, blog not of a subject expert \ldots)
+    \item Untrimmed URLs
+    \item Incorrect or missing information (e.g. missing page numbers, wrong order of authors, wrong author \ldots)
+    \item Incorrect citation type (e.g. \texttt{Online} instead of \texttt{Book} for a book)
+    \item COPY \& PASTE OF TITLES IN ALL CAPS.
+    \item URLs of illegal download sites
+    \item Nonexistent sources generated by LLMs
     \item \ldots
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Common mistakes}
+ 	\frametitle{Common mistakes}
+	\framesubtitle{Citations}
 
-  \begin{itemize}
-    \item Non-scientific sources used (e.g.\ StackOverflow, Wikipedia, blogs not by a subject expert, \ldots)
-    \item URLs not cleaned up (e.g. markers like \texttt{\#:$\sim$:text=something} in URL - Scroll To Text Fragment feature of browsers)
-    \item Incorrect or missing information (e.g. missing page numbers, wrong order of authors, wrong author, \ldots)
-    \item Incorrect citation type (e.g. \texttt{Online} instead of \texttt{Book} for a book - typically seen for books found via Google Books)
-    \item \ldots
-  \end{itemize}
+\begin{itemize}
+	\item Image without citation (= \textcolor{hgorange}{\textbf{Plagiarism!}})
+	\item Statements or definitions without citation
+	\item Citing sources which do not support the statement in the text
+	\item Citing sources outside the (relevant) phrase.
+	\item A single citation at the end of a paragraph
+	\item Too much text based on a single source (max. a couple of sentences)
+	\item \ldots
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Common mistakes}
+	\framesubtitle{Find the issues}
+	
+	\centering
+	\includegraphics[height=.6\textheight]{4/jabref-dont.png}
+	
+	
 \end{frame}
 
 \begin{frame}[plain]
   \frametitle{Exercise}
 
-  Save these sources in JabRef, with all necessary info and fulltext (where possible) and/or URL of the online source:
+  Save these sources in JabRef, with all necessary info and full text (where possible) and/or URL of the online source:
 
   \bigskip
 
