@@ -105,6 +105,7 @@
   \alertbox{Start altijd met een concrete casus!}
 
   \begin{itemize}
+    \item Casus, probleemsituatie voorstellen
     \item Requirements verzamelen
     \item Long list
     \item Short list
@@ -133,7 +134,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[plain]
   \frametitle{Long list}
 
   \begin{itemize}
@@ -163,20 +164,47 @@
   \frametitle{Voorbeeld}
   \framesubtitle{Samenvattende tabel requirements}
 
-  \centering
-  \begin{tabular}{cccc|cc|cccc}
-    \toprule
-    Alternatief & \multicolumn{3}{c}{M} & \multicolumn{2}{c}{S} & \multicolumn{4}{c}{C}                                                             \\ \midrule
-    A           & \CIRCLE               & \CIRCLE               & ?                     & \CIRCLE & ?       & \CIRCLE & \CIRCLE & ?       & \CIRCLE \\
-    B           & \CIRCLE               & ---                   & \CIRCLE               & ---     & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE \\
-    C           & \CIRCLE               & \CIRCLE               & \CIRCLE               & \CIRCLE & ---     & \CIRCLE & \CIRCLE & \CIRCLE & ---     \\ \bottomrule
-  \end{tabular}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \centering
+      \begin{tabular}{cccc}
+        \toprule
+        Prio               & A         & B         & C         \\ \midrule
+        \multirow{3}{*}{M} & {\CIRCLE} & {\CIRCLE} & {\CIRCLE} \\
+                           & {\CIRCLE} & ---       & {\CIRCLE} \\
+                           & {?}       & {\CIRCLE} & {\CIRCLE} \\ \midrule
+        \multirow{2}{*}{S} & {\CIRCLE} & ---       & {\CIRCLE} \\
+                           & {?}       & {\CIRCLE} & ---       \\ \midrule
+        \multirow{4}{*}{C} & {\CIRCLE} & {\CIRCLE} & {\CIRCLE} \\
+                           & {\CIRCLE} & {\CIRCLE} & {\CIRCLE} \\
+                           & {?}       & {\CIRCLE} & {\CIRCLE} \\
+                           & {\CIRCLE} & {\CIRCLE} & ---       \\ \bottomrule
+        \end{tabular}
+    \end{column}
+
+    \begin{column}{.5\textwidth}
+      A, B, C: alternatieve oplossingen
+
+      M, S, C: MoSCoW-prioriteiten
+
+      \bigskip
+
+      {\CIRCLE} = req aanwezig
+      
+      --- = req niet aanwezig
+      
+      ? = geen info beschikbaar
+    \end{column}
+  \end{columns}
+  
+  
 
   \bigskip
 
-  (\CIRCLE = req aanwezig; --- = req niet aanwezig; ? = geen info beschikbaar)
+  
 
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Proof of concept}
@@ -255,6 +283,7 @@
           \begin{itemize}
             \item bv.\ ActiveDirectory, webapplicatieserver, \ldots
             \item bv.\ (edge) router, firewall, \ldots
+            \item bv.\ IoT-toestel van specifiek merk/model
           \end{itemize}
     \item Eén specifieke (web)applicatie
           \begin{itemize}
@@ -289,7 +318,18 @@
     \item Hoe? Interview met belanghebbenden
     \item Hardware, software, apparatuur, services\ldots~oplijsten
     \item Schema/overzicht opstellen
-    \item Welke data?
+    \item Welke data? Niveau vertrouwelijkheid?
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Huidige maatregelen oplijsten}
+
+  \begin{itemize}
+    \item Interview met belanghebbenden
+    \item Toegangsbeveiliging, niveau's
+    \item Security policy (bv.\ wachtwoorden, enz.)
   \end{itemize}
 
 \end{frame}
@@ -324,17 +364,6 @@
           \end{itemize}
     \item Fuzzing
     \item \ldots
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Huidige maatregelen oplijsten}
-
-  \begin{itemize}
-    \item Interview met belanghebbenden
-    \item Toegangsbeveiliging, niveau's
-    \item Security policy (bv.\ wachtwoorden, enz.)
   \end{itemize}
 
 \end{frame}
@@ -412,8 +441,11 @@
       \item Categorie? (Un)supervised/reinforcement learning?
     \end{itemize}
     \item Selecteer vooraf (minstens) één \textit{research paper}
-    \item Probeer te reproduceren of aan te passen aan jouw casus a.d.h.v.\ methodologie
-    \item Niet gelukt? Probeer in volgende iteratie met een andere \textit{research paper}
+    \begin{itemize}
+      \item Probeer te reproduceren of aan te passen aan jouw casus a.d.h.v.\ methodologie
+      \item Niet gelukt? Probeer in volgende iteratie met een andere \textit{research paper}
+    \end{itemize}
+    
   \end{itemize}
 
   \alertbox{Beschrijf in je voorstel al met welke paper(s) je gaat beginnen!}
@@ -463,7 +495,7 @@
 \begin{frame}
   \frametitle{Repliceerbaarheid}
 
-  \alertbox{De lezer moet jouw opstelling snel opnieuw kunnen opzetten}
+  \alertbox{Je moet je opstelling snel opnieuw kunnen opzetten}
 
   \bigskip
 
@@ -661,19 +693,19 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Opgelegde deadlines (23--24)}
+  \frametitle{Opgelegde deadlines (24--25)}
 
   \begin{description}
-    \item[2023--12--15] uitgeschreven voorstel indienen (feedback van promotor tegen 2024--01--19)
-    \item[2024--02--16] aangepast voorstel opladen
-    \item[2024--03--22] draft literatuurstudie
-    \item[2024--05--10] draft BP indienen
-    \item[2024--05--24] finale BP indienen
+    \item[2024--11--15] uitgeschreven voorstel indienen (feedback van promotor tegen 2024--12--06)
+    \item[2024--12--20] aangepast voorstel opladen
+    \item[2025--03--07] draft inleiding, literatuurstudie
+    \item[2025--05--02] draft BP indienen
+    \item[2025--05--23] finale BP indienen
   \end{description}
 
   \medskip
 
-  Pas dit zelf aan voor AJ 24--25.
+  Pas dit zelf aan voor AJ 25--26.
 
 \end{frame}
 
