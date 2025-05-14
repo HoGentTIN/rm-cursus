@@ -1,3 +1,4 @@
+
 \documentclass[aspectratio=169]{beamer}
 \usetheme{hogent}
 \usecolortheme{hgwhite} % witte achtergrond, zwarte tekst
@@ -35,6 +36,10 @@
    \item Errors during compilation?
    \item Errors in the PDF file?
   \end{itemize}
+  
+  \bigskip
+  
+  \alertbox{Use the guide! \url{https://hogenttin.github.io/latex-hogent-gids/}}
 
 \end{frame}
 
@@ -93,6 +98,28 @@
   Use two ``backquotes'' (left) or two single quotes (right)
 \end{frame}
 
+\begin{frame}[fragile]
+    \frametitle{Be careful with special characters}
+    
+    \begin{itemize}
+        \item Certain characters have a special meaning in {\LaTeX}
+        \item Some are even prohibited in JabRef!
+        \item Use commands to render these:
+    \end{itemize}
+    
+    \bigskip
+    
+    \begin{center}
+        \begin{tabular}{rccccc}
+            \toprule
+            \textbf{Symbol}  & \&        & \$        & \_        & \%  & \textbackslash{} \\
+            \textbf{Command} & \verb+\&+ & \verb+\$+ & \verb+\_+ & \verb+\%+ & \verb+\textbackslash+\\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \end{frame}
+    
+
 \begin{frame}
   \frametitle{What command for this symbol?}
 
@@ -104,11 +131,11 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{entering URLs }
+  \frametitle{Entering URLs }
 
   \begin{itemize}
     \item Via package \texttt{hyperref} (already loaded in template!)
-    \item Command \verb+\url{}+, \verb+\href{}{}+
+    \item Commands \verb+\url{}+, \verb+\href{}{}+
     \item Hyperref also makes:
           \begin{itemize}
             \item Table of contents in the PDF
@@ -119,7 +146,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{entering URLs: example}
+  \frametitle{Entering URLs: example}
 
   \verb+\url{https://xkcd.com/1301/}+ $\Rightarrow$ \url{https://xkcd.com/1301/}
 
@@ -196,7 +223,7 @@
 
   \begin{itemize}
     \item \textbf{Cause:} URL is too long, no word split
-    \item \textbf{Solution:} turn on \texttt{breaklinks}-option of \texttt{hyperref}-package, e.g.
+    \item \textbf{Solution:} The \texttt{breaklinks}-option of the \texttt{hyperref}-package \footnote{This option is already included in the rm-paper template}:
   \end{itemize}
 
 \begin{verbatim}
@@ -425,9 +452,9 @@ According to~\textcite{Doe2021} there is an increasing trend in the data every y
 {\LaTeX} syntax for math formulas is also used outside of {\LaTeX}!
 
   \begin{itemize}
-   \item Python/Jupiter Notebooks
+   \item Python/Jupyter Notebooks
    
-   eg \url{https://github.com/HoGentTIN/dsai-en-labs/blob/main/7-time-series/demo-time-series.ipynb}
+   eg \url{https://github.com/HoGentTIN/dsai-labs/blob/main/7-time-series/7.01-time-series.ipynb}
    
    \item In web pages: via \href{https://www.mathjax.org}{MathJax}
    
@@ -541,6 +568,11 @@ public class MyApp \{
       }
     }
   \end{minted}
+  
+  \bigskip
+  
+  Refer to \url{https://hogenttin.github.io/latex-hogent-gids/installatie-minted/}
+  
 \end{frame}
 
 \section{Finally\ldots}
