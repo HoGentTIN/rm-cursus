@@ -108,11 +108,18 @@ Een alternatief is werken met \emph{vector graphics}, m.a.w.~figuren die in het 
 \section{Visualisatie van cijfermateriaal}%
 \label{sec:visualisatie-cijfermateriaal}
 
-In de cursus Data Science \& AI wordt het goed visualiseren van cijfermateriaal in detail besproken en geoefend. Toch zien we dat in de bachelorproef nog heel veel fouten gemaakt worden met foute conclusies als gevolg. Daarom komen we hier nog even terug op dit onderwerp.
+De resultaten (met bijhorende bespreking en conclusie) vormen vaak het interessantste deel van een bachelorproef. Aangezien deze resultaten vaak cijfermateriaal bevatten, is het voor een heldere bespreking van je resultaat cruciaal dat je correcte visualisaties kan toevoegen aan je scriptie. Toch zien we dat in de bachelorproef nog heel veel fouten gemaakt worden bij het verwerken en weergeven van cijfermateriaal, met in het ergste geval foute conclusies als gevolg. Raadpleeg daarom zeker nog eens de cursus Data Science \& AI\footnote{\url{https://hogenttin.github.io/dsai-glossary/}}\footnote{\url{https:/hogenttin.github.io/dsai-glossary/}} tijdens het verwerken van je resultaten. 
 
-% - Enkel gemiddeldes vermelden is onvoldoende! Minstens ook standaardafwijkingen geven en statistische toetsen uitvoeren om te verifiëren of resultaten significant verschillen.
+Let minimaal op het volgende: 
+\begin{itemize}
+	\item Voorzie voldoende iteraties van elk experiment of elke run.
+	\item Enkel gemiddeldes vermelden is onvoldoende! Voeg minstens de standaardafwijkingen toe en voer statistische toetsen uit om te verifiëren of resultaten significant verschillen.
+	\item Denk na over passende visualisaties, afhankelijk van je data. Zie figuur {\ref{fig:data-visuals}}.
+	\item Zorg voor leesbare titels, as-labels en legendes (indien nodig).
+\end{itemize}
 
-Stel, je voert een performantievergelijking uit tussen twee systemen, A en B. Je hebt op elk systeem 50 keer een experiment uitgevoerd en de resultaten geregistreerd. Laat ons veronderstellen dat het resultaat van de meting een 
+% Onafgewerkt voorbeeld:
+% Stel, je voert een performantievergelijking uit tussen twee systemen, A en B. Je hebt op elk systeem 50 keer een experiment uitgevoerd en de resultaten geregistreerd. Laat ons veronderstellen dat het resultaat van de meting een 
 
 \begin{figure}
   \begin{subfigure}{.5\textwidth}
@@ -133,6 +140,7 @@ Stel, je voert een performantievergelijking uit tussen twee systemen, A en B. Je
     \caption{\label{fig:density-plot}Kansdichtheid met steekproefgemiddelden aangeduid als een verticale stippellijn. Hier wordt duidelijk dat de resultaten van het experiment niet normaal verdeeld zijn. Dat maakt dat een staafdiagram met error bars eigenlijk niet geschikt is voor deze data.}
   \end{subfigure}
   
-  \caption[Visualiseren van cijfergegevens]{Verschillende manieren om dezelfde data te visualiseren.}
+  \caption[Visualiseren van cijfergegevens]{\label{fig:data-visuals}Verschillende manieren om dezelfde data te visualiseren.}
 \end{figure}
+
 
