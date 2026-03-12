@@ -107,11 +107,20 @@ An alternative is to work with \emph{vector graphics}, i.e. figures that are dra
 \section{Numbers visualisation }
 \label{sec:numbersvisualisation}
 
-In the Data Science \& AI course, good visualization of numbers is discussed in detail and practiced. Nevertheless, we see that a lot of mistakes are still made in the bachelor's thesis, resulting in incorrect conclusions. That is why we will come back to this topic here.
-
 % - Enkel gemiddeldes vermelden is onvoldoende! Minstens ook standaardafwijkingen geven en statistische toetsen uitvoeren om te verifiëren of resultaten significant verschillen.
 
-Suppose you execute a performance comparison between two systems, A and B. You have performed an experiment 50 times on each system and recorded the results. Let us suppose that the result of the measurement is a
+The results (including discussion and conclusion) often form the most interesting part of a bachelor’s thesis. Since these results frequently include numerical data, it is crucial for a clear discussion of your findings that you can add correct visualizations to your thesis. However, we still see many mistakes being made in bachelor’s theses when processing and presenting numerical data, which can lead to incorrect conclusions. Therefore, be sure to review the Data Science \& AI course material \footnote{\url{https://github.com/HoGentTIN/dsai-labs}}\footnote{\url{https://hogenttin.github.io/dsai-glossary/}} while processing your results.
+
+Pay special attention to the following:
+\begin{itemize}
+	\item Ensure you plan sufficient iterations for each experiment or run.
+	\item Only reporting averages is insufficient! At a minimum, include standard deviations and perform statistical tests to verify whether results differ significantly.
+	\item Choose appropriate visualizations based on your data (see figure \ref{fig:visuals})
+	\item Provide clear titles, axis labels and legends (where needed).
+\end{itemize}
+
+% Unfinished draft:
+% Suppose you execute a performance comparison between two systems, A and B. You have performed an experiment 50 times on each system and recorded the results. Let us suppose that the result of the measurement is a
 
 \begin{figure}
   \begin{subfigure}{.5\textwidth}
@@ -136,6 +145,6 @@ Suppose you execute a performance comparison between two systems, A and B. You h
     \label{fig:density-plot}
   \end{subfigure}
   
- \caption[Visualize number data]{Different ways to visualize the same data.}
+ \caption[Visualize number data]{\label{fig:visuals}Different ways to visualize the same data.}
 \end{figure}
 

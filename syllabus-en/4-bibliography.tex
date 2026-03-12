@@ -42,15 +42,15 @@ Some tips when entering author names:
 \begin{itemize}
 
   \item Write the authors' names in the form ``Family Name, First Name(s)''. So ``Van Vreckem, Bert'' and not ``Bert Van Vreckem.'' In principle the second notation is also accepted, but this only works for typical Anglo-Saxon names with a middle name (eg ``Donald Ervin Knuth'' ). The first two words are considered as first names, the last word as the family name. In that case ``Van'' is therefore wrongly regarded as a middle name.
-  \item If the author is a company or organization, with a name consisting of several words, enclose it in braces: eg ``\{The Linux Foundation\}''. If not, {\LaTeX} tries to interpret this as a person's name. ``Foundation'' then becomes the family name, ``The'' and ``Linux'' the two first names.
+  \item If the author is a company or organization, with a name consisting of several words, enclose it in braces: eg ``\{The Linux Foundation\}''. If not, {\LaTeX} tries to interpret this as a person's name. ``Foundation'' then becomes the family name, ``The'' and ``Linux'' the two first names, resulting in ``Foundation, T. L.``  or ``Services, A.W.`` appearing as authors in your bibliography.
   \item If you have multiple authors, separate each name with \texttt{and}, eg ``Bernard, Anita and Buysse, Jens and Van Vreckem, Bert''.
   \item After entering the author name(s), click on the button with the key icon (see Figure~\ref{fig:jabref}) to generate a unique key for this resource.
   \item In addition to an author field, there is also a field for any editor(s) (\emph{editor}). At least one of the two must be completed, sometimes both. This happens, for example, in a book that is composed of chapters that are written by different authors and where you want to refer to one specific chapter. You will find an example of this further on in this text.
 \end{itemize}
 
-Note that in a bibliography, \textbf{only works referenced from the text} may be included. {\LaTeX} does this automatically by default, so if you're missing sources in the list, it means you didn't use them in the text.
+Note that in a bibliography, \textbf{only sources referenced from the text} will be included. {\LaTeX} does this automatically by default, so if you're missing sources in the list, it means you didn't refer to them in your text.
 
-Always try to keep as much information as possible about your sources, so that it will be easier to find them later. Although this is a time consuming process, and not all of this information is included in the bibliography, consulting the database is much easier. Pay sufficient attention to this and also check the result in the bibliography itself. Are the authors represented correctly? Do you have a year mentioned? Has a URL and date of consultation been specified for an online source (see below)? etc.
+Always try to add as much information as possible about your sources, making it easier to find them later. Although this is a time consuming process, and not all of this information is included in the bibliography, consulting the database is much easier. Pay sufficient attention to this and also check the result in the bibliography itself. Are the authors represented correctly? Do you have a year mentioned? Has a URL and date of consultation been specified for an online source (see below)? etc.
 
 Some fields that are always useful to fill in:
 
@@ -291,12 +291,27 @@ Other publicly available search starting points:
 
   \item Who are the most important names in the ``community''? Keynote speakers at conferences, authors of the most important books on the subject, etc. Follow these people on Twitter, find out if they have a blog, are active on LinkedIn, etc. Read all you can find they've written in the latest years.
 
-  \item Find out if there are newsletters about your subject, which periodically send updates about current events in that field. Examples are Cron.Weekly\footnote{\url{https://www.cronweekly.com/}} (Linux System Administration), DevOps Weekly\footnote{\url{http://www.devopsweekly.com/}} or JS Weekly (and relatives)\footnote{\url{https://javascriptweekly.com/}}.
+  \item Find out if there are newsletters about your subject, which periodically send updates about current events in that field. Examples are Cron.Weekly\footnote{\url{https://www.cronweekly.com/}} (Linux System Administration - discontinued), DevOps Weekly\footnote{\url{http://www.devopsweekly.com/}} or JS Weekly (and relatives)\footnote{\url{https://javascriptweekly.com/}}.
 \end{itemize}
 
 Keeping track of all your sources is time-consuming, but essential for a sound bachelor thesis! So pay the necessary attention to this and check whether the information about your sources is entered correctly in JabRef.
 
 All relevant information that you have collected and read in the course of your research is then synthesized in a continuous text in your own words where you discuss the situation in the research domain, with references to the literature at appropriate places. We will go into more detail in Chapter~\ref{ch:reportingresults}.
+
+\section{Proofreading}
+\label{sec:bibliography-proofreading}
+
+It is important to carefully check your result after rendering the PDF to ensure both the references and bibliography are correctly formatted.
+
+\begin{itemize}
+	\item Are the authors' names displayed correctly? If the author is a company or organization, is the full name mentioned and not mistakenly interpreted as a personal name?
+	\item Verify that no titles are WRITTEN IN ALL CAPS.
+	\item Is at least a year provided for each entry? Also, ensure that no ``Year`` or ``Month`` fields are individually filled and that instead their contents have been moved to the ``Date`` field.
+	\item Are URLs displayed correctly? Have any parameters or tracking codes accidentally been included in the URLs? (f.e. ``?source=chatgpt``)
+	\item Do online sources include a date of last retrieval?
+	\end{itemize}
+
+In addition to a manual check, you can also use automated tools such as bibla\footnote{\url{https://pypi.org/project/bibla/}} for verification. Always critically review any suggested corrections before applying them.
 
 \section{Summary}
 \label{sec:bibliography-summary}
