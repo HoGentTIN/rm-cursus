@@ -425,6 +425,9 @@
 
 \fi
 
+% Code fragments with syntax coloring
+\usepackage[outputdir=../output]{minted}
+
 % Typography & Symbols
 \RequirePackage{eurosym}
 \RequirePackage{microtype}
