@@ -358,6 +358,7 @@
             \item Vermijd productiesystemen.
           \end{itemize}
     \item Pen-testing technieken
+    \item Static/dynamic file/firmware/code analysis
     \item Vulnerability scanning
           \begin{itemize}
             \item bv. OWASP ZAP, Wapiti, OpenVAS, Lynis, \ldots
@@ -412,6 +413,7 @@
 
   \begin{itemize}
     \item Automatisch scoren dartswedstrijd
+    \item Scoren rope skipping met computer vision en machine learning
     \item Anomaliedetectie in servermonitoring
     \item Lesmateriaal samenvatten voor leerlingen met leesmoeilijkheden
     \item \ldots
@@ -440,10 +442,29 @@
       \item Hoe ziet de output er uit?
       \item Categorie? (Un)supervised/reinforcement learning?
     \end{itemize}
-    \item Selecteer vooraf (minstens) één \textit{research paper}
+    \item Hoe ga je het systeem operationeel inzetten?
     \begin{itemize}
-      \item Probeer te reproduceren of aan te passen aan jouw casus a.d.h.v.\ methodologie
-      \item Niet gelukt? Probeer in volgende iteratie met een andere \textit{research paper}
+      \item Data workflow?
+      \item Wat doe je met het resultaat?
+      \item Hoe ga je bijtrainen, testen, evalueren?
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Iteratief proces}
+
+  \begin{itemize}
+  \item Selecteer vooraf (minstens) één \textit{research paper}
+
+    \begin{itemize}
+      \item Reproduceer methodologie beschreven in paper
+      \item Pas aan waar nodig voor jouw casus
+      \item Niet gelukt? Probeer in volgende iteratie:
+      \begin{itemize}
+        \item Pas parameters/configuratie/methode aan
+        \item Probeer met een andere \textit{research paper}
+      \end{itemize} 
     \end{itemize}
     
   \end{itemize}
@@ -471,6 +492,9 @@
           \end{itemize}
   \end{itemize}
 
+  \medskip
+
+  \alertbox{Begin zo snel mogelijk met bouwen van je testopstelling! Dit is belangrijer dan het schrijven van een literatuuroverzicht.}
 \end{frame}
 
 \begin{frame}
@@ -573,7 +597,7 @@
 
   \bigskip
 
-  \alertbox{Er zijn nog meer statistische technieken dan we in DSAI gezien hebben!}
+  \alertbox{Er zijn nog meer statistische technieken dan we in Data Science gezien hebben!}
 \end{frame}
 
 \begin{frame}
@@ -601,7 +625,30 @@
   \frametitle{Tips bij verwerken data}
 
   \begin{itemize}
+    \item Formaat zo eenvoudig mogelijk: tekstgebaseerd
+    
+    \begin{itemize}
+      \item CSV: rijen = observaties, kolommen = variabelen
+      \item JSON, YAML, XML: zijn ook machine readable
+    \end{itemize}
+
     \item Ruwe data (CSV) NOOIT wijzigen
+    
+    \begin{itemize}
+      \item Manuele wijzigingen zijn foutgevoelig
+      \item Niet transparant/reproduceerbaar
+      \item Niet te onderscheiden van manipulatie
+      \item \href{https://www.bbc.com/news/technology-37176926}{Kan resultaten ongeldig maken}!
+    \end{itemize}
+
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tips bij verwerken data}
+
+  \begin{itemize}
     \item Automatiseer zoveel mogelijk de workflow
           \begin{itemize}
             \item Python script of Jupyter Notebook
@@ -637,7 +684,9 @@
 \begin{frame}
   \frametitle{Een goede steekproef}
 
-  Zie ook Data Science \& AI
+  (Zie ook de cursus Data Science)
+
+  \medskip
 
   \begin{itemize}
     \item Goed gedefinieerde populatie (steekproefkader!)
@@ -723,31 +772,12 @@
   \frametitle{Aanbevelingen}
 
   \begin{itemize}
+    \item Volgorde hoofdstukken BP $\neq$ volgorde uitwerking!
     \item Literatuurstudie kan verder doorlopen!
     \item Pas \textit{agile} toe, werk in iteraties!
     \item Zorg voor voldoende tijd voor je eigen bijdrage!
     \item Vóór de paasvakantie moet je al zaken gebouwd/geïmplementeerd hebben
     \item Schrijf dit zelf, laat dit niet over aan ChatGPT of andere LLMs!
-  \end{itemize}
-
-\end{frame}
-
-\section{Vervolg opdracht}
-
-\begin{frame}
-  \frametitle{Uitschrijven methodologie}
-
-  \begin{itemize}
-    \item Schrijf plan van aanpak uit (= methodologie)
-    \item Verdeel onderzoek in verschillende fasen
-          \begin{itemize}
-            \item Wat ga je concreet doen?
-            \item Waarom? Wat is de doelstelling?
-            \item Wat is het concrete resultaat (artefact)?
-            \item Hoe ga je het aanpakken (onderzoeksmethode)?
-          \end{itemize}
-    \item Schatting tijdverloop (zoals BP jaarvak)
-    \item Doorlopende tekst, niet enkel bullet points
   \end{itemize}
 
 \end{frame}
